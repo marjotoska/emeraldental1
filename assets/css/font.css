@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-MediumItalic.html');
+    src: local('Circular Std Medium Italic'), local('CircularStd-MediumItalic'),
+        url('../font/CircularStd-MediumItalicd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-MediumItalic.html') format('woff2'),
+        url('../font/CircularStd-MediumItalic-2.html') format('woff'),
+        url('../font/CircularStd-MediumItalic-3.html') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Black.html');
+    src: local('Circular Std Black'), local('CircularStd-Black'),
+        url('../font/CircularStd-Blackd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-Black.html') format('woff2'),
+        url('../font/CircularStd-Black-2.html') format('woff'),
+        url('../font/CircularStd-Black-3.html') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Medium.html');
+    src: local('Circular Std Medium'), local('CircularStd-Medium'),
+        url('../font/CircularStd-Mediumd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-Medium.html') format('woff2'),
+        url('../font/CircularStd-Medium-2.html') format('woff'),
+        url('../font/CircularStd-Medium-3.html') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Bold.html');
+    src: local('Circular Std Bold'), local('CircularStd-Bold'),
+        url('../font/CircularStd-Boldd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-Bold.html') format('woff2'),
+        url('../font/CircularStd-Bold-2.html') format('woff'),
+        url('../font/CircularStd-Bold-3.html') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-BlackItalic.html');
+    src: local('Circular Std Black Italic'), local('CircularStd-BlackItalic'),
+        url('../font/CircularStd-BlackItalicd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-BlackItalic.html') format('woff2'),
+        url('../font/CircularStd-BlackItalic-2.html') format('woff'),
+        url('../font/CircularStd-BlackItalic-3.html') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('CircularStd-BookItalic.html');
+    src: local('Circular Std Book Italic'), local('CircularStd-BookItalic'),
+        url('../font/CircularStd-BookItalicd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-BookItalic.html') format('woff2'),
+        url('../font/CircularStd-BookItalic-2.html') format('woff'),
+        url('../font/CircularStd-BookItalic-3.html') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-BoldItalic.html');
+    src: local('Circular Std Bold Italic'), local('CircularStd-BoldItalic'),
+        url('../font/CircularStd-BoldItalicd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-BoldItalic.html') format('woff2'),
+        url('../font/CircularStd-BoldItalic-2.html') format('woff'),
+        url('../font/CircularStd-BoldItalic-3.html') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('CircularStd-Book.html');
+    src: local('Circular Std Book'), local('CircularStd-Book'),
+        url('../font/CircularStd-Bookd41d.html?#iefix') format('embedded-opentype'),
+        url('../font/CircularStd-Book.html') format('woff2'),
+        url('../font/CircularStd-Book-2.html') format('woff'),
+        url('../font/CircularStd-Book-3.html') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

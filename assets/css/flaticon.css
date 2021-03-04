@@ -1,0 +1,65 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 04/01/2021 05:58
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticond41d.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.html") format("woff2"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon-2.html#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon-2.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+}
+
+.flaticon-web-programming:before { content: "\f100"; }
+.flaticon-devops:before { content: "\f101"; }
+.flaticon-monitoring:before { content: "\f102"; }
+.flaticon-bar-chart:before { content: "\f103"; }
+.flaticon-warranty:before { content: "\f104"; }
+.flaticon-setting:before { content: "\f105"; }
+.flaticon-layer:before { content: "\f106"; }
+.flaticon-bulb:before { content: "\f107"; }
+.flaticon-technical-support:before { content: "\f108"; }
+.flaticon-quote:before { content: "\f109"; }
+.flaticon-rocket:before { content: "\f10a"; }
+.flaticon-pay-per-click:before { content: "\f10b"; }
+.flaticon-search-engine-optimization:before { content: "\f10c"; }
+.flaticon-search-engine-optimization-1:before { content: "\f10d"; }
+.flaticon-marketing:before { content: "\f10e"; }
+.flaticon-target:before { content: "\f10f"; }
+.flaticon-product:before { content: "\f110"; }
+.flaticon-product-release:before { content: "\f111"; }
+.flaticon-solutions:before { content: "\f112"; }
+.flaticon-booking:before { content: "\f113"; }
+.flaticon-report:before { content: "\f114"; }
+.flaticon-trophy:before { content: "\f115"; }
+.flaticon-local-network:before { content: "\f116"; }
+.flaticon-trophy-1:before { content: "\f117"; }
+.flaticon-object:before { content: "\f118"; }
+.flaticon-chart:before { content: "\f119"; }
+.flaticon-chat:before { content: "\f11a"; }
+.flaticon-talk:before { content: "\f11b"; }
+.flaticon-pie-chart:before { content: "\f11c"; }
+.flaticon-pie-chart-1:before { content: "\f11d"; }
+.flaticon-layers-1:before { content: "\f11e"; }
+.flaticon-pen-tool:before { content: "\f11f"; }
+.flaticon-vector:before { content: "\f120"; }
+.flaticon-startup:before { content: "\f121"; }
+.flaticon-social-media:before { content: "\f122"; }
