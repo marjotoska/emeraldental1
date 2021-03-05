@@ -22,12 +22,12 @@ CSS INDEX
 08. slider
 09. counter
 10. feature
-11. about
+11. Chi Siamo
 12. price 
 13. testimonial
 14. process
 15. contact
-16. services
+16. Servizi 
 17. accordion
 18. subscribe
 19. blog
@@ -4862,17 +4862,17 @@ input.main-search-input:-ms-input-placeholder {
   }
 }
 
-/* 11. about */
-.fe-about::before {
+/* 11. Chi Siamo */
+.fe-Chi Siamo::before {
   display: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .fe-about .img-thumb img {
+  .fe-Chi Siamo .img-thumb img {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  .fe-about .img-thumb img {
+  .fe-Chi Siamo .img-thumb img {
     width: 100%;
   }
 }
@@ -5715,7 +5715,7 @@ input[type="checkbox"] {
 .text_inner_02 p {
   color: #161c2d;
 }
-.text_inner_02 .about-testi span {
+.text_inner_02 .Chi Siamo-testi span {
   color: #15b844;
 }
 .text_inner_02 .author-testi::before {
@@ -6749,7 +6749,7 @@ input[type="checkbox"] {
   }
 }
 
-/* 16. services */
+/* 16. Servizi  */
 @media (max-width: 767px) {
   .what-we-do-area {
     padding-top: 80px;
@@ -7139,43 +7139,43 @@ input[type="checkbox"] {
   border-color: transparent;
 }
 
-.services-area-5 .section-title h5 {
+.Servizi -area-5 .section-title h5 {
   color: #fc4a1a;
 }
 
-.services .services__icon {
+.Servizi .Servizi __icon {
   display: inline-block;
   float: left;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .services .services__icon {
+  .Servizi .Servizi __icon {
     margin-left: 0;
   }
 }
 @media (max-width: 767px) {
-  .services .services__icon {
+  .Servizi .Servizi __icon {
     margin-left: 0;
     margin-bottom: 20px;
   }
 }
-.services .services__text {
+.Servizi .Servizi __text {
   float: left;
 }
-.services .services__text h4 {
+.Servizi .Servizi __text h4 {
   color: #161c2d;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.services .services__text p {
+.Servizi .Servizi __text p {
   margin-bottom: 5px;
 }
-.services .services__text a {
+.Servizi .Servizi __text a {
   font-size: 22px;
   color: #b7b7b7;
   font-weight: 400;
   display: block;
 }
-.services:hover a {
+.Servizi :hover a {
   color: #161c2d;
 }
 
@@ -7372,14 +7372,14 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 767px) {
-  .services-area.grey-bg.pt-125.pb-100 {
+  .Servizi -area.grey-bg.pt-125.pb-100 {
     padding-top: 75px;
     padding-bottom: 50px;
   }
 }
 
 @media (max-width: 767px) {
-  .services-area .feature_img_02 {
+  .Servizi -area .feature_img_02 {
     padding-top: 30px;
   }
 }
@@ -7414,7 +7414,7 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 767px) {
-  .services-area-5 {
+  .Servizi -area-5 {
     padding-top: 75px;
   }
 }
@@ -7437,7 +7437,7 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 767px) {
-  .services-area-5.service-padding {
+  .Servizi -area-5.service-padding {
     padding-bottom: 0;
   }
 }
@@ -7494,7 +7494,7 @@ input[type="checkbox"] {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .services-area-pb {
+  .Servizi -area-pb {
     padding-bottom: 120px;
   }
 }
@@ -9385,6 +9385,5 @@ input[type="checkbox"] {
     padding-right: 0;
   }
 }
-
 
 /*# sourceMappingURL=main.css.map */
