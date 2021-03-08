@@ -30,6 +30,33 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        facebook: "124464958944945", // Facebook page ID
+        whatsapp: "+355 69 20 57 277", // WhatsApp number
+        call_to_action: "Invia un messaggio", // Call to action
+        button_color: "#129BF4", // Color of button
+        position: "right", // Position may be 'right' or 'left'
+        order: "whatsapp,facebook", // Order of buttons
+      };
+      var proto = document.location.protocol,
+        host = "getbutton.io",
+        url = proto + "//static." + host;
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = url + "/widget-send-button/js/init.js";
+      s.onload = function () {
+        WhWidgetSendButton.init(host, proto, options);
+      };
+      var x = document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+
   <body>
     <!--[if lte IE 9]>
       <p class="browserupgrade">
@@ -68,15 +95,19 @@
               <div class="main-menu d-none d-lg-block">
                 <nav>
                   <ul>
-                    <li>
-                      <a class="active" href="index.html">Home </a>
-                    </li>
+                    <li><a href="index.html">Home </a></li>
                     <li><a href="about.html">Chi Siamo</a></li>
                     <li>
-                      <a href="services.html">Servizi </a>
+                      <a href="#">Servizi<i class="far fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                        <li>
+                          <a href="implants.html">Implantologia Dentale</a>
+                        </li>
+                        <li><a href="dental-crowns.html">Corone Dentali</a></li>
+                        <li><a href="veneers.html">Faccette Dentali</a></li>
+                      </ul>
                     </li>
-
-                    <li><a href="contact.html">Contatti</a></li>
+                    <li><a class="active" href="contact.html">Contatti</a></li>
                   </ul>
                 </nav>
               </div>
@@ -109,8 +140,13 @@
         <ul id="mobile-menu-active">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Chi Siamo</a></li>
-          <li>
-            <a href="services.html">Servizi </a>
+          <li class="has-dropdown">
+            <a href="#">Servizi</a>
+            <ul class="submenu">
+              <li><a href="implants.html">Implantologia Dentale</a></li>
+              <li><a href="dental-crowns.html">Corone Dentali</a></li>
+              <li><a href="veneers.html">Faccette Dentali</a></li>
+            </ul>
           </li>
           <li><a href="contact.html">Contatti</a></li>
         </ul>
@@ -243,9 +279,10 @@
               <div class="footer__widget mb-30">
                 <h5 class="semi-title mb-25">Link Veloci</h5>
                 <ul class="fot-list">
-                  <li></li>
                   <li><a href="about.html">Chi Siamo </a></li>
-                  <li><a href="services.html">Servizi</a></li>
+                  <li><a href="implants.html">Implantologia Dentale</a></li>
+                  <li><a href="dental-crowns.html">Corone Dentali</a></li>
+                  <li><a href="veneers.html">Faccette Dentali</a></li>
                 </ul>
               </div>
             </div>

@@ -30,6 +30,25 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+  (function () {
+      var options = {
+          facebook: "124464958944945", // Facebook page ID
+          whatsapp: "+355 69 20 57 277", // WhatsApp number
+          call_to_action: "Invia un messaggio", // Call to action
+          button_color: "#129BF4", // Color of button
+          position: "right", // Position may be 'right' or 'left'
+          order: "whatsapp,facebook", // Order of buttons
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+<!-- /GetButton.io widget -->
+
   <body>
     <!--[if lte IE 9]>
       <p class="browserupgrade">
@@ -79,7 +98,12 @@
                       <a class="active" href="index.html">Home </a>
                     </li>
                     <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="services.html">Servizi </a></li>
+                    <li><a href="#">Servizi <i class="far fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                          <li><a href="implants.html">Implantologia Dentale</a></li>
+                          <li><a href="dental-crowns.html">Corone Dentali</a></li>
+                          <li><a href="veneers.html">Faccette Dentali</a></li>
+                      </ul></a>
                     <li><a href="contact.html">Contatti</a></li>
                   </ul>
                 </nav>
@@ -111,48 +135,18 @@
         <a href="javascript:void(0);"><i class="fas fa-times"></i></a>
       </div>
 
-      <!-- offset-sidebar start -->
-      <div class="offset-sidebar">
-        <div class="offset-widget offset-logo mb-30">
-          <a href="index.html">
-            <img
-              src="assets/img/logo/Clinica Dentale Emerald.webp"
-              alt="logo"
-            />
-          </a>
-        </div>
-        <div class="offset-widget mb-40">
-          <div class="info-widget">
-            <h4 class="offset-title mb-20">Chi Siamo</h4>
-            <p class="mb-30">
-              But I must explain to you how all this mistaken idea of denouncing
-              pleasure and praising pain was born and will give you a complete
-              account of the system and expound the actual teachings of the
-              great explore
-            </p>
-            <a class="theme_btn theme_btn_bg" href="contact.html">Contact Us</a>
-          </div>
-        </div>
-        <div class="offset-widget mb-30 pr-10">
-          <div class="info-widget info-widget2">
-            <h4 class="offset-title mb-20">Contact Info</h4>
-            <p>
-              <i class="fal fa-address-book"></i> 23/A, Miranda City Likaoli
-              Prikano, Dope
-            </p>
-            <p><i class="fal fa-phone"></i> +0989 7876 9865 9</p>
-            <p><i class="fal fa-envelope-open"></i> info@example.com</p>
-          </div>
-        </div>
-      </div>
-      <!-- offset-sidebar end -->
-
       <!-- side-mobile-menu start -->
       <nav class="side-mobile-menu">
         <ul id="mobile-menu-active">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Chi Siamo</a></li>
-          <li><a href="services.html">Servizi </a></li>
+          <li class="has-dropdown"><a href="#">Servizi</a>
+            <ul class="submenu">
+                <li><a href="implants.html">Implantologia Dentale</a></li>
+                <li><a href="dental-crowns.html">Corone Dentali</a></li>
+                <li><a href="veneers.html">Faccette Dentali</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contatti</a></li>
         </ul>
       </nav>
@@ -516,7 +510,9 @@
                 <h5 class="semi-title mb-25">Link Veloci</h5>
                 <ul class="fot-list">
                   <li><a href="about.html">Chi Siamo </a></li>
-                  <li><a href="services.html">Servizi</a></li>
+                  <li><a href="implants.html">Implantologia Dentale</a></li>
+                  <li><a href="dental-crowns.html">Corone Dentali</a></li>
+                  <li><a href="veneers.html">Faccette Dentali</a></li>
                 </ul>
               </div>
             </div>
