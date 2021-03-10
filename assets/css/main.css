@@ -612,6 +612,12 @@ section-title
     margin: 0px 0px 0px 0px !important;
   }
 }
+
+
+.a-link {
+  color: #15b844;
+  text-decoration: underline;
+}
 /* For Green Screen */
 
 .list-style-decimal {
