@@ -600,6 +600,13 @@ textarea::placeholder {
 /*--
 section-title
 ----------------------------------------*/
+
+@media (max-width: 767px) {
+  .media-text-h1 {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .section-title {
     padding-left: 0 !important;
@@ -1341,6 +1348,13 @@ section-title
   margin-right: 200px;
 }
 
+.mr-300 {
+  margin-right: 300px;
+}
+
+.mr-400 {
+  margin-right: 400px;
+}
 /*-- Padding Top --*/
 .pt-5 {
   padding-top: 5px;
@@ -3550,8 +3564,6 @@ ul.right-nav {
 }
 .page-title-area::before {
   content: "";
-  background-color: #222;
-  opacity: 0.65;
   position: absolute;
   left: 0;
   top: 0;
