@@ -612,13 +612,20 @@ section-title
     margin: 0px 0px 0px 0px !important;
   }
 }
+/* For Green Screen */
 
+/* Fix Footer Contacts display */
+
+@media screen and (min-width: 1400px) {
+  #contacts{
+    margin-right: -90px !important;
+  }
+}
 
 .a-link {
   color: #15b844;
   text-decoration: underline;
 }
-/* For Green Screen */
 
 .list-style-decimal {
   list-style: decimal;
