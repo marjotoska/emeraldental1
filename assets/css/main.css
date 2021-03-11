@@ -611,13 +611,16 @@ section-title
   .p {
     margin: 0px 0px 0px 0px !important;
   }
+  .less-mb {
+    padding-bottom: -100px !important;
+  }
 }
 /* For Green Screen */
 
 /* Fix Footer Contacts display */
 
 @media screen and (min-width: 1400px) {
-  #contacts{
+  #contacts {
     margin-right: -90px !important;
   }
 }
