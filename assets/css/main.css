@@ -614,6 +614,13 @@ section-title
   .less-mb {
     padding-bottom: -100px !important;
   }
+  .implant-pic {
+    display: none;
+  }
+  .corone-dentali-vector {
+    width: 70%;
+    height: 70%;
+  }
 }
 /* For Green Screen */
 
@@ -655,6 +662,11 @@ section-title
 
 .bold {
   font-weight: bold;
+}
+
+.corone-dentali-vector {
+  width: 50%;
+  height: 50%;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
