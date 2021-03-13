@@ -193,60 +193,74 @@
               </div>
             </div>
             <div class="col-xxl-6 offset-xxl-2 col-lg-6">
-              <div class="contact-form">
-                <div class="form">
-                  <div class="row">
-                    <div class="col-xl-6">
-                      <input
-                        class="contact__input"
-                        type="text"
-                        placeholder="Nome"
-                      />
+              <form action="https://formspree.io/xlepjpjo" method="POST">
+                <div class="contact-form">
+                  <div class="form">
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <input
+                          class="contact__input"
+                          type="text"
+                          name="First Name"
+                          size="10"
+                          placeholder="Nome"
+                        />
+                      </div>
+                      <div class="col-xl-6">
+                        <input
+                          class="contact__input"
+                          type="text"
+                          name="Last Name"
+                          size="10"
+                          placeholder="Cognome"
+                        />
+                      </div>
                     </div>
-                    <div class="col-xl-6">
-                      <input
-                        class="contact__input"
-                        type="email"
-                        placeholder="Cognome"
-                      />
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <input
+                          class="contact__input"
+                          type="email"
+                          size="25"
+                          name="E-Mail"
+                          placeholder="E-Mail"
+                        />
+                      </div>
+                      <div class="col-xl-6">
+                        <input
+                          class="contact__input"
+                          type="text"
+                          size="25"
+                          name="Subject"
+                          placeholder="Soggetto"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xl-6">
-                      <input
-                        class="contact__input"
-                        type="text"
-                        placeholder="E-Mail"
-                      />
+                    <div class="row">
+                      <div class="col-12">
+                        <textarea
+                          class="contact__input contact__input-messege"
+                          name="message"
+                          size="95"
+                          name="Message"
+                          placeholder="Messaggio"
+                        ></textarea>
+                      </div>
                     </div>
-                    <div class="col-xl-6">
-                      <input
-                        class="contact__input"
-                        type="text"
-                        placeholder="Soggetto"
-                      />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <textarea
-                        class="contact__input contact__input-messege"
-                        name="message"
-                        placeholder="Messaggio"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="subs-btn">
-                        <a class="theme_btn theme_btn_bg" href="#"
-                          >Invia Richiesta <i class="fas fa-chevron-right"></i
-                        ></a>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="subs-btn">
+                          <input
+                            class="theme_btn theme_btn_bg"
+                            type="submit"
+                            value="Invia Richiesta"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
