@@ -622,8 +622,8 @@ section-title
     height: 70%;
   }
 
-  .mobile-dental-implant {
-    width: 100%;
+  .pc-dental-implant {
+    display: none;
   }
 }
 /* For Green Screen */
@@ -7535,7 +7535,7 @@ input[type="checkbox"] {
 
 @media (max-width: 767px) {
   .we_wrapper_03.w-pt.mt-50.mb-30 {
-    argin-top: 35px;
+    margin-top: 35px;
   }
 }
 
@@ -9468,8 +9468,8 @@ input[type="checkbox"] {
 
 /* te miat */
 
-@media screen and (min-width: 993 px) and (max-width: 1400px) {
+@media screen and (min-width: 993 px) {
   .pc-dental-implant {
-    width: 35%;
+    display: contents;
   }
 }
