@@ -621,6 +621,10 @@ section-title
     width: 70%;
     height: 70%;
   }
+
+  .mobile-dental-implant {
+    width: 100%;
+  }
 }
 /* For Green Screen */
 
@@ -9463,3 +9467,9 @@ input[type="checkbox"] {
 /*# sourceMappingURL=main.css.map */
 
 /* te miat */
+
+@media screen and (min-width: 993 px) and (max-width: 1400px) {
+  .pc-dental-implant {
+    width: 35%;
+  }
+}
