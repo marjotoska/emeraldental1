@@ -3614,7 +3614,7 @@ ul.right-nav {
   z-index: 1;
 }
 
-@media only screen and (max-width: 360) {
+@media only screen and (max-width: 360px) {
   .page-title-area {
     min-height: 150px;
   }
