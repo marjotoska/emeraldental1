@@ -8,15 +8,9 @@
 
 @media (min-width: 993px) {
   img#mobile-dental-implant {
-    display: none;
+    max-width: 35%;
   }
 }
-
-@media (max-width: 992px) {
-    img#pc-dental-implant {
-      display: none;
-    }
-  }
 
 :root {
   --bs-blue: #0d6efd;
