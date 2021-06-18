@@ -606,7 +606,7 @@ section-title
     font-size: 24px;
     margin-right: -20px !important;
     margin-left: 0px !important;
-    margin-top: -150px !important;
+    /* margin-top: -150px !important; */
   }
   .p {
     margin: 0px 0px 0px 0px !important;
@@ -622,9 +622,9 @@ section-title
     height: 70%;
   }
 
-  .pc-dental-implant {
+  /* img.pc-dental-implant {
     display: none;
-  }
+  } */
 }
 /* For Green Screen */
 
@@ -3609,23 +3609,14 @@ ul.right-nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 450px;
+  min-height: 350px;
   position: relative;
   z-index: 1;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+@media only screen and (max-width: 992px) {
   .page-title-area {
-    min-height: 450px;
-  }
-}
-@media (max-width: 767px) {
-  .page-title-area {
-    min-height: 400px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .page-title-area {
-    min-height: 400px;
+    min-height: 250px;
   }
 }
 .page-title-area::before {
@@ -9469,7 +9460,7 @@ input[type="checkbox"] {
 /* te miat */
 
 @media screen and (min-width: 993 px) {
-  .pc-dental-implant {
+  /* .pc-dental-implant {
     display: contents;
-  }
+  } */
 }
