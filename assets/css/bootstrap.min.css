@@ -6770,6 +6770,12 @@ fieldset:disabled .btn {
   display: flex !important;
 }
 
+@media screen and (max-width: 992px) {
+  .d-flex {
+    display: inline-block !important;
+  }
+}
+
 .d-inline-flex {
   display: inline-flex !important;
 }

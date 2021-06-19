@@ -9464,3 +9464,35 @@ input[type="checkbox"] {
 /*# sourceMappingURL=main.css.map */
 
 /* te miat */
+
+@media (max-width: 992px) {
+  .h1-mobile {
+    font-size: 30px;
+  }
+  .left-half-50-mobile {
+    max-width: 100%;
+    margin-left: 6%;
+  }
+  .right-half-50-mobile {
+    max-width: 73%;
+    margin-left: 6%;
+  }
+  .mt--100-mobile {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 993px) {
+  .left-half-50-mobile {
+    max-width: 50%;
+    display: inline-block;
+    margin-left: 6%;
+    padding-top: 100px;
+  }
+  .right-half-50-mobile {
+    max-width: 50%;
+    display: inline-block;
+    margin-left: 6%;
+    margin-right: 10%;
+  }
+}
