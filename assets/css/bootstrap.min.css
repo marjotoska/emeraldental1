@@ -7,8 +7,14 @@
  */
 
 @media (min-width: 993px) {
-  img#mobile-dental-implant {
+  img.mobile-dental-implant {
     max-width: 35%;
+  }
+}
+
+@media (min-width: 993px) {
+  img.mobile-dental-tourism {
+    max-width: 70%;
   }
 }
 
