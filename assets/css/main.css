@@ -9472,6 +9472,7 @@ input[type="checkbox"] {
   .left-half-50-mobile {
     max-width: 100%;
     margin-left: 6%;
+    margin-bottom: 30px;
   }
   .right-half-50-mobile {
     max-width: 73%;

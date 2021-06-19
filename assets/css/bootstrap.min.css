@@ -10,10 +10,23 @@
   img.mobile-dental-implant {
     max-width: 35%;
   }
+  img.mobile-dental-tourism {
+    max-width: 70%;
+  }
+  img.grid-mobile {
+    max-width: 90%;
+    margin-left: 20px;
+  }
+  img.shkalla-tujanit-mobile {
+    max-width: 50%;
+  }
 }
 
-@media (min-width: 993px) {
-  img.mobile-dental-tourism {
+@media (max-width: 992px) {
+  .shkalla-tujanit-mobile {
+    max-width: 70%;
+  }
+  .grid-mobile {
     max-width: 70%;
   }
 }
