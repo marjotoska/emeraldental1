@@ -24,10 +24,10 @@
 
 @media (max-width: 992px) {
   .shkalla-tujanit-mobile {
-    max-width: 70%;
+    max-width: 100%;
   }
   .grid-mobile {
-    max-width: 70%;
+    max-width: 100%;
   }
 }
 
