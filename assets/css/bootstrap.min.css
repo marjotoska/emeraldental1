@@ -20,6 +20,9 @@
   img.shkalla-tujanit-mobile {
     max-width: 50%;
   }
+  .moble-dental-crown{
+    min-width: 20%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -28,6 +31,9 @@
   }
   .grid-mobile {
     max-width: 100%;
+  }
+  .moble-dental-crown{
+    min-width: 20%;
   }
 }
 
