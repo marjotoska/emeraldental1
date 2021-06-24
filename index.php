@@ -1,7 +1,7 @@
+<?php if (substr_count($_SERVER[‘HTTP_ACCEPT_ENCODING’], ‘gzip’)) ob_start(“ob_gzhandler”); else ob_start(); ?>
 <!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-200241083-1">
 </script>
@@ -12,7 +12,6 @@
 
   gtag('config', 'UA-200241083-1');
 </script>
-
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
