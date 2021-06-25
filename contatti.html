@@ -207,7 +207,7 @@
             </div>
             <div class="col-xxl-6 offset-xxl-2 col-lg-6">
               <form action="https://formspree.io/xlepjpjo" method="POST">
-                <div class="contact-form">
+                <div id="contact-form">
                   <div class="form">
                     <div class="row">
                       <div class="col-xl-6">
@@ -217,6 +217,9 @@
                           name="First Name"
                           size="10"
                           placeholder="Nome"
+                          required
+                          minlength="4"
+                          pattern="[A-Z][a-z]"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -226,6 +229,9 @@
                           name="Last Name"
                           size="10"
                           placeholder="Cognome"
+                          required
+                          minlength="4"
+                          pattern="[A-Z][a-z]"
                         />
                       </div>
                     </div>
@@ -237,6 +243,8 @@
                           size="25"
                           name="E-Mail"
                           placeholder="E-Mail"
+                          required
+                          minlength="9"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -246,6 +254,9 @@
                           size="25"
                           name="Subject"
                           placeholder="Soggetto"
+                          required
+                          minlength="8"
+                          pattern="[A-Z][a-z]"
                         />
                       </div>
                     </div>
@@ -257,6 +268,8 @@
                           size="95"
                           name="Message"
                           placeholder="Messaggio"
+                          required
+                          minlength="10"
                         ></textarea>
                       </div>
                     </div>
@@ -429,7 +442,7 @@
     <script src="assets/js/jquery.meanmenu.min.js" defer></script>
     <script src="assets/js/metisMenu.min.js" defer></script>
     <script src="assets/js/jquery.nice-select.js" defer></script>
-    <script src="assets/js/ajax-form.js" defer></script>
+    <!-- <script src="assets/js/ajax-form.js" defer></script> -->
     <script src="assets/js/wow.min.js" defer></script>
     <script src="assets/js/jquery.counterup.min.js" defer></script>
     <script src="assets/js/waypoints.min.js" defer></script>
