@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-200241083-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-200241083-1');
+</script>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Contatti: Studio Dentale in Albania | Clinica Dentale Emerald</title>
+    <meta name="description" content="Contattaci per una visita preventiva senza impegno compilando il modulo. Ti contatteremo il primo possibile."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="canonical" href="https://www.emeraldental.com/contatti"/>
+    <link rel="manifest" href="site.html" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicoo.webp"
+    />
+    <!-- Place favicon.png in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/css/metisMenu.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        facebook: "124464958944945", // Facebook page ID
+        whatsapp: "+355 69 20 57 277", // WhatsApp number
+        call_to_action: "Invia un messaggio", // Call to action
+        button_color: "#15b844", // Color of button
+        position: "right", // Position may be 'right' or 'left'
+        order: "whatsapp,facebook", // Order of buttons
+      };
+      var proto = document.location.protocol,
+        host = "getbutton.io",
+        url = proto + "//static." + host;
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = url + "/widget-send-button/js/init.js";
+      s.onload = function () {
+        WhWidgetSendButton.init(host, proto, options);
+      };
+      var x = document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+
+  <body>
+    
+
+     
+    <header>
+      <div
+        class="main-header-area p-static main-header-02 main-header-06 header-06-bg pt-20 pb-10"
+      >
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+              <div class="logo">
+                <a class="logo-img" href="index.html"
+                  ><img loading="lazy"
+                    src="assets/img/logo/Clinica Dentale Emerald.webp"
+                    alt=""
+                /></a>
+                <a class="logo-img sticky-logo d-none" href="index.html"
+                  ><img loading="lazy"
+                    src="assets/img/logo/Clinica Dentale Emerald.webp"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="col-xxl-8 col-xl-7 col-lg-7 d-none d-lg-block">
+              <div class="main-menu main-menu-02 main-menu-06 d-none d-lg-block text-lg-end ml-45" style="min-width: 700px;">
+                <nav>
+                  <ul>
+                    <li>
+                      <a class="active" href="index.html">Home </a>
+                    </li>
+                    <li><a href="about.html">Chi Siamo</a></li>
+                    <li><a href="#">Servizi <i class="far fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                          <li><a href="implantologia-dentale.html">Implantologia Dentale</a></li>
+                          <li><a href="corone-dentali.html">Corone Dentali</a></li>
+                          <li><a href="facette-dentali.html">Faccette Dentali</a></li>
+                      </ul></a>
+                    </li> </a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="turismo-dentale.html">Turismo Dentale</a></li>
+                    <li><a href="#">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" > <i class="far fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                          <li><a href="contact-us.html">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" ></a></li>
+                      </ul>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div
+              class="col-xxl-2 col-xl-3 col-lg-3 col-md-6 col-6 text-xxl-start text-end"
+            >
+              <ul class="right-nav">
+                <li>
+                  <div class="hamburger-menu d-md-block d-lg-none">
+                    <a href="javascript:void(0);">
+                      <i class="far fa-bars"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="d-none d-lg-inline-block"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header-area end -->
+
+    <!-- slide-bar start -->
+    <aside class="slide-bar">
+      <div class="close-mobile-menu">
+        <a href="javascript:void(0);"><i class="fas fa-times"></i></a>
+      </div>
+
+     
+
+      <!-- side-mobile-menu start -->
+      <nav class="side-mobile-menu">
+        <ul id="mobile-menu-active">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi Siamo</a></li>
+          <li class="has-dropdown"><a href="#">Servizi</a>
+            <ul class="submenu">
+                <li><a href="implantologia-dentale.html">Implantologia Dentale</a></li>
+                <li><a href="corone-dentali.html">Corone Dentali</a></li>
+                <li><a href="facette-dentali.html">Faccette Dentali</a></li>
+            </ul>
+          </li>
+          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="turismo-dentale.html">Turismo Dentale</a></li>
+          <li>
+            <a href="#">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" > <i class="far fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <ul><a href="contact-us.html">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" ></a></ul>
+              </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- side-mobile-menu end -->
+    </aside>
+    <div class="body-overlay"></div>
+    <!-- slide-bar end -->
+
+    <main>
+      <section class="contact-area pt-125 pb-120">
+        <div class="container">
+          <div class="row">
+
+            
+            <p class="mt-30 black-color font-size-20 mb-30">
+            1. CAMPO D'APPLICAZIONE, SCOPO E DESTINATARI 
+
+            L'Azienda si impegna a rispettare le leggi e I regolamenti applicabili relativi alla protezione dei dati personali nei paesi in cui l'Azienda show. Questa Politica stabilisce I principi di base con cui l'Azienda tratta I dati personali di consumatori, clienti, fornitori, accomplice commerciali, dipendenti e altre persone e indica le responsabilità dei propri dipartimenti aziendali e dipendenti durante il trattamento dei dati personali. 
+            
+            La presente politica si applica all'Azienda e alle aziende che controlla direttamente o indirettamente che svolgono attività all'interno dello Spazio Economico Europeo (SEE) o che trattano I dati personali degli interessati all'interno del SEE. 
+            
+            I destinatari di questo documento sono tutti I dipendenti, permanenti o temporanei, e tutti I collaboratori che lavorano per conto dell'Azienda. 
+            
+            2. DOCUMENTI DI RIFERIMENTO 
+            
+            Il Regolamento (UE) 2016/679 del 27 Aprile 2016 (di seguito GDPR) 
+            
+            Decreto legislativo n. 196 del 30 Giugno 2003 (Codice Security) e s.m.i. 
+            
+            Politica di conservazione dei Dati 
+            
+            Linee guida per l'elenco dei dati e la mappatura delle attività di trattamento 
+            
+            Descrizione dei Ruolo del Responsabile della Protezione dei Dati 
+            
+            Procedura per la richiesta di accesso simulated intelligence dati da parte dell'interessato 
+            
+            Metodologia di valutazione d'impatto sulla protezione dei dati 
+            
+            Procedura di comunicazione di una violazione di dati 
+            
+            Manuale SGI 
+            
+            3. OGGETTO E FINALITÀ 
+            
+            Il GDPR stabilisce le norme per la protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché le norme per la libera circolazione di bone dati (articolo 1). 
+            
+            4. AMBITO DI APPLICAZIONE MATERIALE 
+            
+            Nell'ambito di applicazione materiale del Regolamento vi sono: 
+            
+            I dati personali sottoposti a trattamento interamente o parzialmente automatizzato. 
+            
+            I dati personali contenuti in un archivio o destinati an esservi inseriti. 
+            
+            Fuori dall'ambito di applicazione materiale vi sono: 
+            
+            I dati personali utilizzati nel corso di attività che non rientrano nell'ambito di applicazione del diritto dell'UE. 
+            
+            I dati personali utilizzati nei controlli doganali e per le pratiche di asilo e immigrazione. 
+            
+            I dati personali utilizzati in relazione promotion attività puramente personali. 
+            
+            I dati personali utilizzati a fini di prevenzione dei crimini, ecc. 
+            
+            5. AMBITO DI APPLICAZIONE TERRITORIALE 
+            
+            Il Regolamento si applica: 
+            
+            I dati personali utilizzati nel corso di attività che non rientrano nell'ambito di applicazione del diritto dell'UE. 
+            
+            I dati personali utilizzati nei controlli doganali e per le pratiche di asilo e immigrazione. 
+            
+            I dati personali utilizzati in relazione promotion attività puramente personali. 
+            
+            I dati personali utilizzati a fini di prevenzione dei crimini, ecc. 
+            
+            6. DEFINIZIONI 
+            
+            Rispetto al Codice della Security (Decreto legislativo n. 196 del 30/06/2003) è stata eliminata la definizione di dati sensibili e di dati giudiziari; ora si parla di: 
+            
+            Simulated intelligence titolari e artificial intelligence responsabili del trattamento nell'Unione, a prescindere dal luogo in cui avviene il trattamento. 
+            
+            Simulated intelligence titolari e simulated intelligence responsabili del trattamento che non sono residenti nell'Unione quando le attività di trattamento riguardano: 
+            
+            - Beni o servizi, a prescindere dal fatto che sia richiesto o meno un pagamento. - Il monitoraggio del comportamento degli interessati all'interno dell'UE. 
+            
+            Simulated intelligence titolari del trattamento non stabiliti nell'Unione, mama in un luogo in cui si applica il diritto di uno Stato membro. 
+            
+            Categorie particolari di dati personali: dati personali che rivelino l'origine razziale o etnica, le opinioni politiche, le convinzioni religiose o filosofiche, o l'appartenenza sindacale, I dati genetici, I dati biometrici intesi an identificare in modo univoco una persona fisica, I dati relativi alla salute o alla vita sessuale o all'orientamento sessuale della persona. 
+            
+            Dati relativi alla salute: dati personali attinenti alla salute fisica o mentale di una persona fisica, compresa la prestazione di servizi di assistenza sanitaria, che rivelano informazioni relative al suo stato di salute. 
+            
+            Categorie particolari di dati personali: dati personali che rivelino l'origine razziale o etnica, le opinioni politiche, le convinzioni religiose o filosofiche, o l'appartenenza sindacale, I dati genetici, I dati biometrici intesi an identificare in modo univoco una persona fisica, I dati relativi alla salute o alla vita sessuale o all'orientamento sessuale della persona. 
+            
+            Dati genetici: I dati personali relativi alle caratteristiche genetiche ereditarie o acquisite di una persona fisica che forniscono informazioni univoche sulla fisiologia o sulla salute di detta persona fisica, e che risultano in particolare dall'analisi di un campione biologico della persona fisica in questione; 
+            
+            Dati biometrici: dati personali ottenuti da un trattamento tecnico specifico relativi alle caratteristiche fisiche, fisiologiche o comportamentali di una persona fisica che ne consentono o confermano l'identificazione univoca, quali l'immagine facciale o I dati dattiloscopici. 
+            
+            Le seguenti definizioni di ends utilizzati in questo documento sono tratte dal Regolamento Generale sulla Protezione dei Dati dell'Unione Europea (GDPR): 
+            
+            Dato Personale: qualsiasi informazione riguardante una persona fisica identificata o identificabile («Interessato»); si considera identificabile la persona fisica che può essere identificata, direttamente o indirettamente, con particolare riferimento an un identificativo come il nome, un numero di identificazione, dati relativi all'ubicazione, un identificativo online o an uno o più elementi caratteristici della sua identità fisica, fisiologica, genetica, psichica, economica, culturale o sociale. 
+            
+            Titolare del trattamento dei dati (Titolare): la persona fisica o giuridica, l'autorità pubblica, il servizio o altro organismo che, singolarmente o insieme advertisement altri, determina le finalità e I mezzi del trattamento di dati personali. 
+            
+            Responsabile del trattamento dei dati (Information Processor DP): la persona fisica o giuridica, l'autorità pubblica, il servizio o altro organismo che tratta dati personali per conto del Titolare. 
+            
+            Responsabile della protezione dei dati (Information Assurance Official DPO): la persona fisica, la società, l'ente pubblico o privato, l'associazione o l'organismo cui il titolare affida, anche all'esterno della sua struttura organizzativa, specifici e definiti compiti di gestione e controllo del trattamento dei dati. La designazione di un DPO è obbligatoria: 
+            
+            - se il trattamento è svolto da un'autorità pubblica o da un organismo pubblico; 
+            
+            - se le attività principali del titolare o del responsabile consistono in trattamenti che richiedono il monitoraggio regolare e sistematico di interessati su larga scala; oppure - se le attività principali del titolare o del responsabile consistono nel trattamento su larga scala di categorie particolari di dati o di dati personali relativi a condanne penali e reati. 
+            
+            La designazione obbligatoria di un DPO può essere prevista anche in casi ulteriori in base alla legge nazionale o al diritto dell'Ue. Qualora si proceda alla designazione di un DPO su base volontaria, si applicano gli identici requisiti - in ends di criteri per la designazione, posizione e compiti - che valgono per I DPO designati in by means of obbligatoria (workmanship. 37 GDPR). 
+            
+            Trattamento: qualsiasi operazione o insieme di operazioni, compiute con o senza l'ausilio di processi automatizzati e applicate a dati personali o insiemi di dati personali, come la raccolta, la registrazione, l'organizzazione, la strutturazione, la conservazione, l'adattamento o la modifica, l'estrazione, la consultazione, l'uso, la comunicazione mediante trasmissione, diffusione o qualsiasi altra forma di messa a disposizione, il raffronto o l'interconnessione, la limitazione, la cancellazione o la distruzione. 
+            
+            Consenso dell'interessato: qualsiasi manifestazione di volontà libera, specifica, informata e inequivocabile dell'interessato, con la quale lo stesso manifesta il proprio assenso, mediante dichiarazione o azione positiva inequivocabile, che I dati personali che lo riguardano siano oggetto di trattamento. 
+            
+            Violazione dei dati personali: la violazione di sicurezza che comporta accidentalmente o in modo illecito la distruzione, la perdita, la modifica, la divulgazione non autorizzata o l'accesso simulated intelligence dati personali trasmessi, conservati o comunque trattati. 
+            
+            Anonimizzazione : Deidentificazione irreversibile dei dati personali in modo story che la persona non possa essere identificata utilizzando tempi, costi e tecnologie ragionevoli da parte del Titolare o di qualsiasi altra persona per identificare l'interessato. I principi di protezione dei dati non dovrebbero pertanto applicarsi an informazioni anonime, vale a critical informazioni che non si riferiscono an una persona fisica identificata o identificabile. 
+            
+            Pseudonimizzazione: il trattamento dei dati personali in modo story che I dati personali non possano più essere attribuiti an un interessato specifico senza l'utilizzo di informazioni aggiuntive, a condizione che bone informazioni aggiuntive siano conservate separatamente e soggette a misure tecniche e organizzative intese a garantire che bone dati personali non siano attribuiti an una persona fisica identificata o identificabile. La pseudonimizzazione riduce, mama non elimina completamente, la possibilità di collegare il dato personale all'interessato. Poiché I dati pseudonimizzati sono comunque dati personali, il trattamento dei dati pseudonimizzati dovrebbe essere conforme simulated intelligence principi del trattamento dei dati personali. 
+            
+            Trattamento transfrontaliero: trattamento di dati personali che ha luogo nell'ambito delle attività di stabilimenti in più di uno Stato membro di un Titolare o DP dei dati nell'Unione ove il Titolare o il DP siano stabiliti in più di uno Stato membro; oppure il trattamento di dati personali che ha luogo nell'ambito delle attività di un unico stabi
+        </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="google-map contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3900674950905!2d19.789333415155358!3d41.32213060800155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503196f4e25f41%3A0x3d513a924c4f86bb!2s%22Poliklinika%20Emerald%20Dental%22!5e0!3m2!1sen!2s!4v1614860276702!5m2!1sen!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </main>
+    <!--footer-area start-->
+    <footer class="footer-area heding-bg pos-rel pt-80">
+      <div class="container">
+        <div class="inner-border-bottom">
+          <div class="row pb-20">
+            <div
+              class="col-xxl-2 col-xl-4 col-lg-4 col-md-6  fadeInUp2 animated"
+              data--delay=".1s"
+            >
+              <div class="footer__widget pr-40 mb-30">
+                <h5 class="semi-title mb-25">Chi Siamo</h5>
+                <p>
+                  Emerald Dental è una moderno studio odontoiatrico situato a 5
+                  minuti dal centro della capitale Tirana. Siamo specializzati
+                  nella diagnostica avanzata e nel trattamento dei disturbi
+                  dentali e orali. I nuovi pazienti vengono accolti con una
+                  consulenza gratuita sulla salute orale.
+                </p>
+                <div class="footer-log mt-25 mb-30">
+                  <a href="index.html" class="footer-logo mb-30 restrict-size"
+                    ><img loading="lazy"
+                      src="assets/img/logo/Clinica Dentale Emerald.webp"
+                      alt=""
+                      width="200px"
+                      height="auto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xxl-2 col-xl-4 col-lg-4 col-md-3 col-sm-6  fadeInUp2 animated"
+              data--delay=".2s"
+            >
+              <div class="footer__widget mb-30">
+                <h5 class="semi-title mb-25">Link Veloci</h5>
+                <ul class="fot-list">
+                  <li><a href="about.html">Chi Siamo </a></li>
+                  <li>
+                    <a href="implantologia-dentale.html"
+                      >Implantologia Dentale</a
+                    >
+                  </li>
+                  <li><a href="corone-dentali.html">Corone Dentali</a></li>
+                  <li><a href="facette-dentali.html">Faccette Dentali</a></li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-xxl-2 col-xl-4 col-lg-4 col-md-3 col-sm-6  fadeInUp2 animated"
+              data--delay=".3s"
+            >
+              <div class="footer__widget mb-30">
+                <h5 class="semi-title mb-25">Chiedere un preventivo</h5>
+                <ul class="fot-list">
+                  <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-xxl-2 col-xl-6 col-lg-6 col-md-6 col-sm-6  fadeInUp2 animated"
+              data--delay=".4s"
+            >
+              <div class="footer__widget mb-25" id="contacts">
+                <h5 class="semi-title mb-25">Contatti</h5>
+                <ul class="fot-list address-list">
+                  <li>
+                    <a href="mailto:poliklinikaemerald@gmail.com"
+                      ><span><i class="far fa-envelope"></i></span>
+                      poliklinikaemerald@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/%22Poliklinika+Emerald+Dental%22/@41.3221306,19.7893334,17z/data=!3m1!4b1!4m5!3m4!1s0x13503196f4e25f41:0x3d513a924c4f86bb!8m2!3d41.3221266!4d19.7915221"
+                      target="blank"
+                      ><span><i class="far fa-map-marker-alt"></i></span> Rruga
+                      e Kavajes, Pallati me Shigjeta, Tirana, Albania</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html"
+                      ><span><i class="far fa-phone-volume"></i></span> +355 69
+                      20 57 277</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy-right-area pt-30">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-12">
+              <div class="copyright-social mb-25">
+                <a
+                  href="https://www.instagram.com/poliklinikaemerald"
+                  target="blank"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
+                <a
+                  href="https://www.facebook.com/poliklinikaemerald"
+                  target="blank"
+                  ><i class="fab fa-facebook-square"></i> Facebook</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/emerald-dental-1a6286202/"
+                  target="blank"
+                  ><i class="fab fa-linkedin"></i> Linkedin</a
+                >
+                <a
+                  href="https://www.youtube.com/channel/UC_5gjvyjOLhk5W3T_H_xIzA"
+                  target="blank"
+                  ><i class="fab fa-youtube"></i> Youtube</a
+                >
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12">
+              <div class="copyright mb-25 text-start text-lg-end">
+                <p>© 2021 Copyright Clinica Dentale Emerald</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer-area end-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/owl.carousel.min.js" defer></script>
+    <script src="assets/js/slick.min.js" defer></script>
+    <script src="assets/js/jquery.meanmenu.min.js" defer></script>
+    <script src="assets/js/metisMenu.min.js" defer></script>
+    <script src="assets/js/jquery.nice-select.js" defer></script>
+    <script src="assets/js/ajax-form.js" defer></script>
+    <script src="assets/js/tilt.jquery.js" defer></script>
+    <script src="assets/js/plugins.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
