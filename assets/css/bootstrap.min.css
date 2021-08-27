@@ -20,8 +20,14 @@
   img.shkalla-tujanit-mobile {
     max-width: 50%;
   }
-  .moble-dental-crown{
+  .moble-dental-crown {
     min-width: 20%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .stubborn-text-on-contact-us {
+    padding-right: 50px;
   }
 }
 
@@ -32,7 +38,7 @@
   .grid-mobile {
     max-width: 100%;
   }
-  .moble-dental-crown{
+  .moble-dental-crown {
     min-width: 20%;
   }
 }
