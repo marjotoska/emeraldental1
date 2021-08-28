@@ -23,6 +23,15 @@
   .moble-dental-crown {
     min-width: 20%;
   }
+  .flex-pc-block-mobile {
+    display: flex;
+  }
+  .card {
+    width: 33%;
+  }
+  .mobile-fix-form {
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -41,11 +50,98 @@
   .moble-dental-crown {
     min-width: 20%;
   }
+  .card {
+    max-width: 99%;
+  }
+  .ninety-percent-width-mobile {
+    max-width: 95%;
+  }
+  .flex-pc-block-mobile {
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+  .mobile-fix-form {
+    padding-right: 0px;
+  }
 }
 
-.text-shadow-class{
+.my-link-style {
+  color: #0000ff;
+}
+
+.my-link-style:active {
+  color: rgb(218, 0, 0);
+}
+
+.my-link-style:hover {
+  color: rgb(218, 0, 0);
+}
+
+.text-shadow-class {
   text-shadow: -1px 5px 7px #d5d5d5;
 }
+
+/* Price Card CSS START */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  background-clip: border-box;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image {
+  position: relative;
+  box-sizing: inherit;
+}
+
+.card .card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.card .card-image .card-title {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+}
+
+.card .card-content {
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}
+
+.card .card-action:last-child {
+  border-radius: 0 0 2px 2px;
+  background-color: inherit;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  position: relative;
+  padding: 16px 24px;
+}
+
+/* Price Card CSS END */
 
 :root {
   --bs-blue: #0d6efd;
