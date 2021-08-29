@@ -6,6 +6,35 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+@media (max-width: 992px) {
+  .shkalla-tujanit-mobile {
+    max-width: 100%;
+  }
+  .grid-mobile {
+    max-width: 100%;
+  }
+  .moble-dental-crown {
+    min-width: 20%;
+  }
+  .card {
+    max-width: 99%;
+  }
+  .ninety-percent-width-mobile {
+    max-width: 95%;
+  }
+  .flex-pc-block-mobile {
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+  .flex-centeronmobile-nstuff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 993px) {
   img.mobile-dental-implant {
     max-width: 35%;
@@ -29,41 +58,28 @@
   .card {
     width: 33%;
   }
+  .flex-centeronmobile-nstuff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
   .mobile-fix-form {
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-fix-form {
+    padding-right: 0px;
   }
 }
 
 @media (max-width: 1200px) {
   .stubborn-text-on-contact-us {
     padding-right: 50px;
-  }
-}
-
-@media (max-width: 992px) {
-  .shkalla-tujanit-mobile {
-    max-width: 100%;
-  }
-  .grid-mobile {
-    max-width: 100%;
-  }
-  .moble-dental-crown {
-    min-width: 20%;
-  }
-  .card {
-    max-width: 99%;
-  }
-  .ninety-percent-width-mobile {
-    max-width: 95%;
-  }
-  .flex-pc-block-mobile {
-    display: block;
-  }
-  .card {
-    width: 100%;
-  }
-  .mobile-fix-form {
-    padding-right: 0px;
   }
 }
 
@@ -83,6 +99,11 @@
   text-shadow: -1px 5px 7px #d5d5d5;
 }
 
+.flex-alignitems-justifycontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Price Card CSS START */
 
 .card {
