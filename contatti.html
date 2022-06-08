@@ -218,7 +218,7 @@ id="contact-form" method="POST">
                           placeholder="Nome"
                           required
                           minlength="4"
-                          pattern="[A-Za-z]*"
+                          pattern="[A-Za-z]*^(?!eric|Eric).*$"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -230,7 +230,7 @@ id="contact-form" method="POST">
                           placeholder="Cognome"
                           required
                           minlength="4"
-                          pattern="[A-Za-z]*"
+                          pattern="[A-Za-z]*^(?!jones|Jones).*$"
                         />
                       </div>
                     </div>
@@ -244,6 +244,7 @@ id="contact-form" method="POST">
                           placeholder="E-Mail"
                           required
                           minlength="9"
+                          pattern="^((?!eric.jones.z).)*$"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -255,7 +256,7 @@ id="contact-form" method="POST">
                           placeholder="Soggetto"
                           required
                           minlength="7"
-                          pattern="[A-Za-z0-9 ]*"
+                          pattern="[A-Za-z0-9 ]*^((?!eyeballs|Eyeballs).)*$"
                         />
                       </div>
                     </div>
@@ -268,7 +269,8 @@ id="contact-form" method="POST">
                           name="Message"
                           placeholder="Messaggio"
                           required
-                          minlength="5"
+                          minlength="9"
+                          pattern="[A-Za-z0-9 ]*^((?!CLICK HERE|Eyeballs).)*$"
                         ></textarea>
                       </div>
                     </div>

@@ -344,7 +344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="flex-alignitems-justifycontent" style="flex-direction: column; min-width: 100%;">
           <div class="col-xxl-6 col-lg-6">
             <form action="https://formspree.io/xlepjpjo"  
-id="contact-form" method="POST">
+              id="contact-form" method="POST">
               <div id="contact-form">
                 <div class="form">
                   <div class="row">
@@ -357,7 +357,7 @@ id="contact-form" method="POST">
                         placeholder="Nome"
                         required
                         minlength="4"
-                        pattern="[A-Za-z]*"
+                        pattern="[A-Za-z]*^(?!eric|Eric).*$"
                       />
                     </div>
                     <div class="col-xl-6">
@@ -369,7 +369,7 @@ id="contact-form" method="POST">
                         placeholder="Cognome"
                         required
                         minlength="4"
-                        pattern="[A-Za-z]*"
+                        pattern="[A-Za-z]*^(?!jones|Jones).*$"
                       />
                     </div>
                   </div>
@@ -382,7 +382,8 @@ id="contact-form" method="POST">
                         name="E-Mail"
                         placeholder="E-Mail"
                         required
-                        minlength="9"
+                        minlength="9" 
+                        pattern="^((?!eric.jones.z).)*$"
                       />
                     </div>
                     <div class="col-xl-6">
@@ -394,7 +395,7 @@ id="contact-form" method="POST">
                         placeholder="Soggetto"
                         required
                         minlength="7"
-                        pattern="[A-Za-z0-9 ]*"
+                        pattern="[A-Za-z0-9 ]*^((?!eyeballs|Eyeballs).)*$"
                       />
                     </div>
                   </div>
@@ -408,6 +409,7 @@ id="contact-form" method="POST">
                         placeholder="Messaggio"
                         required
                         minlength="9"
+                        pattern="[A-Za-z0-9 ]*^((?!CLICK HERE|Eyeballs).)*$"
                       ></textarea>
                     </div>
                   </div>
@@ -567,6 +569,23 @@ id="contact-form" method="POST">
     <!--footer-area end-->
 
     <!-- JS here -->
+    <script>
+      function regEx(){
+        let firstname = document.getElementsByName("First Name");
+        let lastname = document.getElementsByName("Last Name");
+        const globalRegex = new RegExp("eric", "gi");
+        const globalRegex1 = new RegExp("jones", "gi");
+
+        if(globalRegex.test(firstname) == false && globalRegexq.test(lastname) == false)
+        {
+          console.log("eric jones not allowed here!");
+        }
+        else
+        {
+          console.log("ALLES GUT!");
+        }
+      }
+    </script>
     <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
