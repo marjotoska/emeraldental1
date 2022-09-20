@@ -388,18 +388,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </section> -->
       <!--what-we-do-area end-->
 
-      <section class="testimonial-area-03 pos-rel pt-125 pb-125">
-        <div class="container align-items-center section-title text-center">
-          <h3 class="mb-35" style="color: #15b844; font-size: 32px; margin-top: -20px;">Laurie è una paziente degli Stati Uniti. Si è fidata di noi con il suo sorriso ed è stata contenta dei suoi risultati!
-            <br><br> Scopri di più sulla sua esperienza in questa intervista di seguito.
-          </h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/1nZVJRetmMs" title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            class="ninety-percent-width-mobile">
-          </iframe>
-        </div>
-      </section>
-
       <!--testimonial-area start-->
       <section class="testimonial-area-03 pos-rel grey-bg pt-125 pb-125">
         <div class="container">
@@ -682,7 +670,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12">
               <div class="copyright mb-25 text-start text-lg-end">
-                <p>© <span id="year"></span> Copyright Clinica Dentale Emerald</p>
+                <p>© <span id="year"></span>
+                  <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+                  Copyright Clinica Dentale Emerald</p>
               </div>
             </div>
           </div>
@@ -692,7 +682,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!--footer-area end-->
 
     <!-- JS here -->
-    <script src="assets/js/yearscript.js" defer></script>
+    <!-- <script src="assets/js/yearscript.js" defer></script> -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>

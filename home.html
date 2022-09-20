@@ -602,7 +602,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12">
               <div class="copyright mb-25 text-start text-lg-end">
-                <p>© <span id="year"></span> Copyright Emerald Dental Clinic</p>
+                <p>© <span id="year"></span>
+                  <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script> Copyright Emerald Dental Clinic</p>
               </div>
             </div>
           </div>
@@ -612,7 +613,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!--footer-area end-->
 
     <!-- JS here -->
-    <script src="assets/js/yearscript.js" defer></script>
+    <!-- <script src="assets/js/yearscript.js" defer></script> -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
