@@ -10,6 +10,14 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+.list-disc{
+  list-style-type: disc;
+}
+
+.color-black{
+  color: #000;
+}
+
 /* THANK YOU PAGE CSS, DESKTOP START*/
 .thanks{
   margin:auto; 
@@ -56,6 +64,9 @@
   }
   .flex-pc-block-mobile {
     display: block;
+  }
+  .zero-margin-mobile{
+    margin-left: -110px;
   }
   .card {
     width: 100%;
@@ -7515,6 +7526,10 @@ fieldset:disabled .btn {
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
+}
+
+.mt-minus-25{
+  margin-top: -25px;
 }
 
 .mt-0 {
