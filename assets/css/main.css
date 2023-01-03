@@ -9417,6 +9417,10 @@ input[type="checkbox"] {
   .mt--100-mobile {
     margin-top: 30px;
   }
+  .mobile-equal-padding{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @media (min-width: 993px) {
@@ -9431,5 +9435,9 @@ input[type="checkbox"] {
     display: inline-block;
     margin-left: 6%;
     margin-right: 10%;
+  }
+  .mobile-equal-padding{
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
