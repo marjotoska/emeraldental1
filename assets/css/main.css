@@ -9440,6 +9440,31 @@ input[type="checkbox"] {
   .mobile-padding-change{
     padding-left: 0px;
   }
+  a.hover-white:hover{
+    background-color: #ffffff;
+    color: #15b844;
+  }
+  .hover-white{
+    border: none;
+    background-color: #15b844;
+    padding: 14px 29px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.5s;
+    align-items: center;
+  }
+  .button-div{
+    margin: auto;
+    width: 41%;
+    padding: 10px 0 10px 0;
+    margin-bottom:50px
+  }
+  .display-contents-mobile-block-pc
+  {
+    display: contents;
+  }
 
 }
 /* pc view */
@@ -9467,5 +9492,30 @@ input[type="checkbox"] {
   .mobile-padding-change{
     padding-left: 50px;
     padding-right: 0px;
+  }
+  a.hover-white:hover{
+    background-color: #ffffff;
+    color: #15b844;
+  }
+  .hover-white{
+    border: none;
+    background-color: #15b844;
+    padding: 14px 29px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.5s;
+    align-items: center;
+  }
+  .button-div{
+    margin: auto;
+    width: 38%;
+    padding: 10px 0 10px 0;
+    margin-bottom:50px
+  }
+  .display-contents-mobile-block-pc
+  {
+    display: block;
   }
 }
