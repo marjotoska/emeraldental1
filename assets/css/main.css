@@ -9437,6 +9437,10 @@ input[type="checkbox"] {
     width: 358.125px; 
     height: 238.870095573px
   }
+  .mobile-blog-pic-square{
+    width: 238.870095573px; 
+    height: 238.870095573px
+  }
   .mobile-padding-change{
     padding-left: 0px;
   }
@@ -9487,6 +9491,10 @@ input[type="checkbox"] {
   }
   .mobile-blog-pic{
     width: 955px; 
+    height: 636.986921529px
+  }
+  .mobile-blog-pic-square{
+    width: 636.986921529px; 
     height: 636.986921529px
   }
   .mobile-padding-change{
