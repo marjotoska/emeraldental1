@@ -9412,6 +9412,51 @@ input[type="checkbox"] {
 /*# sourceMappingURL=main.css.map */
 
 /* te miat */
+
+.theme_btn_google_review {
+  overflow: hidden;
+  color: #ffffff;
+  background: #15b844;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Circular Std";
+  padding: 10px 26px 10px 25px;
+  display: inline-block;
+  border-radius: 7px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+.theme_btn_google_review i {
+  font-size: 13px;
+  line-height: 1;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.theme_btn_google_review::before {
+  top: 0px;
+  width: 0px;
+  left: auto;
+  right: 0px;
+  z-index: -1;
+  bottom: 0px;
+  content: "";
+  position: absolute;
+  border-radius: 7px;
+  transition: all 0.3s ease-in-out;
+}
+.theme_btn_google_review:hover {
+  color: #ffffff;
+}
+.theme_btn_google_review:hover::before {
+  left: 0px;
+  width: 100%;
+  right: auto;
+}
+
 /* mobile view */
 @media (max-width: 992px) {
   .h1-mobile {
