@@ -1,14 +1,6 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
-Theme Name: Turismo Dentale | Clinica Dentale Emerald
-Author: bdevs
-Support: nasir.chalo@gmail.com
-Description: Saas & Software Landing Page Template
-Version: 1.0
-
------------------------------------------------------------------------------------
-
 CSS INDEX
 ===================
 
@@ -9413,6 +9405,86 @@ input[type="checkbox"] {
 
 /* te miat */
 
+/* css per listen e turizmit dentar me 7 pika */
+.progress-list p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.progress-list ol {
+	list-style: none;
+	counter-reset: list;
+	padding: 0 1rem;
+}
+
+.progress-list li {
+	--stop: calc(100% / var(--length) * var(--i));
+	--l: 40%;
+	--l2: 88%;
+  /* --l: A <percentage> or the keyword none, which represents lightness. Here 100% is white, 0% is black, and 50% is "normal". */
+	--c1: hsl(137, 80%, var(--l));
+	--c2: hsl(137, 80%, var(--l2));
+	
+	position: relative;
+	counter-increment: list;
+	max-width: 45rem;
+	margin: 2rem auto;
+	padding: 2rem 1rem 1rem;
+	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+	border-radius: 0.25rem;
+	overflow: hidden;
+	background-color: white;
+}
+
+.progress-list li::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+}
+
+.progress-list h3 {
+	display: flex;
+	align-items: baseline;
+	margin: 0 0 1rem;
+	color: #15b844;
+}
+
+.progress-list h3::before {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	content: counter(list);
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: #15b844;
+	color: white;
+}
+
+@media (min-width: 40em) {
+	.progress-list li {
+		margin: 3rem auto;
+		padding: 3rem 2rem 2rem;
+	}
+	
+	.progress-list h3 {
+		font-size: 2.25rem;
+		margin: 0 0 2rem;
+	}
+	
+	.progress-list h3::before {
+		margin-right: 1.5rem;
+	}
+}
+
 .theme_btn_google_review {
   overflow: hidden;
   color: #ffffff;
@@ -9515,6 +9587,13 @@ input[type="checkbox"] {
     display: contents;
   }
 
+/* pc view */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .sm-p-left{
+    margin: 1rem 25rem 1rem 0rem;
+  }
+}
+
 }
 /* pc view */
 @media (min-width: 993px) {
@@ -9570,5 +9649,14 @@ input[type="checkbox"] {
   .display-contents-mobile-block-pc
   {
     display: block;
+  }
+  .sm-p-left{
+  margin: 1.5rem 25rem 1.5rem 0rem;
+  }
+
+  @media (min-width: 1200px){
+    .sm-p-left{
+      margin: 1.5rem 3rem 1.5rem 0rem;
+    }
   }
 }
