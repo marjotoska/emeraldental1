@@ -9401,6 +9401,12 @@ input[type="checkbox"] {
   }
 }
 
+ol.decimal > li {
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
 /* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE */
 /* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE */
 /* ~ HERO-IMAGE CODE START(IN /TURISMO-DENTALE/ PAGE) ~ */
