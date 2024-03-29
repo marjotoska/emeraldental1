@@ -94,15 +94,25 @@
 <url>
   <loc>https://www.emeraldental.com/dental-tourism</loc>
   <lastmod>2024-03-29T12:42:46+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.emeraldental.com/la-migliore-clinica-dentale-in-tirana</loc>
   <lastmod>2024-03-29T12:42:46+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.emeraldental.com/best-dental-clinic-in-tirana</loc>
+  <lastmod>2024-03-29T12:42:46+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.emeraldental.com/endodontics</loc>
+  <lastmod>2024-03-29T12:42:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.emeraldental.com/endodonzia</loc>
   <lastmod>2024-03-29T12:42:46+00:00</lastmod>
   <priority>0.51</priority>
 </url>
