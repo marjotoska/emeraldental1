@@ -51,7 +51,7 @@
   (function () {
       var options = {
           facebook: "124464958944945", // Facebook page ID
-          whatsapp: "+355 69 20 57 277", // WhatsApp number
+          whatsapp: "+39 350 910 5210", // WhatsApp number
           call_to_action: "Hai una domanda? Inviaci un messaggio", // Call to action
           button_color: "#15b844", // Color of button
           position: "right", // Position may be 'right' or 'left'
@@ -421,15 +421,26 @@
                     <div class="col-xl-6">
                       <input
                         class="contact__input"
-                        type="text"
-                        size="25"
-                        name="Subject"
-                        placeholder="Soggetto"
+                        type="tel"
+                        size="15"
+                        name="Phone Number"
+                        placeholder="Numero di telefono"
                         required
                         minlength="7"
-                        pattern="[A-Za-z0-9 ]*^((?!eyeballs|Eyeballs).)*$"
+                        pattern="[0-9]*$"
                       />
-                    </div>
+                  </div>
+                  <div class="col-12">
+                    <input
+                      class="contact__input"
+                      type="text"
+                      size="25"
+                      name="Subject"
+                      placeholder="Soggetto"
+                      required
+                      minlength="7"
+                      pattern="[A-Za-z0-9 ]*^((?!eyeballs|Eyeballs).)*$"
+                    />
                   </div>
                   <div class="row">
                     <div class="col-12">
@@ -469,6 +480,11 @@
             style="display: flex; align-items: center; justify-content: center; text-align: center; font-size: 20px;" 
             class="text-shadow-class my-link-style">
             Inviare una mail direttamente a: poliklinikaemerald@gmail.com
+          </a>
+          <a href="https://wa.me/393509105210" target="_blank"
+            style="display: flex; align-items: center; justify-content: center; text-align: center; font-size: 20px;" 
+            class="text-shadow-class my-link-style">
+            Contattaci su WhatsApp: +39 350 910 5210
           </a>
                  
           </div>

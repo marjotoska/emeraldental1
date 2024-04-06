@@ -48,8 +48,8 @@
     (function () {
       var options = {
         facebook: "124464958944945", // Facebook page ID
-        whatsapp: "+355 69 20 57 277", // WhatsApp number
-        call_to_action: "Invia un messaggio", // Call to action
+        whatsapp: "+39 350 910 5210", // WhatsApp number
+        call_to_action: "Hai una domanda? Inviaci un messaggio", // Call to action
         button_color: "#15b844", // Color of button
         position: "right", // Position may be 'right' or 'left'
         order: "whatsapp,facebook", // Order of buttons
@@ -241,6 +241,18 @@
                         />
                       </div>
                       <div class="col-xl-6">
+                        <input
+                          class="contact__input"
+                          type="tel"
+                          size="15"
+                          name="Phone Number"
+                          placeholder="Numero di telefono"
+                          required
+                          minlength="7"
+                          pattern="[0-9]*$"
+                        />
+                      </div>
+                      <div class="col-12">
                         <input
                           class="contact__input"
                           type="text"
