@@ -9662,6 +9662,8 @@ ol.decimal > li {
 	background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
 }
 
+
+.progress-list h2,
 .progress-list h3 {
 	display: flex;
 	align-items: baseline;
@@ -9669,6 +9671,7 @@ ol.decimal > li {
 	color: #15b844;
 }
 
+.progress-list h2::before,
 .progress-list h3::before {
 	display: flex;
 	justify-content: center;
@@ -9690,13 +9693,15 @@ ol.decimal > li {
 		padding: 3rem 2rem 2rem;
 	}
 	
-	.progress-list h3 {
+	.progress-list h2,
+  .progress-list h3 {
 		font-size: 2.25rem;
 		margin: 0 0 2rem;
 	}
 	
-	.progress-list h3::before {
-		margin-right: 1.5rem;
+.progress-list h2::before, 
+.progress-list h3::before {
+  margin-right: 1.5rem;
 	}
 }
 
@@ -9780,6 +9785,9 @@ ol.decimal > li {
     width: 358.125px; 
     height: 238.870095573px
   }
+  .mobile-emerald-card-pic{
+    width: 320.125px; 
+  }
   .mobile-blog-pic-square{
     width: 238.870095573px; 
     height: 238.870095573px
@@ -9849,6 +9857,9 @@ ol.decimal > li {
   .mobile-blog-pic-square{
     width: 636.986921529px; 
     height: 636.986921529px
+  }
+  .mobile-emerald-card-pic{
+    width: 655px;
   }
   .mobile-padding-change{
     padding-left: 50px;
