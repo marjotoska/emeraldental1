@@ -9834,6 +9834,9 @@ ol.decimal > li {
   .hide-on-pc{
     display: none;
   }
+  .width-108-for-navbar{
+    width: 108%;
+  }
   .left-half-50-mobile {
     max-width: 50%;
     display: inline-block;
