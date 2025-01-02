@@ -2952,6 +2952,10 @@ padding-left: 52px;
 }
 
 /* 04. header */
+#position-relative{
+  position: relative;
+}
+
 .main-header-area {
   position: absolute;
   z-index: 999;
