@@ -9791,6 +9791,11 @@ ol.decimal > li {
     width: 358.125px; 
     height: 238.870095573px
   }
+  /* same size as the one above */
+  .mobile-blog-pic-small{
+    width: 358.125px; 
+    height: 238.870095573px
+  }
   .mobile-emerald-card-pic{
     width: 320.125px; 
   }
@@ -9862,6 +9867,10 @@ ol.decimal > li {
   .mobile-blog-pic{
     width: 955px; 
     height: 636.986921529px
+  }
+  .mobile-blog-pic-small{
+    width: 666px; 
+    height: 444px
   }
   .mobile-blog-pic-square{
     width: 636.986921529px; 
