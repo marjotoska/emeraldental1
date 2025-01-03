@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /best-tourist-attractions-in-albania-p2.html
-Disallow: /quanto-costa-rifarsi-i-denti-in-tirana.html
