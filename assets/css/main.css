@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
+KTU ESHTE DHE KODI IM :)
 
 CSS INDEX
 ===================
@@ -29,6 +36,14 @@ CSS INDEX
 23. footer
 -----------------------------------------------------------------------------------*/
 /* 01. theme default styles */
+
+
+/*aliGN LEFT IMPORTANT*/
+
+body .text-left {
+  text-align: left !important;
+}
+
 @font-face {
   font-family: "Circular Std";
   src: url("CircularStd-MediumItalic.html");
