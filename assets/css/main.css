@@ -9430,6 +9430,42 @@ ol.decimal > li {
 /* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE */
 /* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE */
 /* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE *//* MY CUSTOM CSS HERE */
+
+.tighter-divs{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+ol.numbered-list {
+  list-style-type: none;
+  counter-reset: whatever;
+
+  display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+ol.numbered-list li:before {
+    counter-increment: whatever;
+    content: counters(whatever, ".");
+
+    font-weight: bold;
+    font-size: 16px;
+
+    width: 35px;
+    height: 35px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 10px 10px 0;
+    background-color: #1db100;
+    border-radius: 50%;
+
+    color: #fff;
+}
+
 /* ~ HERO-IMAGE CODE START(IN /TURISMO-DENTALE/ PAGE) ~ */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
@@ -9463,6 +9499,14 @@ ol.decimal > li {
   font-size: 60px;
 }
 /* THANK YOU PAGE CSS, DESKTOP END*/
+
+/* mobile */
+@media (max-width: 992px) {
+  .tighter-divs{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
 
 /* THANK YOU PAGE CSS, MOBILE START*/
 @media (max-width: 992px) {
