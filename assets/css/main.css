@@ -6,7 +6,6 @@ KTU ESHTE DHE KODI IM :)
 KTU ESHTE DHE KODI IM :)
 KTU ESHTE DHE KODI IM :)
 KTU ESHTE DHE KODI IM :)
-KTU ESHTE DHE KODI IM :)
 
 CSS INDEX
 ===================
@@ -9100,6 +9099,9 @@ input[type="checkbox"] {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  div.parent-wrapper.seventeen-p-equal-padding{
+    padding-top: 320px;
+  }
   .footer__widget {
     padding-left: 0;
   }
@@ -9814,8 +9816,22 @@ ol.numbered-list li:before {
   right: auto;
 }
 
+.seventeen-p-equal-padding{
+  padding-left: 17%;
+  padding-right: 17%;
+}
+.list-style-disc{
+  list-style: disc;
+  margin-left: 18px;
+}
+
 /* mobile view */
 @media (max-width: 992px) {
+  div.parent-wrapper.seventeen-p-equal-padding{
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 220px;
+  }
   .green-bg-section{
     background-color: #15b844;
     margin-top: -10px;
@@ -9901,6 +9917,11 @@ ol.numbered-list li:before {
 }
 /* pc view */
 @media (min-width: 993px) {
+  div.parent-wrapper.seventeen-p-equal-padding{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 230px;
+  }
   .hide-on-pc{
     display: none;
   }
