@@ -88,19 +88,26 @@
             background: #ffffff !important; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
+        /* 3. ENSURE SUBMENU LINKS STAY DARK */
+        /* This prevents them from ever turning white at the top of the page */
+        .main-menu ul li .submenu li a {
+            color: #000000 !important; /* Or whatever dark color your brand uses */
+            /* background-color: #ffffff; Ensures the background of the dropdown is solid */
+        }
         
         /* Ensure text returns to original color when scrolled */
         header.scrolled .main-menu ul li a,
         header.scrolled .hamburger-menu a i,
         header.scrolled .main-menu ul li i {
-            color: inherit !important; /* Reverts to main.css colors */
+            color: #000000 !important; /* Reverts to main.css colors */
         }
 
         /* --- HERO BACKGROUND LOGIC --- */
         .hero-background-wrapper {
             /* 10% black overlay (0.1) over the image */
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-                        url('assets/img/blog/clear_aligner_blue_bg.webp');
+                        url('assets/img/oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants/OMF-Surgery-2.webp');
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -168,50 +175,50 @@
       <div id="position-relative" class="main-header-area main-header-02 main-header-06 header-06-bg pt-20 pb-10">
       <div class="container">
           <div class="row align-items-center justify-content-between">
-          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
-              <div class="logo">
-              <a class="logo-img" href="home.html"
-                  ><img loading="lazy"
-                  src="assets/img/logo/Emerald Dental Clinic Logo.webp"
-                  alt="Emerald Clinic"
-              /></a>
-              <a class="logo-img sticky-logo d-none" href="home.html"
-                  ><img loading="lazy"
-                  src="assets/img/logo/Emerald Dental Clinic Logo.webp"
-                  loading="lazy"
-                  alt=""
-              /></a>
-              </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+                <div class="logo">
+                  <a class="logo-img" href="home.html"
+                      ><img loading="lazy"
+                      src="assets/img/logo/Emerald Dental Clinic Logo.webp"
+                      alt="Emerald Clinic"
+                  /></a>
+                  <a class="logo-img sticky-logo d-none" href="home.html"
+                      ><img loading="lazy"
+                      src="assets/img/logo/Emerald Dental Clinic Logo.webp"
+                      loading="lazy"
+                      alt=""
+                  /></a>
+                </div>
           </div>
           <div class="col-xxl-8 col-xl-10 col-lg-7 d-none d-lg-block">
               <div class="width-108-for-navbar main-menu main-menu-02 main-menu-06 d-none d-lg-block text-lg-end ml-45" style="min-width: 700px;">
-              <nav>
-                  <ul>
-                      <li>
-                          <a class="active" href="home.html">Home </a>
-                      </li>
-                      <li>
-                          <a href="about-us.html">About Us</a>
-                      </li>
-                      <li>
-                          <a href="#">Services <i class="far fa-chevron-down"></i></a>
-                          <ul class="submenu">
-                              <li><a href="dental-implants.html">Dental Implants</a></li>
-                              <li><a href="dental-crowns.html">Dental Crowns</a></li>
-                              <li><a href="veneers.html">Veneers</a></li>
-                              <li><a href="endodontics.html">Endodontics</a></li>
-                              <li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a></li>
-                          </ul>
-                      </li>
-                      <li><a href="prices.html">Prices</a></li>
-                      <li><a href="contact-us.html">Contact</a></li>
-                      <li><a href="dental-tourism.html">Dental Tourism</a></li>
-                      <li><a href="blog-en.html">Blog</a></li>
-                      <li>
-                          <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" > <i class="far fa-chevron-down"></i></a>
-                      </li>
-                  </ul>
-              </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="active" href="home.html">Home </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Services <i class="far fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="dental-implants.html">Dental Implants</a></li>
+                                <li><a href="dental-crowns.html">Dental Crowns</a></li>
+                                <li><a href="veneers.html">Veneers</a></li>
+                                <li><a href="endodontics.html">Endodontics</a></li>
+                                <li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="dental-tourism.html">Dental Tourism</a></li>
+                        <li><a href="blog-en.html">Blog</a></li>
+                        <li>
+                            <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" > <i class="far fa-chevron-down"></i></a>
+                        </li>
+                    </ul>
+                </nav>
               </div>
           </div>
           <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-6 col-6 text-xxl-start text-end">
@@ -595,7 +602,7 @@
         <!-- REDIRECT TO OTHER BLOG PAGES START -->
           <nav class="blog-navigation">
             <a href="endodontics.html" class="nav-tile prev-post">
-              <div class="tile-bg" style="background-image: url('');"></div>
+              <div class="tile-bg" style="background-image: url('./assets/img/endo_cover-noise.webp');"></div>
               <div class="tile-content">
                 <span class="nav-label"><span class="arrow">←</span> Previous Post</span>
                 <h2 class="nav-title" style="color: #fff">Endodontics, all you need to know | Emerald Dental Clinic </h2>
