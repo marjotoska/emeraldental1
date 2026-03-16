@@ -9836,6 +9836,10 @@ ol.numbered-list li:before {
   list-style-type: decimal; /* ensures li items inherit decimal */
 }
 
+.no-numbering::before {
+    content: none !important;
+}
+
 @media (min-width: 992px) {
   div.parent-wrapper.seventeen-p-equal-padding{
     padding-left: 60px;
