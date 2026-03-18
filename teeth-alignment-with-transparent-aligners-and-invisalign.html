@@ -88,12 +88,19 @@
             background: #ffffff !important; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
+        /* 3. ENSURE SUBMENU LINKS STAY DARK */
+        /* This prevents them from ever turning white at the top of the page */
+        .main-menu ul li .submenu li a {
+            color: #000000 !important; /* Or whatever dark color your brand uses */
+            /* background-color: #ffffff; Ensures the background of the dropdown is solid */
+        }
         
         /* Ensure text returns to original color when scrolled */
         header.scrolled .main-menu ul li a,
         header.scrolled .hamburger-menu a i,
         header.scrolled .main-menu ul li i {
-            color: inherit !important; /* Reverts to main.css colors */
+            color: #000000 !important; /* Reverts to main.css colors */
         }
 
         /* --- HERO BACKGROUND LOGIC --- */
@@ -212,7 +219,7 @@
                           <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
                           <ul class="submenu">
                               <li><a href="allineamento-denti-con-aligner-trasparent-e-invisalign.html">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
-                              <li><a href="drejtimi-i-dhembeve-me-invisalign.html">AL <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Gjuha Shqip" ></a></li>
+                              <li><a href="drejtimi-i-dhembeve-me-invisalign.html">AL <img loading="lazy" src="assets/img/header/al-flag-3.png" alt="Gjuha Shqip" ></a></li>
                           </ul>
                       </li>
                   </ul>
@@ -264,7 +271,7 @@
                 <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
                 <ul class="submenu">
                     <li><a href="allineamento-denti-con-aligner-trasparent-e-invisalign.html">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
-                    <li><a href="drejtimi-i-dhembeve-me-invisalign.html">AL <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Gjuha Shqip" ></a></li>
+                    <li><a href="drejtimi-i-dhembeve-me-invisalign.html">AL <img loading="lazy" src="assets/img/header/al-flag-3.png" alt="Gjuha Shqip" ></a></li>
                 </ul>
             </li>
             </ul>
