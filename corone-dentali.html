@@ -227,6 +227,44 @@
                         <p class="mt-20 black-color font-size-20">Dopo che avete deciso per il tipo di corona, il dentista dovrebbe preparare il dente. Il dente dovrebbe essere rastremato e accorciato in modo che, insieme alla corona, abbia le stesse dimensioni del dente naturale.</p>
                         <p class="mt-20 black-color font-size-20"></p>
 
+
+
+                    <!-- VIDEO IRLANDEZJA -->
+                      <section class="video-container" aria-labelledby="video-heading">
+                        <h2 id="video-heading" class="visually-hidden">Hollywood Smile Transformation with Zirconia Crowns</h2>
+                        
+                        <div class="video-wrapper">
+                            <video 
+                                id="promo-video" 
+                                preload="metadata" 
+                                muted 
+                                playsinline 
+                                loop
+                                poster="zirconia-smile-thumbnail.jpg"
+                                aria-label="Before and after video showing a Hollywood Smile makeover using durable Zirconia crowns">
+                                
+                                <source src="assets/video/dental-crowns/hollywood_smile_paziente_irlandese.mp4" type="video/mp4">
+                                Your browser does not support the video tag. Here is a <a href="assets/video/dental-crowns/hollywood_smile_paziente_irlandese.mp4">link to the video</a>.
+                            </video>
+                            
+                            <button id="unmute-btn" aria-label="Unmute video">
+                                Click to Hear the Results 🔊
+                            </button>
+                        </div>
+
+                        <p class="black-color">
+                            La nostra ultima trasformazione <b>“Hollywood Smile”</b> ha completamente rivoluzionato il sorriso e la sicurezza della nostra adorabile paziente irlandese! ☘️ 
+                        
+
+                        <p class="black-color">
+                            Grazie all'uso di <b>corone in zirconia di alta qualità</b>, abbiamo ottenuto un risultato armonioso, naturale e radioso che dura davvero nel tempo. All'Emerald Dental siamo specializzati in cure odontoiatriche di livello mondiale e turismo dentale per i nostri visitatori internazionali. 
+                        
+
+                        <p class="black-color">
+                            Sei pronto per la tua trasformazione? <b>Consulta oggi stesso i nostri medici esperti</b> e fai il primo passo verso il tuo sorriso perfetto! ✨
+                      </section>
+                    <!-- VIDEO IRLANDEZJA -->
+
                         
                     <h3 class="mt-70">Vantaggi delle Corone in Ceramica-Zirconio:</h3>
                     <ul class="mt-20 ml-30 font-size-20">
@@ -388,6 +426,36 @@
         <script src="assets/js/tilt.jquery.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+        <!-- IRLANDEZJA VID SCRIPT -->
+          <script>
+            const video = document.getElementById('promo-video');
+            const unmuteBtn = document.getElementById('unmute-btn');
+
+            // 1. Play/Pause on Scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play().catch(error => console.log("Auto-play blocked until interaction."));
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 }); // Starts when 50% of the video is visible
+
+            observer.observe(video);
+
+            // 2. The "Unmute" workaround
+            unmuteBtn.addEventListener('click', () => {
+                if (video.muted) {
+                    video.muted = false;
+                    unmuteBtn.innerText = "Mute 🔇";
+                } else {
+                    video.muted = true;
+                    unmuteBtn.innerText = "Unmute 🔊";
+                }
+            });
+          </script>
+        <!-- IRLANDEZJA VID SCRIPT -->
     </body>
     
     
