@@ -227,6 +227,45 @@
 
                         <p class="mt-20 black-color font-size-20">Crowns are ready to be placed after only one visit, where the dentist files down 
                           the teeth and takes the impressions to send it to the lab.</p>
+
+
+                    <!-- VIDEO IRLANDEZJA -->
+                      <section class="video-container" aria-labelledby="video-heading">
+                        <h2 id="video-heading" class="visually-hidden">Hollywood Smile Transformation with Zirconia Crowns</h2>
+                        
+                        <div class="video-wrapper">
+                            <video 
+                                id="promo-video" 
+                                preload="metadata" 
+                                muted 
+                                playsinline 
+                                loop
+                                poster="zirconia-smile-thumbnail.jpg"
+                                aria-label="Before and after video showing a Hollywood Smile makeover using durable Zirconia crowns">
+                                
+                                <source src="assets/video/dental-crowns/hollywood_smile_irish_patient.mp4" type="video/mp4">
+                                Your browser does not support the video tag. Here is a <a href="hollywood-smile-zirconia.mp4">link to the video</a>.
+                            </video>
+                            
+                            <button id="unmute-btn" aria-label="Unmute video">
+                                Click to Hear the Results 🔊
+                            </button>
+                        </div>
+
+                        <p class="black-color">
+                            Our latest <strong>Hollywood Smile transformation</strong> has completely redefined the smile and confidence of our lovely patient from Ireland! ☘️ 
+                        </p>
+
+                        <p class="black-color">
+                            Using premium <strong>Zirconia crowns</strong>, we’ve achieved a seamless, natural, and radiant result that truly lasts. At <strong>Emerald Dental</strong>, we specialize in world-class restorative care and dental tourism for our international visitors. 
+                        </p>
+
+                        <p class="black-color">
+                            Ready for your own transformation? <strong>Consult with our expert doctors today</strong> and take the first step toward your perfect smile! ✨
+                        </p>
+                      </section>
+                    <!-- VIDEO IRLANDEZJA -->
+
                         
                     <h3 class="mt-70">Dental crown care</h3>
 
@@ -409,6 +448,37 @@
         <script src="assets/js/tilt.jquery.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+        <!-- IRLANDEZJA VID SCRIPT -->
+        <script>
+          const video = document.getElementById('promo-video');
+          const unmuteBtn = document.getElementById('unmute-btn');
+
+          // 1. Play/Pause on Scroll
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      video.play().catch(error => console.log("Auto-play blocked until interaction."));
+                  } else {
+                      video.pause();
+                  }
+              });
+          }, { threshold: 0.5 }); // Starts when 50% of the video is visible
+
+          observer.observe(video);
+
+          // 2. The "Unmute" workaround
+          unmuteBtn.addEventListener('click', () => {
+              if (video.muted) {
+                  video.muted = false;
+                  unmuteBtn.innerText = "Mute 🔇";
+              } else {
+                  video.muted = true;
+                  unmuteBtn.innerText = "Unmute 🔊";
+              }
+          });
+        </script>
+        <!-- IRLANDEZJA VID SCRIPT -->
+
 
         <!-- GetButton.io widget -->
         <script type="text/javascript">
