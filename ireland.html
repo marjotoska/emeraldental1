@@ -23,7 +23,7 @@
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
-        <meta name="robots" content="noindex">
+        <!-- <meta name="robots" content="noindex"> -->
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
         <!-- To prevent all search engines that support the noindex rule from indexing a page on your site -->
@@ -236,6 +236,137 @@
                 /* } */
             </style>
         <!-- HERO SECTION WITH VID END -->
+
+        <!-- PRICE TABLE STYLING START -->
+            <style>
+                    :root {
+                        --emerald: #2ecc71;
+                        --dark: #2c3e50;
+                        --light-gray: #f8f9fa;
+                        --text-gray: #7f8c8d;
+                        --white: #ffffff;
+                        --shadow: 0 4px 15px rgba(0,0,0,0.08);
+                    }
+
+                    .dental-pricing-section {
+                        font-family: 'Segoe UI', Arial, sans-serif;
+                        /* Spacing: 60px top/bottom, 5% left/right */
+                        margin: 60px auto;
+                        padding: 0 5%; 
+                        max-width: 1200px; /* Prevents table from becoming too wide on ultra-wide screens */
+                        color: var(--dark);
+                    }
+
+                    .dental-pricing-section h2 {
+                        font-size: 28px;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                        color: var(--dark);
+                        line-height: 1.2;
+                    }
+
+                    .dental-pricing-section p.subtitle {
+                        color: var(--text-gray);
+                        margin-bottom: 40px;
+                        font-size: 17px;
+                        line-height: 1.6;
+                        max-width: 800px;
+                    }
+
+                    .comparison-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        background: var(--white);
+                        border-radius: 16px;
+                        overflow: hidden;
+                        box-shadow: var(--shadow);
+                    }
+
+                    .comparison-table thead {
+                        background-color: var(--dark);
+                        color: var(--white);
+                    }
+
+                    .comparison-table th {
+                        padding: 22px 20px;
+                        text-align: left;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                    }
+
+                    .comparison-table td {
+                        padding: 20px;
+                        border-bottom: 1px solid #edf2f7;
+                        font-size: 16px;
+                    }
+
+                    .service-title {
+                        font-weight: 700;
+                        display: block;
+                        color: var(--dark);
+                    }
+
+                    .price-albania {
+                        color: var(--emerald);
+                        font-weight: 800;
+                        font-size: 18px;
+                    }
+
+                    .savings-tag {
+                        display: inline-block;
+                        background: rgba(46, 204, 113, 0.15);
+                        color: #27ae60;
+                        font-size: 12px;
+                        padding: 4px 12px;
+                        border-radius: 50px;
+                        font-weight: 700;
+                    }
+
+                    /* Mobile Responsive Logic */
+                    @media (max-width: 768px) {
+                        .dental-pricing-section {
+                            margin: 40px auto;
+                            padding: 0 20px;
+                        }
+
+                        .comparison-table thead {
+                            display: none; /* Hide headers on mobile */
+                        }
+
+                        .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+                            display: block;
+                            width: 100%;
+                        }
+
+                        .comparison-table tr {
+                            margin-bottom: 15px;
+                            border: 1px solid #edf2f7;
+                            border-radius: 12px;
+                        }
+
+                        .comparison-table td {
+                            text-align: right;
+                            padding-left: 50%;
+                            position: relative;
+                            border-bottom: 1px solid #f7f7f7;
+                        }
+
+                        .comparison-table td::before {
+                            content: attr(data-label);
+                            position: absolute;
+                            left: 20px;
+                            width: 45%;
+                            text-align: left;
+                            font-weight: 700;
+                            font-size: 13px;
+                            color: var(--text-gray);
+                            text-transform: uppercase;
+                        }
+                    }
+                </style>
+        <!-- PRICE TABLE STYLING END -->
 
         <!-- /* Custom fix for full-width footer on this page only */ -->
             <style>
@@ -512,6 +643,49 @@
         <!-- HERO SECTION WITH VID END -->
 
         <div>
+            <!-- PRICE TABLE START -->
+                <div class="dental-pricing-section">
+                    <h2 class="mb-20">Veneers Ireland vs. Albania: 2026 Cost Comparison</h2>
+                    <p class="subtitle">Searching for a <strong>Galway dentist</strong> or <strong>dental care in Ireland</strong>? Discover how much you can save on premium E-max and Zirconia veneers at Emerald Dental Clinic compared to the <strong>cheapest dentist in Ireland</strong>.</p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Veneer Material Type</th>
+                                <th>Emerald Dental Price (Albania)</th>
+                                <th>Average Price in Ireland</th>
+                                <th>Your Total Savings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Veneer Type"><span class="service-title">Zirconia Veneers</span></td>
+                                <td data-label="Emerald Dental Price"><span class="price-albania">€170</span></td>
+                                <td data-label="Ireland Price">€800 – €1,200</td>
+                                <td data-label="Savings"><span class="savings-tag">Save ~80%</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Veneer Type"><span class="service-title">E-max Veneers</span></td>
+                                <td data-label="Emerald Dental Price"><span class="price-albania">€300</span></td>
+                                <td data-label="Ireland Price">€950 – €1,500</td>
+                                <td data-label="Savings"><span class="savings-tag">Save ~75%</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Veneer Type"><span class="service-title">Composite Veneers</span></td>
+                                <td data-label="Emerald Dental Price"><span class="price-albania">€100</span></td>
+                                <td data-label="Ireland Price">€350 – €600</td>
+                                <td data-label="Savings"><span class="savings-tag">Save ~70%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 15px; color: #4a5568; margin-top: 30px; line-height: 1.7; font-style: italic;">
+                        While looking for the <strong>cheapest dentist in Sligo</strong> or a <strong>cheap dentist in Galway</strong> might save you a few Euros locally, choosing Emerald Dental Clinic provides world-class <strong>dental care abroad</strong> for a fraction of the cost. Whether you need <strong>clear braces in Ireland</strong> or are researching <strong>all on 4 dental implants in Albania</strong>, our clinic offers the same high-end Zirconium materials and digital smile design found at the most expensive <strong>dentists in Ireland</strong>.
+                        <br><br>
+                        Prices are estimated for <span id="year-table"></span><script>document.getElementById("year-table").innerHTML = new Date().getFullYear();</script> and represent the <strong>cheapest dental implants abroad</strong> options with premium quality.
+                    </p>
+                </div>
+            <!-- PRICE TABLE END -->
 
             <!-- PATIENT FORM START -->
                 <div style="background-color: #f0faf3; padding: 100px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
