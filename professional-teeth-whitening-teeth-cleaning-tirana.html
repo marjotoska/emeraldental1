@@ -35,24 +35,26 @@
     <link rel="stylesheet" href="assets/css/slick.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <style>
-        header { position: absolute; width: 100%; top: 0; left: 0; z-index: 999; transition: background 0.3s ease; }
-        header:not(.scrolled) .main-menu ul li a, header:not(.scrolled) .hamburger-menu a i, header:not(.scrolled) .main-menu ul li i { color: #ffffff !important; }
-        header:not(.scrolled) .main-header-area { background: transparent !important; }
-        header.scrolled { position: fixed; background: #ffffff !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .main-menu ul li .submenu li a { color: #000000 !important; }
-        header.scrolled .main-menu ul li a, header.scrolled .hamburger-menu a i, header.scrolled .main-menu ul li i { color: #000000 !important; }
+    <!-- navbar desktop scroll and opacity -->
+        <style>
+            header { position: absolute; width: 100%; top: 0; left: 0; z-index: 999; transition: background 0.3s ease; }
+            header:not(.scrolled) .main-menu ul li a, header:not(.scrolled) .hamburger-menu a i, header:not(.scrolled) .main-menu ul li i { color: #ffffff !important; }
+            header:not(.scrolled) .main-header-area { background: transparent !important; }
+            header.scrolled { position: fixed; background: #ffffff !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+            .main-menu ul li .submenu li a { color: #000000 !important; }
+            header.scrolled .main-menu ul li a, header.scrolled .hamburger-menu a i, header.scrolled .main-menu ul li i { color: #000000 !important; }
 
-        .hero-background-wrapper {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('assets/img/professional-teeth-cleaning_landscape.png');
-            background-size: cover; background-position: center; width: 100%;
-            padding-top: 250px; padding-bottom: 150px; margin-bottom: 50px;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .hero-background-wrapper h1 { color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); max-width: 950px; margin: 0 auto; text-align: center; font-size: 3rem; }
-        @media (max-width: 992px) { .hero-background-wrapper { padding-top: 180px; padding-bottom: 100px; min-height: 250px; } }
-    </style>
+            .hero-background-wrapper {
+                background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                            url('assets/img/professional-teeth-cleaning_landscape.png');
+                background-size: cover; background-position: center; width: 100%;
+                padding-top: 250px; padding-bottom: 150px; margin-bottom: 50px;
+                display: flex; align-items: center; justify-content: center;
+            }
+            .hero-background-wrapper h1 { color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); max-width: 950px; margin: 0 auto; text-align: center; font-size: 3rem; }
+            @media (max-width: 992px) { .hero-background-wrapper { padding-top: 180px; padding-bottom: 100px; min-height: 250px; } }
+        </style>
+    <!-- navbar desktop scroll and opacity -->
 
     <!-- PRICE TABLE STYLING START -->
         <style>

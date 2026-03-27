@@ -43,6 +43,17 @@
         <link rel="stylesheet" href="assets/css/slick.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
 
+        <!-- navbar desktop scroll and opacity -->
+            <style>
+                header { position: absolute; width: 100%; top: 0; left: 0; z-index: 999; transition: background 0.3s ease; }
+                header:not(.scrolled) .main-menu ul li a, header:not(.scrolled) .hamburger-menu a i, header:not(.scrolled) .main-menu ul li i { color: #ffffff !important; }
+                header:not(.scrolled) .main-header-area { background: transparent !important; }
+                header.scrolled { position: fixed; background: #ffffff !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+                .main-menu ul li .submenu li a { color: #000000 !important; }
+                header.scrolled .main-menu ul li a, header.scrolled .hamburger-menu a i, header.scrolled .main-menu ul li i { color: #000000 !important; }
+            </style>
+        <!-- navbar desktop scroll and opacity -->
+
         <!-- HERO SECTION WITH VID START -->
             <style>
                 :root {
@@ -56,7 +67,12 @@
                 .hero-section {
                     background-color: var(--emerald-deep);
                     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 16H9v-2h5V9.87a4.5 4.5 0 1 0-2 0V14H7v2h5v18h2V16z' fill='%23059669' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-                    padding: 40px 20px;
+                    /* padding: 40px 20px; */
+
+                    /* --- UPDATED PADDING FOR DESKTOP --- */
+                        padding: 140px 20px 60px 20px; 
+                        /* 140px top padding creates room for the absolute header */
+
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -125,6 +141,15 @@
                     .btn-quote, .btn-quote-2 {
                         width: 100%; /* Optional: make buttons full width on very small screens */
                         max-width: 300px;
+                    }
+                }
+
+                /* --- ADD THIS MOBILE SPACING FIX --- */
+                @media (max-width: 991px) {
+                    .hero-section {
+                        /* Mobile navbars are usually shorter, so 100px-110px is often enough */
+                        padding-top: 110px; 
+                        padding-bottom: 40px;
                     }
                 }
 
@@ -670,6 +695,21 @@
             <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
             <script src="assets/js/tilt.jquery.js" defer></script>
             <script src="assets/js/main.js" defer></script>
+
+            <!-- CONVERT NAVBAR CONTENTS TO WHITE FOR CONTRAST END -->
+                <script>
+                    window.addEventListener('scroll', function() {
+                        const header = document.querySelector('header');
+                        // Change '100' to the height of your hero image if you want it exact
+                        if (window.scrollY > 700) { 
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                    });
+                </script>
+            <!-- CONVERT NAVBAR CONTENTS TO WHITE FOR CONTRAST END -->
+
             <!-- VIDEO SCRIPT START -->
                 <script>
                     const video = document.getElementById('promo-video');
