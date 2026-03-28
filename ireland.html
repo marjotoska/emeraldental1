@@ -45,6 +45,7 @@
 
         <!-- navbar desktop scroll and opacity -->
             <style>
+                html { scroll-behavior: smooth; }
                 header { position: absolute; width: 100%; top: 0; left: 0; z-index: 999; transition: background 0.3s ease; }
                 header:not(.scrolled) .main-menu ul li a, header:not(.scrolled) .hamburger-menu a i, header:not(.scrolled) .main-menu ul li i { color: #ffffff !important; }
                 header:not(.scrolled) .main-header-area { background: transparent !important; }
@@ -237,10 +238,201 @@
             </style>
         <!-- HERO SECTION WITH VID END -->
 
+        <!-- WHY EMERALD SECTION START -->  
+            <style>
+                .why-emerald-section {
+                    max-width: 1200px;
+                    margin: 80px auto;
+                    padding: 0 5%;
+                    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+                    color: #2d3748;
+                }
+
+                .split-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 60px;
+                    flex-wrap: wrap;
+                }
+
+                .image-column {
+                    flex: 1;
+                    min-width: 350px;
+                }
+
+                .image-column img {
+                    width: 100%;
+                    border-radius: 24px;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                    display: block;
+                }
+
+                .text-column {
+                    flex: 1.2;
+                    min-width: 350px;
+                }
+
+                .text-column h2 {
+                    font-size: 36px;
+                    color: #1a202c;
+                    margin-bottom: 20px;
+                    line-height: 1.2;
+                }
+
+                .text-column h2 span {
+                    color: #15b844;
+                }
+
+                .intro-p {
+                    font-size: 18px;
+                    line-height: 1.7;
+                    color: #4a5568;
+                    margin-bottom: 30px;
+                }
+
+                /* Features Grid */
+                .features-mini-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+
+                .feature-item {
+                    background: #f8fafc;
+                    padding: 20px;
+                    border-radius: 15px;
+                    border-left: 4px solid #15b844;
+                }
+
+                .feature-item h4 {
+                    margin: 0 0 8px 0;
+                    font-size: 16px;
+                    color: #1a202c;
+                }
+
+                .feature-item p {
+                    margin: 0;
+                    font-size: 14px;
+                    color: #718096;
+                    line-height: 1.5;
+                }
+
+                .btn-emerald {
+                    display: inline-block;
+                    margin-top: 40px;
+                    background: #15b844;
+                    color: white;
+                    padding: 16px 35px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    box-shadow: 0 10px 20px rgba(51, 204, 46, 0.2);
+                    transition: transform 0.3s ease;
+                }
+
+                .btn-emerald:hover {
+                    transform: translateY(-3px);
+                }
+
+                /* Mobile Logic */
+                @media (max-width: 992px) {
+                    .split-container {
+                        flex-direction: column; /* Text Top, Image Bottom */
+                        gap: 40px;
+                    }
+                    .image-column {
+                        order: 2; /* Move image below text */
+                        width: 100%;
+                    }
+                    .text-column {
+                        order: 1;
+                        width: 100%;
+                    }
+                    .text-column h2 {
+                        font-size: 28px;
+                    }
+                }
+
+                /* Tooltip Container */
+                .tooltip-container {
+                    position: relative;
+                    display: inline-block;
+                    cursor: help;
+                }
+
+                /* The Tooltip Box */
+                .tooltip-text {
+                    visibility: hidden;
+                    width: 280px;
+                    background-color: #2c3e50;
+                    color: #fff;
+                    text-align: left;
+                    border-radius: 12px;
+                    padding: 15px;
+                    position: absolute;
+                    z-index: 10;
+                    bottom: 125%; /* Position above the text */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                }
+
+                /* Tooltip Arrow */
+                .tooltip-text::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #2c3e50 transparent transparent transparent;
+                }
+
+                /* Show on Hover */
+                .tooltip-container:hover .tooltip-text {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                /* Info Icon Styling */
+                .info-icon {
+                    font-size: 14px;
+                    color: #2ecc71;
+                    margin-left: 5px;
+                    background: #e6f7ed;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Mobile Adjustment: Ensure tooltip doesn't go off-screen */
+                @media (max-width: 480px) {
+                    .tooltip-text {
+                        left: 0;
+                        transform: translateX(-10%);
+                        width: 240px;
+                    }
+                    .tooltip-text::after {
+                        left: 20%;
+                    }
+                }
+            </style>
+        <!-- WHY EMERALD SECTION END -->
+
         <!-- PRICE TABLE STYLING START -->
             <style>
                 :root {
-                    --emerald: #2ecc71;
+                    --emerald: #15b844;
                     --dark: #2c3e50;
                     --light-gray: #f8f9fa;
                     --text-gray: #7f8c8d;
@@ -408,7 +600,7 @@
         <!-- PRICE TABLE STYLING START -->
             <style>
                 :root {
-                    --emerald: #2ecc71;
+                    --emerald: #15b844;
                     --dark: #2c3e50;
                     --light-gray: #f8f9fa;
                     --text-gray: #7f8c8d;
@@ -660,11 +852,75 @@
 
         <div>
 
-            <!-- PRICE TABLE START -->
-                <div class="dental-pricing-section">
-                    <h2 class="mb-20">Veneers Ireland vs. Albania: 2026 Cost Comparison</h2>
-                    <p class="subtitle">Searching for a <strong>Galway dentist</strong> or <strong>dental care in Ireland</strong>? Discover how much you can save on premium E-max and Zirconia veneers at Emerald Dental Clinic compared to the <strong>cheapest dentist in Ireland</strong>.</p>
+            <!-- WHY EMERALD SECTION START -->
+                <section class="why-emerald-section">
+                    <div class="split-container">
+                        
+                        <div class="text-column">
+                            <h2>Why Patients Choose <span>Emerald Dental Albania</span> Over Ireland?</h2>
+                            
+                            <p class="intro-p">
+                                Are you finding <strong>dental care in Ireland</strong> or seeking a <strong>Galway dentist</strong> a bit too expensive? At Emerald Dental, we specialize in <strong>dental tourism in Albania</strong>, offering the exact same <strong>Straumann Implants</strong> and world-class technology found in the UK or USA - but at <strong>70% lower costs</strong>.
+                            </p>
 
+                            <div class="features-mini-grid">
+                                <div class="feature-item">
+                                    <div class="tooltip-container">
+                                        <h4>✈️ Flight Included* <span class="info-icon">i</span></h4>
+                                        <div class="tooltip-text">
+                                            <strong>Note:</strong> We offer coverage for flight, transportation, and accommodation expenses only if the total cost of treatment exceeds <strong>€3,000</strong> per stage.
+                                            <br><br>
+                                            <em>Example:</em> If stage one costs €3,000, you qualify for the full package. If stage two costs €200, you get free transportation only.
+                                        </div>
+                                    </div>
+                                    <p>We subtract your plane ticket price from your final bill. Your travel is on us.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🏨 Hotel & Pickup</h4>
+                                    <p>Free airport pickup and premium hotel stay included in your treatment plan.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🇮🇹 Italy-Graduated</h4>
+                                    <p>Our expert surgeons are graduated in Italy with years of maxillofacial experience.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>💎 Premium Brands</h4>
+                                    <p>No generic materials. We only use <strong>Implantswiss</strong> and <strong>Straumann</strong>.</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 30px; font-size: 15px; color: #718096;">
+                                While <strong>all on 4 dental implants Turkey</strong> or <strong>full set of veneers Turkey cost</strong> might seem tempting, patients prefer Albania for our <strong>English fluency</strong>, European standards, and superior <strong>digital smile design</strong>.
+                            </p>
+
+                            <a href="#contact-form" class="btn-emerald">Reserve Your Free Appointment</a>
+                        </div>
+
+                        <div class="image-column">
+                            <img src="assets/img/feature/DSC_0464.webp" alt="Emerald Dental Clinic Albania - Modern Technology">
+                            
+                            <div style="margin-top: 25px; background: #e6f7ed; padding: 25px; border-radius: 20px;">
+                                <p style="margin: 0; font-weight: 700; color: #15b844;">"The Best Decision I Ever Made"</p>
+                                <p style="margin: 10px 0 0 0; font-size: 14px; color: #4a5568; line-height: 1.5;">
+                                    "I was looking for the <strong>cheapest dental implants abroad</strong> and found Emerald Dental Clinic. Unlike my experience researching <strong>dentists in Ireland</strong>, the communication here was perfect and the <strong>zirconium crowns</strong> look incredibly natural." 
+                                    <br><strong>- Patient from Cork, Ireland</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            <!-- WHY EMERALD SECTION END -->
+
+
+            <!-- PRICE TABLE START -->
+                <div id="quote" class="dental-pricing-section" style="scroll-margin-top: 105px;">
+                    <h2 class="mb-20">Dental Care in Ireland vs. Albania: 2026 Price List</h2>
+                    
+                    <p class="subtitle">
+                        Whether you are looking for a trusted <strong>Galway dentist</strong>, expert <strong>dental implants in Ireland</strong>, or the <strong>cheapest dentist in Sligo</strong>, comparing costs is the first step to a healthier smile. At Emerald Dental, we provide premium <strong>dental care in Ireland</strong>-standard quality at Albanian prices, helping you save thousands on complex restorations.
+                    </p>
+                    
                     <table class="comparison-table">
                         <thead>
                             <tr>
@@ -759,8 +1015,8 @@
             <!-- PRICE TABLE END -->
 
             <!-- PATIENT FORM START -->
-                <div style="background-color: #f0faf3; padding: 100px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-                    <div id="patient-form" style="scroll-margin-top: 100px;"></div>
+                <div id="contact-form" style="scroll-margin-top: 105px; background-color: #f0faf3; padding: 100px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <!-- <div id="patient-form"></div> -->
 
                     <div style="max-width: 900px; margin: 0 auto;">
                         <div style="text-align: center; margin-bottom: 50px;">
