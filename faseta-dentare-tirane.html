@@ -55,6 +55,104 @@
         @media (max-width: 992px) { .hero-background-wrapper { padding-top: 180px; padding-bottom: 100px; min-height: 250px; } }
     </style>
 
+    <!-- Modern Video Player Styling START -->
+        <style>
+            .video-column { flex: 1; position: relative; }
+            
+            .video-wrapper {
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                background: #000;
+                cursor: pointer;
+            }
+
+            video { width: 100%; display: block; }
+
+            /* Custom Overlays */
+            .video-title-overlay {
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                padding: 40px 20px 20px;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 500;
+                transition: opacity 0.3s;
+                z-index: 2;
+            }
+
+            .video-row {
+                gap: 60px; /* bigger spacing between videos */
+                max-width: 1200px; /* keeps layout clean on big screens */
+                margin: 0 auto; /* center the whole row */
+            }
+
+            @media (min-width: 1200px) {
+                .video-row {
+                    gap: 80px; /* even more breathing room on large screens */
+                }
+            }
+
+            .video-playing .video-title-overlay { opacity: 0; }
+
+            /* Center Play Button */
+            .play-pause-btn {
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px; height: 70px;
+                background: rgba(0, 0, 0, 0.6);
+                border: 2px solid white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.3s, transform 0.2s;
+                z-index: 3;
+            }
+            
+            .play-pause-btn:hover { transform: translate(-50%, -50%) scale(1.1); background: var(--emerald-light); }
+            .video-playing .play-pause-btn { opacity: 0; pointer-events: none; }
+
+            /* Bottom Control Bar */
+            .video-controls {
+                position: absolute;
+                bottom: 0; left: 0; right: 0;
+                padding: 15px;
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                z-index: 4;
+            }
+
+            .video-wrapper:hover .video-controls { opacity: 1; }
+
+            .vol-container { display: flex; align-items: center; gap: 8px; }
+            
+            input[type=range] {
+                cursor: pointer;
+                width: 80px;
+                accent-color: var(--accent-gold);
+            }
+
+            #mute-toggle { background: none; border: none; color: white; cursor: pointer; font-size: 1.2rem; }
+
+            @media (max-width: 968px) {
+                .hero-container { flex-direction: column; text-align: center; }
+                .video-column { order: -1; width: 100%; max-width: 500px; }
+                .hero-text h1 { font-size: 2.2rem; }
+            }
+            /* @media (max-width: 515px) { */
+                /* .btn-quote-2 { display: inline-flex; margin-top: 20px; } */
+            /* } */
+        </style>
+    <!-- Modern Video Player Styling END -->
+
     <!-- PRICE TABLE STYLING START -->
         <style>
             :root {
@@ -161,6 +259,7 @@
             })();
         </script>
     <!-- /GetButton.io widget -->
+
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ"
@@ -330,6 +429,73 @@
                         </a>
                     </li>
                 </ul>
+
+
+                <!-- VIDEO TESTIMONIAL SECTION START -->
+                    <div class="video-testimonial-section mb-60">
+                        
+                        <h2 class="mb-20 text-center">Shikoni Transformimin Real të Pacientit</h2>
+                        <p class="black-color font-size-20 mb-40 text-center" style="max-width: 800px; margin: 0 auto;">
+                            Ndiqni procesin e vendosjes së fasetave kompozit dhe dëgjoni eksperiencën reale të pacientit tonë.
+                        </p>
+
+                        <div class="d-flex flex-wrap justify-content-center video-row">
+
+                            <!-- VIDEO 1 -->
+                            <div class="video-column" style="max-width: 500px;">
+                                <div class="video-wrapper">
+                                    
+                                    <div class="video-title-overlay">
+                                        Procesi i Fasetave Kompozit (Para & Pas)
+                                    </div>
+
+                                    <video class="custom-video" preload="metadata" playsinline loop>
+                                        <source src="assets/video/faseta-dentare-tirane/Daniel gingiviplasti V_0 SHQIP.mp4" type="video/mp4">
+                                    </video>
+
+                                    <div class="play-pause-btn">
+                                        <span style="border-left: 20px solid white; border-top: 12px solid transparent; border-bottom: 12px solid transparent; margin-left: 5px;"></span>
+                                    </div>
+
+                                    <div class="video-controls">
+                                        <div class="vol-container">
+                                            <button class="mute-toggle">🔊</button>
+                                            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- VIDEO 2 -->
+                            <div class="video-column" style="max-width: 500px;">
+                                <div class="video-wrapper">
+                                    
+                                    <div class="video-title-overlay">
+                                        Intervista me Pacientin
+                                    </div>
+
+                                    <video class="custom-video" preload="metadata" playsinline loop>
+                                        <source src="assets/video/faseta-dentare-tirane/Daniel Faseta Kompozit Interviste V_3 SHQIP.mp4" type="video/mp4">
+                                    </video>
+
+                                    <div class="play-pause-btn">
+                                        <span style="border-left: 20px solid white; border-top: 12px solid transparent; border-bottom: 12px solid transparent; margin-left: 5px;"></span>
+                                    </div>
+
+                                    <div class="video-controls">
+                                        <div class="vol-container">
+                                            <button class="mute-toggle">🔊</button>
+                                            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- VIDEO TESTIMONIAL SECTION END -->
 
 
 
@@ -812,5 +978,57 @@
               });
           </script>
         <!-- CONVERT NAVBAR CONTENTS TO WHITE FOR CONTRAST END -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+        const video = wrapper.querySelector('.custom-video');
+        const playBtn = wrapper.querySelector('.play-pause-btn');
+        const muteBtn = wrapper.querySelector('.mute-toggle');
+        const volumeSlider = wrapper.querySelector('.volume-slider');
+
+        if (!video || !playBtn) return;
+
+        // PLAY / PAUSE
+        playBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                wrapper.classList.add('video-playing');
+            } else {
+                video.pause();
+                wrapper.classList.remove('video-playing');
+            }
+        });
+
+        // CLICK VIDEO ALSO TOGGLE
+        video.addEventListener('click', () => {
+            playBtn.click();
+        });
+
+        // MUTE
+        if (muteBtn) {
+            muteBtn.addEventListener('click', () => {
+                video.muted = !video.muted;
+                muteBtn.textContent = video.muted ? '🔇' : '🔊';
+            });
+        }
+
+        // VOLUME
+        if (volumeSlider) {
+            volumeSlider.addEventListener('input', (e) => {
+                video.volume = e.target.value;
+                video.muted = e.target.value == 0;
+                if (muteBtn) {
+                    muteBtn.textContent = video.muted ? '🔇' : '🔊';
+                }
+            });
+        }
+
+    });
+
+});
+</script>
+
   </body>
 </html>
