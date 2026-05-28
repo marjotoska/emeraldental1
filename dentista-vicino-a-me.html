@@ -1609,80 +1609,80 @@
                         </div>
 
                         <!-- RIGHT SIDE -->
-                        <div class="consult-form-wrap" id="contact-form">
-                            <div class="consult-form-header">
-                                <p class="consult-title" style=" font-size: 28px; font-weight: 600; color: #fff; line-height: 1.3; margin: 0; max-width: 1200px;">
-                                    Compila il modulo qui sotto per un <span>preventivo gratuito</span>,
-                                    <br>
-                                    <span class="consult-subtitle">
-                                        e ti contatteremo il prima possibile.
-                                    </span>
-                                </p>
+                            <div class="consult-form-wrap" id="contact-form">
+                                <div class="consult-form-header">
+                                    <p class="consult-title" style=" font-size: 28px; font-weight: 600; color: #fff; line-height: 1.3; margin: 0; max-width: 1200px;">
+                                        Compila il modulo qui sotto per un <span>preventivo gratuito</span>,
+                                        <br>
+                                        <span class="consult-subtitle">
+                                            e ti contatteremo il prima possibile.
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div class="consult-form-card">
+
+                                    <form action="https://formsubmit.co/poliklinikaemerald@gmail.com"
+                                        method="POST"
+                                        enctype="multipart/form-data">
+
+                                        <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
+
+                                        <div class="form-grid">
+
+                                            <div class="form-group">
+                                                <label>NOME</label>
+                                                <input type="text" name="First Name" placeholder="Il tuo nome" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>COGNOME</label>
+                                                <input type="text" name="Last Name" placeholder="Il tuo cognome" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>EMAIL</label>
+                                                <input type="email" name="Email" placeholder="email@example.com" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>TELEFONO</label>
+                                                <input type="tel" name="Phone" placeholder="+39..." required>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group full">
+                                            <label>OGGETTO</label>
+                                            <input type="text" name="Subject" placeholder="Come possiamo aiutarti?" required>
+                                        </div>
+
+                                        <div class="form-group full">
+                                            <label>MESSAGGIO</label>
+                                            <textarea name="Message" placeholder="Parlaci delle tue esigenze dentali..." required></textarea>
+                                        </div>
+
+                                        <div style="margin-bottom: 20px;">
+                                            <label style="display: block; font-size: 13px; font-weight: 600; color: #718096; margin-bottom: 8px; margin-left: 4px;">ALLEGARE RADIOGRAFIE O FOTO (OPZIONALE)</label>
+                                            <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
+                                                <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf" 
+                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
+                                                onchange="updateFileName(this)">
+                                                <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                                                    <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Clicca per caricare i file
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="submit-btn">
+                                            Invia Richiesta
+                                        </button>
+
+                                    </form>
+
+                                </div>
+
                             </div>
-
-                            <div class="consult-form-card">
-
-                                <form action="https://formsubmit.co/poliklinikaemerald@gmail.com"
-                                    method="POST"
-                                    enctype="multipart/form-data">
-
-                                    <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
-
-                                    <div class="form-grid">
-
-                                        <div class="form-group">
-                                            <label>NOME</label>
-                                            <input type="text" name="First Name" placeholder="Il tuo nome" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>COGNOME</label>
-                                            <input type="text" name="Last Name" placeholder="Il tuo cognome" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>EMAIL</label>
-                                            <input type="email" name="Email" placeholder="email@example.com" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>TELEFONO</label>
-                                            <input type="tel" name="Phone" placeholder="+39..." required>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="form-group full">
-                                        <label>OGGETTO</label>
-                                        <input type="text" name="Subject" placeholder="Come possiamo aiutarti?" required>
-                                    </div>
-
-                                    <div class="form-group full">
-                                        <label>MESSAGGIO</label>
-                                        <textarea name="Message" placeholder="Parlaci delle tue esigenze dentali..." required></textarea>
-                                    </div>
-
-                                    <div style="margin-bottom: 20px;">
-                                        <label style="display: block; font-size: 13px; font-weight: 600; color: #718096; margin-bottom: 8px; margin-left: 4px;">ALLEGARE RADIOGRAFIE O FOTO (OPZIONALE)</label>
-                                        <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
-                                            <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf" 
-                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
-                                            onchange="updateFileName(this)">
-                                            <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
-                                                <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Clicca per caricare i file
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="submit-btn">
-                                        Invia Richiesta
-                                    </button>
-
-                                </form>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
