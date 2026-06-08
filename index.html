@@ -117,7 +117,7 @@
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "280"
+                "reviewCount": "303"
               }
             },
             {
@@ -454,6 +454,207 @@
         </ol>
       </div>
 
+       <!-- PARTNERS SECTION (CSS) START -->
+        <style>
+          /* --- Partners Section Styling --- */
+          .partners-section {
+              padding: 80px 20px;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          }
+
+          .partners-container {
+              max-width: 1140px;
+              margin: 0 auto;
+          }
+
+          .partners-header {
+              text-align: center;
+              max-width: 700px;
+              margin: 0 auto 50px auto;
+          }
+
+          .partners-subtitle {
+              display: inline-block;
+              font-size: 14px;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              color: #0ea5e9; /* Light blue accent color */
+              margin-bottom: 12px;
+          }
+
+          .partners-title {
+              font-size: 32px;
+              color: #1e293b;
+              margin-bottom: 16px;
+              font-weight: 700;
+          }
+
+          .partners-description {
+              font-size: 16px;
+              color: #64748b;
+              line-height: 1.6;
+          }
+
+          /* Grid and Cards layout */
+          .partners-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+              gap: 30px;
+          }
+
+          .partner-card {
+              background: #ffffff;
+              border-radius: 16px;
+              border: 1px solid #e2e8f0;
+              padding: 40px 30px;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .partner-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+          }
+
+          /* Visual tags/badges upper right */
+          .partner-badge {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+              background-color: #fef2f2;
+              color: #ef4444; /* Red color scheme for Vodafone app promo */
+              font-size: 12px;
+              font-weight: 600;
+              padding: 6px 12px;
+              border-radius: 20px;
+          }
+
+          .partner-badge.financial {
+              background-color: #f0fdf4;
+              color: #16a34a; /* Green color scheme for 0% interest */
+          }
+
+          /* Logo placement container */
+          .partner-logo-box {
+              height: 65px;
+              display: flex;
+              align-items: center;
+              margin-bottom: 25px;
+          }
+
+          .partner-logo {
+              max-height: 100%;
+              max-width: 180px;
+              object-fit: contain;
+          }
+
+          /* 2. Center the links/titles inside partner-content */
+          .partner-content {
+              display: flex;
+              flex-direction: column;
+              align-items: center;    /* ADDED: Centers the link element horizontally */
+              text-align: center;     /* ADDED: Centers the paragraph text lines */
+          }
+
+          /* Typography Inside Cards */
+          .partner-content a {
+              font-size: 20px;
+              color: #0ea5e9;;
+              margin-bottom: 12px;
+              font-weight: 600;
+          }
+
+          .partner-content p {
+              font-size: 15px;
+              color: #475569;
+              line-height: 1.6;
+              margin-bottom: 24px;
+          }
+
+          /* Arrowed anchor links */
+          .partner-link {
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              font-size: 15px;
+              font-weight: 600;
+              color: #0ea5e9;
+              text-decoration: none;
+              margin-top: auto; /* Pushes the button to the bottom if text heights differ */
+              transition: color 0.2s ease;
+          }
+
+          .partner-link svg {
+              transition: transform 0.2s ease;
+          }
+
+          .partner-link:hover {
+              color: #0284c7;
+          }
+
+          .partner-link:hover svg {
+              transform: translateX(4px);
+          }
+
+          /* Responsive breakpoint adjustments */
+          @media (max-width: 640px) {
+              .partners-section {
+                  padding: 50px 15px;
+              }
+              .partners-title {
+                  font-size: 26px;
+              }
+              .partner-card {
+                  padding: 30px 20px;
+              }
+          }
+        </style>
+      <!-- PARTNERS SECTION (CSS) END -->
+
+      <!-- PARTNERS SECTION START -->
+        <section class="partners-section">
+          <div class="partners-container">
+              <div class="partners-header">
+                  <span class="partners-subtitle">I Nostri Partner</span>
+                  <h2 class="partners-title">Vantaggi Esclusivi per i Nostri Pazienti</h2>
+                  <p class="partners-description">
+                      Grazie alle nostre partnership strategiche con leader del settore in Albania, offriamo agevolazioni uniche, sconti esclusivi e piani di finanziamento personalizzati per rendere il tuo percorso di cura ancora più accessibile.
+                  </p>
+              </div>
+
+              <div class="partners-grid">
+                  <!-- Partner 1: Vodafone -->
+                  <div class="partner-card">
+                      <div class="partner-badge">Promo App</div>
+                      <div class="partner-logo-box">
+                          <img src="assets/img/index-home/Vodafone_Albania-Logo.wine.webp" alt="Vodafone Albania Logo" class="partner-logo">
+                      </div>
+                      <div class="partner-content">
+                          <a href="https://www.vodafone.al" target="_blank" rel="noopener" class="partner-link">Vodafone Albania</a>
+                          <p>Sei cliente Vodafone? Attiva le promozioni dedicate direttamente all'interno dell'app <strong>My Vodafone (AL)</strong> sul tuo smartphone e ottieni sconti esclusivi sui trattamenti odontoiatrici presso la nostra clinica a Tirana.</p>
+                      </div>
+                  </div>
+
+                  <!-- Partner 2: Credins Bank -->
+                  <div class="partner-card">
+                      <div class="partner-badge financial">Interessi 0%</div>
+                      <div class="partner-logo-box">
+                          <!-- Replace src with your local assets path, e.g., assets/img/partners/credins.png -->
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Credins_Bank.svg/1280px-Credins_Bank.svg.png" alt="Credins Bank Logo" class="partner-logo">
+                      </div>
+                      <div class="partner-content">
+                          <a href="https://bankacredins.com" target="_blank" rel="noopener" class="partner-link">Credins Bank</a>
+                          <p>Ritrova il sorriso senza pensieri. Offriamo la possibilità di accedere a un <strong>finanziamento a tasso zero (0% interessi)</strong> per tutte le cure dentali. Gli interessi bancari della tua pratica li paga interamente Emerald Dental.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      <!-- PARTNERS SECTION END -->
+
       <!-- separator for id="patient-form"  -->
       <hr id="patient-form"></hr>
 
@@ -664,7 +865,7 @@
           <div class="row">
             <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3">
               <div class="section-title text-center pr-20 pl-20 mb-80">
-                <h2 style="color: #15b844">Cosa dicono di noi i pazienti: più di 280 recensioni di Google a 5 stelle</h2>
+                <h2 style="color: #15b844">Cosa dicono di noi i pazienti: centinaia di recensioni a 5 stelle su Google</h2>
               </div>
             </div>
           </div>
@@ -886,6 +1087,9 @@
         </div>
       </section>
       <!--testimonial-area end-->
+
+     
+
 
       <div class="google-map contact-map">
         <iframe
