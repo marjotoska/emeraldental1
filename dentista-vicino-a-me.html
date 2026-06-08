@@ -172,6 +172,46 @@
                     color: #1a1a1a;
                 }
 
+                /* --- Fix Slider Edge Constraints --- */
+                .vol-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    min-width: 120px; /* Gives the container enough breathing room */
+                }
+
+                input[type=range].volume-slider {
+                    -webkit-appearance: none; /* Strips default Apple/Chrome track styling */
+                    appearance: none;
+                    width: 85px;
+                    height: 6px; /* Explicit height for the track horizontal bar */
+                    background: rgba(255, 255, 255, 0.3); /* Gives a clean background track */
+                    border-radius: 3px;
+                    outline: none;
+                    margin: 0; /* Clears hidden native margin blocking the edges */
+                    padding: 0; /* Clears hidden native padding blocking the edges */
+                }
+
+                /* Ensures the sliding thumb handle can physically cross the outer 0% and 100% boundary lines */
+                input[type=range].volume-slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: var(--accent-gold);
+                    cursor: pointer;
+                }
+
+                input[type=range].volume-slider::-moz-range-thumb {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: var(--accent-gold);
+                    cursor: pointer;
+                    border: none;
+                }
+
                 /* Ensure the text container handles the spacing nicely on mobile */
                 @media (max-width: 968px) {
                     .hero-text {
@@ -266,7 +306,19 @@
                     accent-color: var(--accent-gold);
                 }
 
-                #mute-toggle { background: none; border: none; color: white; cursor: pointer; font-size: 1.2rem; }
+                .mute-toggle {
+                    background: transparent !important; /* Removes the grey box background */
+                    border: none !important;             /* Removes the default button border line */
+                    outline: none;                       /* Removes blue focus outline box when clicked */
+                    padding: 0;                          /* Removes default inner spacing */
+                    margin: 0;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    line-height: 1;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 @media (max-width: 1200px) {
                     .hero-container {
@@ -2124,7 +2176,7 @@
                             volSlider.addEventListener('input', (e) => {
                                 video.volume = e.target.value;
                                 video.muted = (video.volume == 0);
-                                updateMute();
+                                updateMuteAndSlider(); // Call the unified UI sync
                             });
                         }
 
@@ -2133,13 +2185,24 @@
                             muteToggle.addEventListener('click', (e) => {
                                 e.stopPropagation();
                                 video.muted = !video.muted;
-                                updateMute();
+                                updateMuteAndSlider(); // Call the unified UI sync
                             });
                         }
 
-                        function updateMute() {
-                            if (!muteToggle) return;
-                            muteToggle.innerText = (video.muted || video.volume === 0) ? "🔇" : "🔊";
+                        // Fixes the issue: Syncs both the emoji and the position of the visual slider handle
+                        function updateMuteAndSlider() {
+                            const isCurrentlyMuted = video.muted || video.volume === 0;
+                            
+                            // 1. Update the Mute/Unmute Emoji
+                            if (muteToggle) {
+                                muteToggle.innerText = isCurrentlyMuted ? "🔇" : "🔊";
+                            }
+
+                            // 2. Update the Slider Handle Position
+                            if (volSlider) {
+                                // If muted, visually slide to 0. Otherwise, match the video's actual numerical volume level.
+                                volSlider.value = isCurrentlyMuted ? 0 : video.volume;
+                            }
                         }
 
                         // sync UI state
