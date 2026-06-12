@@ -210,7 +210,7 @@
             }
         </style>
     </head>
-    <body style="background: var(--soft-bg);">
+    <body style="background: #fff;">
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- HEADER (Simulato per l'inline del tuo tema esistente) -->
@@ -882,8 +882,285 @@
                 </div>
             </section>
 
-            <!-- 4. CONTENUTO INTERLINKING (Aumento PageRank e Riduzione Bounce Rate) START -->
+            <!-- 4 - CSS, JS, HTML -->
+                <style>
+                    :root {
+                        --primary-color: #0d9488; /* Verde smeraldo / ottanio moderno */
+                        --primary-dark: #0f766e;
+                        --text-color: #334155;
+                        --bg-light: #f8fafc;
+                        --white: #ffffff;
+                        --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                    }
+                    .emerald-section {
+                        line-height: 1.8; /* Allineato a .content-interlinking */
+                        font-size: 1.1rem; /* Allineato a .content-interlinking */
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 80px 20px; /* Applicato il padding corretto per eliminare i dislivelli */
+                    }
+                    .emerald-section p {
+                        color: #475569; /* Sostituito var(--text-color) con il colore esatto richiesto */
+                    }
+                    .emerald-seo-title {
+                        color: var(--text-color);
+                        font-size: 2rem; /* Portato a 2rem come richiesto */
+                        font-weight: 800; /* Portato a 800 per massima rilevanza visiva */
+                        margin-bottom: 20px; /* Sincronizzato a 20px */
+                        line-height: 1.3;
+                    }
+
+                    .emerald-lead-text {
+                        font-size: 1.1rem;
+                        margin-bottom: 1.2rem;
+                    }
+
+                    .emerald-maps-link {
+                        color: var(--primary-color);
+                        text-decoration: none;
+                        font-weight: 600;
+                        border-bottom: 2px solid transparent;
+                        transition: all 0.3s ease;
+                    }
+
+                    .emerald-maps-link:hover {
+                        color: var(--primary-dark);
+                        border-bottom-color: var(--primary-dark);
+                    }
+
+                    /* Slider / Carosello Recensioni */
+                    .reviews-carousel-container {
+                        background-color: var(--bg-light);
+                        border-radius: 12px;
+                        padding: 30px 20px;
+                        margin-top: 40px;
+                        box-shadow: var(--shadow);
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .reviews-carousel-title {
+                        text-align: center;
+                        font-size: 1.4rem;
+                        color: var(--text-color);
+                        margin-top: 0;
+                        margin-bottom: 25px;
+                    }
+
+                    .reviews-slider {
+                        position: relative;
+                        min-height: 160px;
+                    }
+
+                    .review-slide {
+                        display: none;
+                        text-align: center;
+                        animation: fadeIn 0.5s ease-in-out;
+                    }
+
+                    .review-slide.active {
+                        display: block;
+                    }
+
+                    .review-stars {
+                        color: #fbbf24; /* Giallo stelle */
+                        font-size: 1.25rem;
+                        margin-bottom: 10px;
+                    }
+
+                    .review-text {
+                        font-style: italic;
+                        font-size: 1.05rem;
+                        margin-bottom: 15px;
+                        padding: 0 40px;
+                    }
+
+                    .review-author {
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        color: var(--text-color);
+                    }
+
+                    /* Pulsanti di navigazione */
+                    .carousel-btn {
+                        position: absolute;
+                        top: 55%;
+                        transform: translateY(-50%);
+                        background: var(--white);
+                        border: 1px solid #e2e8f0;
+                        color: var(--primary-color);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        box-shadow: var(--shadow);
+                        transition: all 0.2s ease;
+                        user-select: none;
+                        z-index: 10;
+                    }
+
+                    .carousel-btn:hover {
+                        background: var(--primary-color);
+                        color: var(--white);
+                    }
+
+                    .btn-prev { left: 10px; }
+                    .btn-next { right: 10px; }
+
+                    @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(5px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+
+                    @media (max-width: 640px) {
+                        .review-text { padding: 0 15px; font-size: 0.95rem; }
+                        .carousel-btn { width: 32px; height: 32px; }
+                    }
+                </style>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                    const slides = document.querySelectorAll('.review-slide');
+                    let currentSlide = 0;
+
+                    function showSlide(index) {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (index + slides.length) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                    }
+
+                    // Eventi per i pulsanti Avanti / Indietro
+                    document.querySelector('.btn-next').addEventListener('click', () => showSlide(currentSlide + 1));
+                    document.querySelector('.btn-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+
+                    // Autoplay opzionale ogni 6 secondi
+                    setInterval(() => {
+                    showSlide(currentSlide + 1);
+                    }, 6000);
+                    });
+                </script>
+
                 <section class="content-interlinking">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                
+                                <h2 class="emerald-seo-title">
+                                    I migliori impianti dentali in Albania: prezzi trasparenti e qualità garantita da Emerald Dental Clinic
+                                </h2>
+
+                                <!-- Paragrafo 1: Focus su Riprova Sociale ed Esperienza -->
+                                <p class="emerald-lead-text">
+                                    Scegliere la clinica giusta per ritrovare il sorriso è una decisione importante, basata sulla fiducia e sui risultati. Con oltre <strong>7 anni di servizio</strong> dedicati all'eccellenza odontoiatrica, Emerald Dental Clinic è diventata un punto di riferimento internazionale. Abbiamo già trasformato la vita di oltre <strong>3.000 pazienti soddisfatti</strong>, offrendo soluzioni definitive a chi cerca un risparmio concreto senza rinunciare ai migliori standard europei.
+                                </p>
+
+                                <!-- Paragrafo 2: Focus SEO Keyword + Link di Conversione alle Recensioni Google -->
+                                <p>
+                                    Se stai valutando la convenienza degli <a href="prezzi.html" class="emerald-maps-link" target="_blank" rel="noopener">impianti dentali in Albania i nostri prezzi</a> ti permetteranno di risparmiare fino al 60% rispetto alle tariffe medie italiane, mantenendo l'uso esclusivo di materiali certificati CE e garanzie scritte a lungo termine. Non affidarti solo alle nostre parole: ti invitiamo a leggere le <a href="https://share.google/aaMvrNGmKuNiDUAJu" class="emerald-maps-link" target="_blank" rel="noopener">centinaia di recensioni reali lasciate dai nostri pazienti su Google Maps</a>. Scoprirai le storie e le testimonianze dirette di chi, prima di te, ha superato ogni dubbio e ha scelto la sicurezza e la professionalità della nostra struttura.
+                                </p>
+
+                                <!-- Carosello Moderno Recensioni -->
+                                <div class="reviews-carousel-container">
+                                    <h3 class="reviews-carousel-title">Cosa dicono i nostri pazienti</h3>
+                                    
+                                    <div class="reviews-slider">
+                                        <!-- Pulsanti Navigazione -->
+                                        <button class="carousel-btn btn-prev" aria-label="Recensione precedente">&#10094;</button>
+                                        <button class="carousel-btn btn-next" aria-label="Prossima recensione">&#10095;</button>
+
+                                        <!-- Slide 1 (Attiva di default) -->
+                                        <div class="review-slide active">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"sono arrivato alla clinica tramite passaparola grazie ad amici che si erano trovati molto bene, confermo l'ottima esperienza, mi ha trattato una dottoressa superpreparata ed esperta, coadiuvata dall'aiutante, studio pulitissimo e gradevole (sono arrivato dal centro a piedi), anche il titolare mi ha ricevuto e fatto un ottimo trattamento. Consigliatissimo e tornerò periodicamente"</p>
+                                            <div class="review-author">Federico Francone - Milano</div>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Li ho contattati a metà mattina per una otturazione. Sono venuti incontro alle mie esigenze lavorative ricevendomi alle 18.30. Ambiente super pulito e confortevole. Dopo la visita (scrupolosa e senza fretta ) mi hanno subito fatto il trattamento. Risultato ottimo grazie alla professionalità della dott.ssa Fjona. Ve lo consiglio"</p>
+                                            <div class="review-author">Marco Ribechini - Bologna</div>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Ottima clinica dentale, dottori preparati e professionali, oltre che gentili e attenti, ho avuto una bella esperienza, sono andato così a caso e ho fatto la scelta giusta, sono passato per un problema ed è stato diagnosticato un altro e ho risolto entrambi. Si sono messi subito a disposizione e nel giro di un giorno ho risolto. Grazie mille arrivederci alla prossima."</p>
+                                            <div class="review-author">Lucio Paladino - Roma</div>
+                                        </div>
+                                        
+                                        <!-- Slide 4 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Sono venuta per una consulto, pulizia e sbiancamento dei denti. Personale accogliente, gentile e dettagliato nella descrizione del lavoro da svolgere. Tutto si è svolto in maniera ottimale, lo consiglio vivamente è il miglior centro dentistico di Tirana"</p>
+                                            <div class="review-author">concetta puocci</div>
+                                        </div>
+
+                                        <!-- Slide 5 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Grandissima esperienza positiva col dottore e con il proprietario del centro. Mi sono trovato benissimo, gente cortese ed accogliente. Soprattutto disponibili anche nel darti consigli x dove andare a dormire e pranzare. In poche parole presenti in tutto. Prezzo ottimo e lavoro eccellente. Lo consiglio vivamente"</p>
+                                            <div class="review-author">giuseppe landolfi</div>
+                                        </div>
+
+                                        <!-- Slide 6 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Sono stata da loro e mi sono trovata benissimo, ho fatto le due arcate più tre impianti in 3 giorni e mi hanno accolto con professionalità, gentilezza e coccolata. In così poco tempo si sono presi cura di me in tutto e mi hanno ridato il sorriso che sognavo. Consiglio vivamente clinica Emerald con tutto il suo staff eccezionale , parlano italiano e preparati in tutto. Ho lasciato il cuore da loro ♥️"</p>
+                                            <div class="review-author">Concetta simeoli</div>
+                                        </div>
+                                        
+                                        <!-- Slide 7 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Sono venuta con le mie due ragazze per una consulenza e pulizie dei denti. Tutto si è svolto in maniera ottimale dalla prima comunicazione fino all'arrivo allo studio dentale. Spiegazioni nei minimi dettagli. La dottoressa ha le mani da fata. Molto delicata. La cosa che ci ha sorpreso, è stato l'onestà da parte della dottoressa. Una delle mie figlie è venuta per fasi la pulizia dentale. Visto l'ottimo stato della boca, non è stato necessario intervenire. Anche la consulenza della seconda figlia, per un eventuale correzione dei denti, abbiamo ricevuto una spiegazione più che onesta. Lo consiglio vivamente e ci torno sicuramente."</p>
+                                            <div class="review-author">Nicole</div>
+                                        </div>
+                                                                                
+                                        <!-- Slide 8 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Un esperienza che mi ha colpito molto...sono stato per la prima volta staff eccellente sia nella gentilezza, competenza, professionalità, serietà e ospitalità, si valuta insieme al dottore il da farsi , il tutto senza un po di dolore, massima qualità nei prodotti usati , e capsule in zirconio splendide. Consiglio vivamente questa struttura che agisce sempre prima nel salvare , curare il proprio dente. Per niente venali sui prezzi....a differenza dei dentisti italiani.....raccomando vivamente...grazie mille alla clinica emerald tirana...👌"</p>
+                                            <div class="review-author">Luigi Simeoli</div>
+                                        </div>
+                                                                                                                        
+                                        <!-- Slide 9 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Sono arrivato dall'Italia ho fatto un trattamento hai denti con ottimi risultati ad un prezzo veramente interessante , ottimo anche il personale, molto ospitali,e lo consiglio a tutti ."</p>
+                                            <div class="review-author">Roberto Bonini</div>
+                                        </div>
+                                                                                                                                                                
+                                        <!-- Slide 10 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Clinica molto professionale e con prezzi onesti. Personale molto qualificato, si impegnano nel raggiungere i risultati migliori senza tanti "effetti scenografici"...sicuramente da consigliare a conoscenti.."</p>
+                                            <div class="review-author">Luigi Stanca</div>
+                                        </div>
+
+                                                                                                                                                                                                        
+                                        <!-- Slide 11 -->
+                                        <div class="review-slide">
+                                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                            <p class="review-text">"Posto bellissimo ,dottori molto professionali ,ho fatto i denti e nel frattempo anche estetica ,consiglio ,qualità e prezzo ,locali molto puliti il personale gentili e ospitali . Da andare assolutamente Elisa Travagliati"</p>
+                                            <div class="review-author">Elisa Travagliati</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            <!-- END OF 4.0 -->
+
+            <!-- 4.1 CONTENUTO INTERLINKING (Aumento PageRank e Riduzione Bounce Rate) START -->
+                <section class="content-interlinking" style="background: #fff;">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
@@ -894,10 +1171,10 @@
                         </div>
                     </div>
                 </section>
-            <!-- 4. CONTENUTO INTERLINKING (Aumento PageRank e Riduzione Bounce Rate) END -->
+            <!-- 4.1 CONTENUTO INTERLINKING (Aumento PageRank e Riduzione Bounce Rate) END -->
 
             <!-- 5. SEZIONE FAQ CON ACCORDION NATIVO -->
-            <section class="faq-section">
+            <section class="faq-section" style="background: var(--soft-bg);">
                 <div class="container">
                     <div class="section-title-center">
                         <h2>Domande Frequenti sugli Impianti Dentali</h2>
@@ -1189,7 +1466,7 @@
             <!-- css form END -->
 
             <!-- 6. SEZIONE PREVENTIVO / QUOTE (Riutilizzata e Ridisegnata) -->
-                <div class="form-gray-bg">
+                <div class="form-gray-bg" style="background: #fff;">
 
                     <section id="preventivo" class="container my-5">
                         <div class="quote-cta">
