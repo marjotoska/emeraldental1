@@ -192,14 +192,24 @@
             .hero-container {
                 max-width: 1300px;
                 width: 100%;
-                display: flex;
-                flex-direction: row;
+                display: grid;
+                grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+                grid-template-areas:
+                    "copy media"
+                    "actions media";
                 gap: 60px;
                 align-items: center;
                 z-index: 2;
             }
-            .hero-text { flex: 1.2; }
-            .video-column { flex: 0.8; width: 100%; }
+            .hero-text { grid-area: copy; }
+            .hero-media-stack {
+                grid-area: media;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                width: 100%;
+            }
+            .video-column { width: 100%; }
             
             .hero-badge {
                 background: rgba(21, 184, 68, 0.2);
@@ -228,7 +238,7 @@
                 opacity: 0.9;
             }
             
-            .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+            .hero-buttons { grid-area: actions; display: flex; gap: 20px; flex-wrap: wrap; }
             .btn-lovable-primary {
                 background: var(--lime);
                 color: white !important;
@@ -253,6 +263,7 @@
                 backdrop-filter: blur(10px);
             }
             .btn-lovable-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+            .hero-media-stack p{ font-size: 1.2rem; line-height: 1.7; margin-bottom: 35px; opacity: 0.9; }
 
             /* --- MODERN VIDEO WRAPPER --- */
             .video-wrapper {
@@ -264,6 +275,20 @@
                 background: #000;
             }
             .video-wrapper video { width: 100%; display: block; }
+            .video-card-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 10px;
+                color: #d1fae5;
+                font-size: 0.95rem;
+                font-weight: 700;
+            }
+            .video-card-label i { color: var(--lime); }
+            .promo-video-card .video-wrapper {
+                box-shadow: 0 24px 60px rgba(21,184,68,0.22), 0 20px 45px rgba(0,0,0,0.28);
+                border-color: rgba(167,243,208,0.28);
+            }
             
             /* --- PARTNERS SECTION --- */
             .partners-section { padding: 60px 0; background: white; border-bottom: 1px solid #edf2f7; }
@@ -300,11 +325,34 @@
             .quote-cta h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; }
 
             /* Responsive */
+            @media(min-width: 992px){ .display-pc-none{display: none;} .display-pc-none p{font-size: 1.2rem;} }
             @media (max-width: 991px) {
-                .hero-container { flex-direction: column; text-align: center; gap: 40px; }
+                .hero-container {
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                        "copy"
+                        "media"
+                        "actions";
+                    text-align: center;
+                    gap: 34px;
+                }
                 .hero-text h1 { font-size: 2.5rem; }
                 .hero-buttons { justify-content: center; }
                 .comparison-table th, .comparison-table td { padding: 12px; font-size: 14px; }
+                .hero-media-stack { max-width: 620px; margin: 0 auto; }
+                .video-card-label { justify-content: center; }
+                .display-mobile-none {display: none;}
+            }
+            @media (max-width: 575px) {
+                .hero-section { padding: 150px 16px 72px; }
+                .hero-media-stack { gap: 18px; }
+                .hero-buttons { width: 100%; }
+                .btn-lovable-primary,
+                .btn-lovable-secondary {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 15px 20px;
+                }
             }
         </style>
     </head>
@@ -320,7 +368,7 @@
 
         <main>
             <!-- 1. HERO SECTION -->
-            <section class="hero-section">
+            <section class="hero-section" style="margin-top: -100px;">
                 <div class="hero-container">
                     <div class="hero-text">
                         <span class="hero-badge">Emerald Dental: Clinica Odontoiatrica d'Eccellenza a Tirana</span>
@@ -419,17 +467,43 @@
                                 <span class="trust-label">Impianti Certificati</span>
                             </div>
                         </div>
+
+                        <p class="display-mobile-none" style="color:#fff;">
+                            Prima di intraprendere il suo percorso di cura in Albania, Pierluigi ha avuto diversi scambi di email e successive <a href="https://wa.me/393509105210" target="_blank" rel="noopener" class="seo-link">consulenze telefoniche</a> con i nostri dentisti. Durante queste conversazioni ha potuto porre tutte le sue domande e ricevere risposte dettagliate sui trattamenti più adatti alle sue esigenze, con particolare attenzione all'armonia del sorriso, all'estetica del viso e al risultato finale.
+                            Dopo aver ricevuto una consulenza gratuita e senza alcun costo, un servizio che <a href="index.html" class="seo-link">Emerald Dental</a> offre a tutti i nostri pazienti interessati agli <a href="prezzi.html" class="seo-link">impianti dentali in Albania,</a> Pierluigi ha deciso di affidarsi al nostro team. I nostri coordinatori lo hanno quindi assistito nell'organizzazione del viaggio, del soggiorno e di tutti gli aspetti logistici necessari durante il periodo di cura.
+                            Il risultato finale e l'esperienza vissuta da Pierluigi possono essere scoperti direttamente nelle sue parole: guarda il video per ascoltare la sua testimonianza e vedere il suo nuovo sorriso.
+                        </p>
+                    
                         <div class="hero-buttons">
                             <a href="#preventivo" class="btn-lovable-primary">Richiedi Preventivo Gratis <i class="fas fa-arrow-right"></i></a>
                             <a href="#prezzi" class="btn-lovable-secondary">Vedi Listino Completo</a>
                         </div>
                     </div>
-                    <div class="video-column">
-                        <div class="video-wrapper">
-                            <video controls preload="metadata">
-                                <source src="assets/video/dentista-vicino-a-me/L'esperienza di Pierluigi Faccette Per Un Sorriso Perfetto.  Emerald Dental.mp4" type="video/mp4">
-                                Il tuo browser non supporta i video HTML5.
-                            </video>
+                    <div class="hero-media-stack" aria-label="Video testimonianze e servizi Emerald Dental">
+                        <div class="video-column promo-video-card">
+                            <div class="video-card-label"><i class="fas fa-play-circle"></i> Guarda i nostri servizi</div>
+                            <div class="video-wrapper">
+                                <video class="low-volume-autoplay" controls autoplay playsinline preload="metadata" data-volume="0.08">
+                                    <source src="assets/video/impianti-dentali-in-albania-prezzi/video_promozionale_servizi.mp4" type="video/mp4">
+                                    Il tuo browser non supporta i video HTML5.
+                                </video>
+                            </div>
+                        </div>
+
+                        <p class="display-pc-none" style="color:#fff;">
+                            Prima di intraprendere il suo percorso di cura in Albania, Pierluigi ha avuto diversi scambi di email e successive <a href="https://wa.me/393509105210" target="_blank" rel="noopener" class="seo-link">consulenze telefoniche</a> con i nostri dentisti. Durante queste conversazioni ha potuto porre tutte le sue domande e ricevere risposte dettagliate sui trattamenti più adatti alle sue esigenze, con particolare attenzione all'armonia del sorriso, all'estetica del viso e al risultato finale.
+                            Dopo aver ricevuto una consulenza gratuita e senza alcun costo, un servizio che <a href="index.html" class="seo-link">Emerald Dental</a> offre a tutti i nostri pazienti interessati agli <a href="prezzi.html" class="seo-link">impianti dentali in Albania,</a> Pierluigi ha deciso di affidarsi al nostro team. I nostri coordinatori lo hanno quindi assistito nell'organizzazione del viaggio, del soggiorno e di tutti gli aspetti logistici necessari durante il periodo di cura.
+                            Il risultato finale e l'esperienza vissuta da Pierluigi possono essere scoperti direttamente nelle sue parole: guarda il video per ascoltare la sua testimonianza e vedere il suo nuovo sorriso.
+                        </p>
+                        
+                        <div class="video-column">
+                            <div class="video-card-label"><i class="fas fa-user-check"></i> L'esperienza di Pierluigi</div>
+                            <div class="video-wrapper">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="assets/video/dentista-vicino-a-me/L'esperienza di Pierluigi Faccette Per Un Sorriso Perfetto.  Emerald Dental.mp4" type="video/mp4">
+                                    Il tuo browser non supporta i video HTML5.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -667,6 +741,215 @@
                     </div>
                 </section>
             <!-- 2. Partner Implants END -->
+
+            <!-- PATIENT PARTNERS SECTION START -->
+                <style>
+                    .patient-partners-section {
+                        padding: 80px 20px;
+                        background: #f8fafc;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    }
+
+                    .patient-partners-container {
+                        max-width: 1140px;
+                        margin: 0 auto;
+                    }
+
+                    .patient-partners-header {
+                        text-align: center;
+                        max-width: 780px;
+                        margin: 0 auto 50px;
+                    }
+
+                    .patient-partners-subtitle {
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: #0ea5e9;
+                        margin-bottom: 12px;
+                    }
+
+                    .patient-partners-title {
+                        font-size: 32px;
+                        color: #1e293b;
+                        margin-bottom: 16px;
+                        font-weight: 800;
+                    }
+
+                    .patient-partners-description {
+                        font-size: 16px;
+                        color: #64748b;
+                        line-height: 1.7;
+                        margin: 0;
+                    }
+
+                    .patient-partners-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 28px;
+                    }
+
+                    .patient-partner-card {
+                        background: #ffffff;
+                        border-radius: 16px;
+                        border: 1px solid #e2e8f0;
+                        padding: 36px 28px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 100%;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+
+                    .patient-partner-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+                    }
+
+                    .patient-partner-badge {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        background-color: #fef2f2;
+                        color: #ef4444;
+                        font-size: 12px;
+                        font-weight: 700;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                    }
+
+                    .patient-partner-badge.financial {
+                        background-color: #f0fdf4;
+                        color: #16a34a;
+                    }
+
+                    .patient-partner-badge.travel {
+                        background-color: #eff6ff;
+                        color: #2563eb;
+                    }
+
+                    .patient-partner-logo-box {
+                        height: 68px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 12px 0 24px;
+                    }
+
+                    .patient-partner-logo {
+                        max-height: 100%;
+                        max-width: 190px;
+                        object-fit: contain;
+                    }
+
+                    .patient-partner-logo-text {
+                        color: #2563eb;
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        letter-spacing: 0;
+                    }
+
+                    .patient-partner-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        height: 100%;
+                    }
+
+                    .patient-partner-link {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #0ea5e9;
+                        text-decoration: none;
+                        margin-bottom: 14px;
+                        transition: color 0.2s ease;
+                    }
+
+                    .patient-partner-link:hover {
+                        color: #0284c7;
+                    }
+
+                    .patient-partner-content p {
+                        font-size: 15px;
+                        color: #475569;
+                        line-height: 1.65;
+                        margin: 0;
+                    }
+
+                    @media (max-width: 640px) {
+                        .patient-partners-section {
+                            padding: 54px 15px;
+                        }
+
+                        .patient-partners-title {
+                            font-size: 26px;
+                        }
+
+                        .patient-partner-card {
+                            padding: 32px 20px;
+                        }
+
+                        .patient-partner-badge {
+                            position: static;
+                            align-self: center;
+                            margin-bottom: 14px;
+                        }
+                    }
+                </style>
+
+                <section class="patient-partners-section">
+                    <div class="patient-partners-container">
+                        <div class="patient-partners-header">
+                            <span class="patient-partners-subtitle">I Nostri Partner</span>
+                            <h2 class="patient-partners-title">Vantaggi Esclusivi per i Nostri Pazienti</h2>
+                            <p class="patient-partners-description">
+                                Grazie alle nostre partnership strategiche con leader del settore in Albania e nel turismo dentale internazionale, offriamo agevolazioni uniche, sconti esclusivi e piani di finanziamento personalizzati per rendere il tuo percorso di cura ancora piu accessibile.
+                            </p>
+                        </div>
+
+                        <div class="patient-partners-grid">
+                            <div class="patient-partner-card">
+                                <div class="patient-partner-badge">Promo App</div>
+                                <div class="patient-partner-logo-box">
+                                    <img src="assets/img/index-home/Vodafone_Albania-Logo.wine.webp" alt="Vodafone Albania Logo" class="patient-partner-logo">
+                                </div>
+                                <div class="patient-partner-content">
+                                    <a href="https://www.vodafone.al" target="_blank" rel="noopener" class="patient-partner-link">Vodafone Albania</a>
+                                    <p>Sei cliente Vodafone? Attiva le promozioni dedicate direttamente dall'app <strong>My Vodafone (AL)</strong> e ottieni sconti esclusivi sui trattamenti odontoiatrici presso la nostra clinica a Tirana.</p>
+                                </div>
+                            </div>
+
+                            <div class="patient-partner-card">
+                                <div class="patient-partner-badge financial">Interessi 0%</div>
+                                <div class="patient-partner-logo-box">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Credins_Bank.svg/1280px-Credins_Bank.svg.png" alt="Credins Bank Logo" class="patient-partner-logo">
+                                </div>
+                                <div class="patient-partner-content">
+                                    <a href="https://bankacredins.com" target="_blank" rel="noopener" class="patient-partner-link">Credins Bank</a>
+                                    <p>Ritrova il sorriso senza pensieri. Offriamo la possibilita di accedere a un <strong>finanziamento a tasso zero</strong> per le cure dentali: gli interessi bancari della tua pratica li paga Emerald Dental.</p>
+                                </div>
+                            </div>
+
+                            <div class="patient-partner-card">
+                                <div class="patient-partner-badge travel">Turismo dentale</div>
+                                <div class="patient-partner-content">
+                                <div class="patient-partner-logo-box">
+                                    <img src="assets/img/impianti-dentali-in-albania-prezzi/dental_departures_logo.svg" alt="Dental Departures Logo" class="patient-partner-logo">
+                                </div>
+                                    <a href="https://www.dentaldepartures.com" target="_blank" rel="noopener" class="patient-partner-link">Dental Departures</a>
+                                    <p><strong>Dental Departures</strong> aiuta i pazienti internazionali a confrontare cliniche, trattamenti e percorsi di cura all'estero. Emerald Dental e stata tra i primi partner scelti per l'Albania, e molti pazienti arrivati tramite la loro piattaforma sono rimasti molto soddisfatti del nostro servizio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- PATIENT PARTNERS SECTION END -->
 
 
             <!-- 2.1 Implants Warranty and passport CSS START -->
@@ -1786,6 +2069,22 @@
                     } else {
                         header.classList.remove('scrolled');
                     }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelectorAll('.low-volume-autoplay').forEach(function(video) {
+                        const requestedVolume = Number(video.dataset.volume || 0.08);
+                        video.volume = Math.max(0, Math.min(requestedVolume, 0.12));
+                        video.muted = false;
+
+                        const playAttempt = video.play();
+                        if (playAttempt && typeof playAttempt.catch === 'function') {
+                            playAttempt.catch(function() {
+                                video.muted = true;
+                                video.play().catch(function() {});
+                            });
+                        }
+                    });
                 });
             </script>
         <!-- FAQ INTERACTIVE SCRIPT END -->
