@@ -655,6 +655,535 @@
         </section>
       <!-- PARTNERS SECTION END -->
 
+      <!-- Smooth Scroll Section START -->
+        <!-- <style>
+          *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+          html { scroll-behavior: auto; }
+          body {
+            font-family: system-ui, sans-serif;
+            /* background: #f9f8f5; */
+            color: #000;
+            overflow-x: hidden;
+          }
+
+          /* demo spacers so you can scroll into the section */
+          .demo-before,
+          .demo-after {
+            min-height: 100svh;
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+            text-align: center;
+            background: #eee;
+          }
+
+          /* ── pin-spacer (GSAP-style) ── */
+          .pin-spacer {
+            position: relative;
+            width: 100%;
+          }
+
+          /* ── pinned section ── */
+          #infographic {
+            width: 100%;
+            min-width: 394px;
+            min-height: 100svh;
+            height: 100svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: #f9f8f5;
+            will-change: transform;
+          }
+
+          /* center text stack */
+          .infographic-copy {
+            position: relative;
+            height: 15rem;
+            width: 100%;
+            z-index: 2;
+            pointer-events: none;
+          }
+
+          .infographic-copy-inner {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+          }
+
+          .stat-number {
+            font-size: clamp(4rem, 18vw, 9rem);
+            line-height: 0.95;
+            font-weight: 350;
+            letter-spacing: -0.04em;
+            will-change: transform, opacity;
+          }
+
+          .headline-grid {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            margin-top: 0.25rem;
+          }
+
+          .headline-grid h2 {
+            grid-area: 1 / 1;
+            font-size: clamp(1.35rem, 4.5vw, 3.25rem);
+            line-height: 1.05;
+            font-weight: 350;
+            letter-spacing: -0.02em;
+            max-width: 18ch;
+            will-change: transform, opacity;
+          }
+
+          /* floating graphics layer */
+          .graphics-layer {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100svh;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+            will-change: opacity;
+          }
+
+          .graphic-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            will-change: transform, opacity;
+          }
+
+          /* photo cards */
+          .card-photo {
+            display: block;
+            width: 11.3rem;
+            height: 12.5rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            position: relative;
+          }
+
+          .card-photo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            will-change: transform;
+          }
+
+          /* svg / ui cards */
+          .card-ui {
+            position: relative;
+            width: 17.6rem;
+            height: 7.86rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+          }
+
+          .card-ui img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          .card-ui--offset {
+            position: absolute;
+            top: -7rem;
+            left: 7rem;
+          }
+
+          .card-ui--wide {
+            width: 17.6rem;
+            height: 10rem;
+          }
+
+          .card-ui--tall {
+            width: 17.6rem;
+            height: 8.74rem;
+          }
+
+          .card-square {
+            display: block;
+            width: 12.1rem;
+            height: 12.3rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            position: relative;
+          }
+
+          .card-square img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            will-change: transform;
+          }
+
+          /* tablet */
+          @media (min-width: 768px) {
+            .card-photo { width: 17rem; height: 20.8rem; }
+            .card-ui { width: 22.5rem; height: 12.6rem; }
+            .card-ui--wide { width: 26.1rem; height: 14rem; }
+            .card-ui--tall { width: 22.5rem; height: 12.6rem; }
+            .card-square { width: 19.1rem; height: 19.1rem; }
+          }
+
+          /* desktop */
+          @media (min-width: 1024px) {
+            .card-photo { width: 23.6rem; height: 26.1rem; border-radius: 1.6rem; }
+            .card-ui { width: 34rem; height: 15.2rem; border-radius: 1.6rem; }
+            .card-ui--wide { width: 34rem; height: 17rem; }
+            .card-ui--tall { width: 34rem; height: 19.6rem; }
+            .card-square { width: 27.3rem; height: 27.7rem; border-radius: 1.6rem; }
+            .card-ui--offset { top: -7rem; left: 7rem; }
+          }
+
+          @media (max-width: 767px) {
+            .card-ui--offset {
+              top: -4rem;
+              left: 3rem;
+              width: 14rem;
+              height: 6.5rem;
+            }
+            .infographic-copy { height: 11rem; }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .graphic-item, .stat-number, .headline-grid h2, .graphics-layer {
+              will-change: auto !important;
+            }
+          }
+        </style> -->
+
+       <!-- <div class="pin-spacer" id="pinSpacer">
+          <section id="infographic" aria-label="Infographic">
+
+            <div class="infographic-copy">
+              <div class="infographic-copy-inner">
+                <span class="stat-number" id="statNumber">98%</span>
+                <div class="headline-grid">
+                  <h2 id="headlineA">of posting is handled<br>autonomously</h2>
+                  <h2 id="headlineB">The more Lassie learns,<br>the less input it needs</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="graphics-layer" id="graphicsLayer">
+              <div class="graphic-item" data-index="0">
+                <span class="card-photo">
+                  <img data-zoom alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/top-left-9a8c2dff-8249-4cbe-99d9-3c11d1e56105.jpg" />
+                </span>
+              </div>
+              <div class="graphic-item" data-index="1" data-graphic="true">
+                <div class="card-ui card-ui--offset">
+                  <img alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/top-left-1-983872b1-f53d-40b6-93ef-4ef36423303a.svg" />
+                </div>
+              </div>
+              <div class="graphic-item" data-index="2">
+                <picture class="card-square">
+                  <img data-zoom alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/top-right-9c96bfd2-d943-4721-af2b-970d6f1e8056.jpg" />
+                </picture>
+              </div>
+              <div class="graphic-item" data-index="3" data-graphic="true">
+                <div class="card-ui card-ui--wide">
+                  <img alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/bottom-left-bb2d87e3-276f-4e1d-8077-cdfc77ce079b.svg" />
+                </div>
+              </div>
+              <div class="graphic-item" data-index="4">
+                <picture class="card-square" style="width:12.1rem;height:11.6rem;">
+                  <img data-zoom alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/bottom-right-dffd49f7-779e-491d-bbec-97ed5a920117.jpg" />
+                </picture>
+              </div>
+              <div class="graphic-item" data-index="5" data-graphic="true">
+                <div class="card-ui card-ui--tall">
+                  <img alt="" src="https://cdn.lassie.ai/assets/media/website/infographic/bottom-right-6f11c3d8-d8de-4a85-81cd-ac22c29c59c8.svg" />
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </div> -->
+
+        <!-- <script>
+          (function () {
+            'use strict';
+
+            var spacer = document.getElementById('pinSpacer');
+            var section = document.getElementById('infographic');
+            var graphicsLayer = document.getElementById('graphicsLayer');
+            var statNumber = document.getElementById('statNumber');
+            var headlineA = document.getElementById('headlineA');
+            var headlineB = document.getElementById('headlineB');
+            var items = Array.prototype.slice.call(document.querySelectorAll('.graphic-item'));
+            var zoomImgs = Array.prototype.slice.call(document.querySelectorAll('[data-zoom]'));
+
+            /* Final positions as fractions of viewport (measured from lassie.ai) */
+            var FINAL_DESKTOP = [
+              { x: -0.434, y: -0.317 },
+              { x: -0.378, y: -0.234 },
+              { x:  0.189, y: -0.485 },
+              { x: -0.297, y:  0.262 },
+              { x:  0.288, y:  0.121 },
+              { x:  0.298, y:  0.029 }
+            ];
+
+            var FINAL_MOBILE = [
+              { x: -0.493, y: -0.305 },
+              { x: -0.504, y: -0.269 },
+              { x:  0.170, y: -0.261 },
+              { x: -0.514, y:  0.093 },
+              { x: -0.136, y:  0.274 },
+              { x: -0.011, y:  0.239 }
+            ];
+
+            /* Drift from mid → end (desktop second half) */
+            var DRIFT_DESKTOP = [
+              { x: -0.364, y: -0.399 },
+              { x: -0.342, y: -0.270 },
+              { x:  0.302, y: -0.356 },
+              { x: -0.389, y:  0.201 },
+              { x:  0.220, y:  0.204 },
+              { x:  0.244, y:  0.090 }
+            ];
+
+            var scrollDistance = 0;
+            var spacerTop = 0;
+            var ticking = false;
+            var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+            function lerp(a, b, t) { return a + (b - a) * t; }
+            function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+            function easeInOutCubic(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+            function seg(p, a, b) { return easeOutCubic(clamp((p - a) / (b - a), 0, 1)); }
+            function segEase(p, a, b) { return easeInOutCubic(clamp((p - a) / (b - a), 0, 1)); }
+
+            function isDesktop() { return window.innerWidth >= 1024; }
+
+            function getScrollDistance() {
+              var vh = window.innerHeight;
+              return vh * (isDesktop() ? 2.2 : 1.2);
+            }
+
+            function getPreRoll() {
+              return window.innerHeight * (isDesktop() ? 0.75 : 0.55);
+            }
+
+            function layoutPin() {
+              scrollDistance = getScrollDistance();
+              spacerTop = spacer.offsetTop;
+              spacer.style.height = section.offsetHeight + scrollDistance + 'px';
+            }
+
+            function applyPin(scrollY) {
+              var pinStart = spacerTop;
+              var pinEnd = spacerTop + scrollDistance;
+
+              if (scrollY >= pinStart && scrollY <= pinEnd) {
+                section.style.position = 'fixed';
+                section.style.top = '0';
+                section.style.left = '0';
+                section.style.width = '100%';
+                section.style.height = '100svh';
+                section.style.zIndex = '10';
+              } else if (scrollY > pinEnd) {
+                section.style.position = 'absolute';
+                section.style.top = scrollDistance + 'px';
+                section.style.left = '0';
+                section.style.width = '100%';
+                section.style.height = '100svh';
+                section.style.zIndex = '';
+              } else {
+                section.style.position = 'relative';
+                section.style.top = '0';
+                section.style.left = '';
+                section.style.width = '';
+                section.style.height = '';
+                section.style.zIndex = '';
+              }
+            }
+
+            function applyAnimation(progress) {
+              var desktop = isDesktop();
+              var w = window.innerWidth;
+              var h = window.innerHeight;
+              var finals = desktop ? FINAL_DESKTOP : FINAL_MOBILE;
+              var drifts = desktop ? DRIFT_DESKTOP : finals;
+
+              /* ── phase splits (from lassie.ai scroll sampling) ── */
+              var expandEnd   = desktop ? 0.55 : 0.40;
+              var holdEnd     = desktop ? 0.72 : 0.45;
+              var swapStart   = desktop ? 0.72 : 0.45;
+              var swapEnd     = desktop ? 0.95 : 0.75;
+
+              /* scale: 0.15 → ~0.57 → 1.0 (desktop); 0.15 → 1 (mobile) */
+              var scale;
+              if (desktop) {
+                if (progress <= 0.20) {
+                  scale = lerp(0.15, 0.57, seg(progress, 0, 0.20));
+                } else if (progress <= expandEnd) {
+                  scale = lerp(0.57, 1.0, seg(progress, 0.20, expandEnd));
+                } else {
+                  scale = 1;
+                }
+              } else {
+                scale = progress <= expandEnd ? lerp(0.15, 1.0, seg(progress, 0, expandEnd)) : 1;
+              }
+
+              /* position progress with slight stagger per item */
+              var posT = seg(progress, 0, expandEnd);
+
+              /* inner photo counter-scale (ken-burns) */
+              var imgScale = desktop
+                ? lerp(1.67, 1.0, seg(progress, 0, expandEnd))
+                : lerp(1.45, 1.0, seg(progress, 0, expandEnd));
+
+              /* drift after hold */
+              var driftT = desktop ? segEase(progress, holdEnd, 1) : segEase(progress, expandEnd, 1);
+
+              items.forEach(function (el, i) {
+                var start = { x: 0, y: 0 };
+                var mid = {
+                  x: finals[i].x * w,
+                  y: finals[i].y * h
+                };
+                var end = {
+                  x: drifts[i].x * w,
+                  y: drifts[i].y * h
+                };
+
+                var stagger = i * 0.025;
+                var t = clamp(posT - stagger, 0, 1);
+
+                var x = lerp(start.x, mid.x, t);
+                var y = lerp(start.y, mid.y, t);
+
+                if (progress > holdEnd) {
+                  x = lerp(mid.x, end.x, driftT);
+                  y = lerp(mid.y, end.y, driftT);
+                }
+
+                el.style.transform = 'translate(calc(-50% + ' + x + 'px), calc(-50% + ' + y + 'px)) scale(' + scale + ')';
+                el.style.opacity = '1';
+              });
+
+              zoomImgs.forEach(function (img) {
+                img.style.transform = 'scale(' + imgScale + ')';
+              });
+
+              /* graphics layer fade-in */
+              graphicsLayer.style.opacity = String(seg(progress, 0, 0.10));
+
+              /* stat + headline A fade in */
+              var textIn = desktop ? seg(progress, 0.12, 0.32) : seg(progress, 0.08, 0.28);
+              var textInY = lerp(30, 0, textIn);
+
+              /* swap out A / stat */
+              var swapT = seg(progress, swapStart, swapEnd);
+              var textOutY = lerp(0, -60, swapT);
+
+              if (progress < swapStart) {
+                statNumber.style.opacity = String(textIn);
+                statNumber.style.transform = 'translate3d(0, ' + textInY + 'px, 0)';
+                statNumber.style.visibility = textIn > 0.01 ? 'inherit' : 'hidden';
+
+                headlineA.style.opacity = String(textIn);
+                headlineA.style.transform = 'translate3d(0, ' + textInY + 'px, 0)';
+                headlineA.style.visibility = textIn > 0.01 ? 'visible' : 'hidden';
+
+                headlineB.style.opacity = '0';
+                headlineB.style.transform = 'translate(0, 20%)';
+                headlineB.style.visibility = 'hidden';
+              } else {
+                var outOp = 1 - swapT;
+                statNumber.style.opacity = String(outOp);
+                statNumber.style.transform = 'translate3d(0, ' + textOutY + '%, 0)';
+                statNumber.style.visibility = outOp > 0.01 ? 'inherit' : 'hidden';
+
+                headlineA.style.opacity = String(outOp);
+                headlineA.style.transform = 'translate3d(0, ' + textOutY + '%, 0)';
+                headlineA.style.visibility = outOp > 0.01 ? 'visible' : 'hidden';
+
+                var bIn = seg(progress, swapStart + 0.06, swapEnd + 0.03);
+                var bY = lerp(20, 0, bIn);
+                headlineB.style.opacity = String(bIn);
+                headlineB.style.transform = 'translate(0, ' + bY + '%)';
+                headlineB.style.visibility = bIn > 0.01 ? 'visible' : 'hidden';
+              }
+            }
+
+            function update() {
+              ticking = false;
+              var scrollY = window.scrollY;
+              var preRoll = getPreRoll();
+              var animStart = spacerTop - preRoll;
+              var animEnd = spacerTop + scrollDistance;
+              var progress = clamp((scrollY - animStart) / (animEnd - animStart), 0, 1);
+
+              applyPin(scrollY);
+
+              if (reducedMotion) {
+                graphicsLayer.style.opacity = '1';
+                items.forEach(function (el, i) {
+                  var finals = isDesktop() ? FINAL_DESKTOP : FINAL_MOBILE;
+                  el.style.transform = 'translate(calc(-50% + ' + (finals[i].x * innerWidth) + 'px), calc(-50% + ' + (finals[i].y * innerHeight) + 'px)) scale(1)';
+                });
+                statNumber.style.opacity = '0';
+                headlineA.style.opacity = '0';
+                headlineB.style.opacity = '1';
+                headlineB.style.visibility = 'visible';
+                headlineB.style.transform = 'translate(0,0)';
+                return;
+              }
+
+              applyAnimation(progress);
+            }
+
+            function onScroll() {
+              if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+              }
+            }
+
+            function init() {
+              layoutPin();
+              update();
+              window.addEventListener('scroll', onScroll, { passive: true });
+              window.addEventListener('resize', function () {
+                layoutPin();
+                update();
+              });
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', init);
+            } else {
+              init();
+            }
+          })();
+        </script> -->
+      <!-- Smooth Scroll Section END -->
+
+
       <!-- separator for id="patient-form"  -->
       <hr id="patient-form"></hr>
 
