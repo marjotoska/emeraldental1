@@ -650,7 +650,7 @@
         <div class="edc-form-row">
           <div class="edc-field">
             <label for="edcName">Full name</label>
-                                      <input
+                          <input
                             class="contact__input"
                             type="text"
                             name="Full Name"
@@ -658,12 +658,12 @@
                             placeholder="Full Name"
                             required
                             minlength="4"
-                            pattern="[A-Za-z]*"
+                            pattern="[A-Za-z\s]*$"
                           />
           </div>
           <div class="edc-field">
             <label for="edcEmail">Email</label>
-                                      <input
+                          <input
                             class="contact__input"
                             type="email"
                             size="25"
@@ -678,7 +678,9 @@
         <div class="edc-form-row">
           <div class="edc-field">
             <label for="edcPhone">Phone / WhatsApp</label>
-            <input type="tel" id="edcPhone" name="phone" placeholder="+39 300 000 0000">
+            <input type="tel" id="edcPhone" name="phone"
+              pattern="^\+?[1-9]\d{1,14}$" 
+              placeholder="+39 123 456 7890">
           </div>
           <div class="edc-field">
             <label for="edcTreatment">Treatment of interest</label>
@@ -687,7 +689,7 @@
               <option>Dental Crowns</option>
               <option>Veneers</option>
               <option>Endodontics</option>
-              <option>Not sure yet</option>
+              <option>Other</option>
             </select>
           </div>
         </div>
@@ -710,9 +712,14 @@
         </div>
 
         <div class="edc-form-submit">
-          <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn">Send my case <i class="fas fa-paper-plane"></i></button>
-          <span class="edc-form-note">We usually reply within 24 hours. 
-            Your files are only used to prepare your treatment plan.</span>
+          <input
+            class="theme_btn theme_btn_bg"
+            type="submit"
+            value="Send my case"/>
+          <!-- <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn"> -->
+            <!-- Send my case <i class="fas fa-paper-plane"></i></button> -->
+          <!-- <span class="edc-form-note">We usually reply within 24 hours.  -->
+            <!-- Your files are only used to prepare your treatment plan.</span> -->
         </div>
       </form>
 
