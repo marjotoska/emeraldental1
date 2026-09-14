@@ -1,0 +1,1039 @@
+<!--
+  ============================================================================
+  DROP-IN REPLACEMENT FOR THE <main>...</main> BLOCK ONLY.
+  Keep your existing <head>, <header>, <aside class="slide-bar">, <footer>,
+  and all <script> tags at the bottom of the page exactly as they are.
+  Everything below (from <main> to </main>, including the <style> and
+  <script> that travel with it) is self-contained: it only adds NEW class
+  names (all prefixed "edc-") so it cannot collide with your existing
+  bootstrap/main.css classes, and it reuses the Font Awesome icon set
+  (fas/far/fab) your site already loads — no new libraries, no webfonts,
+  no external requests. Font-family matches the "Segoe UI, Roboto,
+  sans-serif" stack already used in your footer, so typography stays
+  consistent with the rest of the site.
+  ============================================================================
+-->
+
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <style>
+  :root{
+    --edc-primary:#15b844;
+    --edc-primary-dark:#0e8f36;
+    --edc-primary-darker:#0a6b29;
+    --edc-primary-light:#e9faf0;
+    --edc-ink:#0d1b1e;
+    --edc-text:#1c2b2d;
+    --edc-muted:#5f6b6d;
+    --edc-bg-alt:#f6faf7;
+    --edc-white:#ffffff;
+    --edc-radius:18px;
+    --edc-shadow:0 10px 30px rgba(13,27,30,.08);
+    --edc-shadow-lg:0 20px 50px rgba(13,27,30,.14);
+    --edc-font:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .edc-main{ font-family:var(--edc-font); color:var(--edc-text); overflow-x:hidden; }
+  .edc-main *{ box-sizing:border-box; }
+  .edc-container{ max-width:960px; margin:0 auto; padding:0 24px; }
+
+  /* ---------- reading progress bar ---------- */
+  .edc-progress{ position:fixed; top:0; left:0; height:4px; width:0%; background:linear-gradient(90deg,var(--edc-primary),var(--edc-primary-dark)); z-index:9999; transition:width .1s linear; }
+
+  /* ---------- hero ---------- */
+  .edc-hero{ position:relative; padding:100px 0 70px; background:linear-gradient(135deg,var(--edc-ink) 0%,#123b1f 55%,var(--edc-primary-darker) 100%); overflow:hidden; }
+  .edc-hero::before{ content:""; position:absolute; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle,rgba(21,184,68,.35),transparent 70%); top:-220px; right:-160px; }
+  .edc-hero::after{ content:""; position:absolute; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle,rgba(21,184,68,.2),transparent 70%); bottom:-200px; left:-140px; }
+  .edc-hero-inner{ position:relative; z-index:2; text-align:center; }
+  .edc-badge{ display:inline-block; background:rgba(21,184,68,.15); border:1px solid rgba(21,184,68,.4); color:#8ef0ac; padding:7px 18px; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:.3px; margin-bottom:22px; }
+  .edc-hero h1{ color:var(--edc-white); font-size:clamp(30px,5vw,50px); line-height:1.15; font-weight:800; margin:0 0 18px; letter-spacing:-.5px; }
+  .edc-hero-sub{ color:#cfe9d8; font-size:clamp(16px,2vw,19px); font-style:italic; max-width:640px; margin:0 auto 28px; line-height:1.6; }
+  .edc-hero-meta{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:34px; }
+  .edc-hero-meta span{ background:rgba(255,255,255,.08); color:#eafbf0; font-size:13.5px; font-weight:600; padding:8px 16px; border-radius:999px; border:1px solid rgba(255,255,255,.12); }
+  .edc-hero-cta{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+  .edc-btn{ display:inline-flex; align-items:center; gap:8px; padding:14px 26px; border-radius:12px; font-weight:700; font-size:15px; text-decoration:none; cursor:pointer; border:none; transition:transform .15s ease, box-shadow .15s ease, background .15s ease; }
+  .edc-btn:hover{ transform:translateY(-2px); }
+  .edc-btn-primary{ background:var(--edc-primary); color:#04240f; box-shadow:0 10px 24px rgba(21,184,68,.35); }
+  .edc-btn-primary:hover{ background:#1ccb4e; }
+  .edc-btn-ghost{ background:transparent; color:var(--edc-white); border:1.5px solid rgba(255,255,255,.5); }
+  .edc-btn-ghost:hover{ border-color:var(--edc-white); background:rgba(255,255,255,.08); }
+
+  /* ---------- sticky quick nav ---------- */
+  .edc-quicknav{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(8px); border-bottom:1px solid #e7efe9; }
+  .edc-quicknav-track{ display:flex; gap:6px; overflow-x:auto; padding:12px 24px; max-width:960px; margin:0 auto; scrollbar-width:none; }
+  .edc-quicknav-track::-webkit-scrollbar{ display:none; }
+  .edc-quicknav a{ flex:0 0 auto; font-size:13.5px; font-weight:600; color:var(--edc-muted); text-decoration:none; padding:8px 15px; border-radius:999px; white-space:nowrap; transition:.15s; }
+  .edc-quicknav a:hover{ color:var(--edc-primary-dark); background:var(--edc-primary-light); }
+  .edc-quicknav a.is-active{ background:var(--edc-primary); color:#04240f; }
+
+  /* ---------- intro & stats ---------- */
+  .edc-intro{ padding:60px 24px 20px; }
+  .edc-dropcap{ font-size:19px; line-height:1.85; color:var(--edc-text); }
+  .edc-dropcap::first-letter{ font-size:64px; font-weight:800; float:left; line-height:.8; margin:6px 12px 0 0; color:var(--edc-primary); }
+  .edc-stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
+  .edc-stat{ background:var(--edc-white); border:1px solid #e7efe9; border-radius:var(--edc-radius); padding:22px 12px; text-align:center; box-shadow:var(--edc-shadow); }
+  .edc-stat-num{ display:block; font-size:clamp(22px,3vw,30px); font-weight:800; color:var(--edc-primary-dark); }
+  .edc-stat-label{ display:block; font-size:13px; color:var(--edc-muted); margin-top:4px; font-weight:600; text-transform:uppercase; letter-spacing:.4px; }
+
+  /* ---------- generic section ---------- */
+  .edc-section{ padding:64px 24px; }
+  .edc-section.alt{ background:var(--edc-bg-alt); }
+  .edc-section-inner{ max-width:900px; margin:0 auto; }
+  .edc-eyebrow{ display:flex; align-items:center; gap:10px; color:var(--edc-primary-dark); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+  .edc-eyebrow i{ font-size:15px; }
+  .edc-h2{ font-size:clamp(24px,3.4vw,34px); font-weight:800; margin:0 0 18px; letter-spacing:-.3px; }
+  .edc-p{ font-size:17px; line-height:1.85; color:var(--edc-text); margin:0 0 16px; }
+  .edc-p b{ color:var(--edc-ink); }
+
+  /* ---------- callout / key takeaway ---------- */
+  .edc-callout{ display:flex; gap:14px; align-items:flex-start; background:var(--edc-primary-light); border-left:4px solid var(--edc-primary); border-radius:10px; padding:18px 20px; margin:22px 0 6px; }
+  .edc-callout i{ color:var(--edc-primary-dark); font-size:19px; margin-top:2px; }
+  .edc-callout p{ margin:0; font-size:15.5px; line-height:1.65; color:var(--edc-ink); }
+  .edc-callout b{ color:var(--edc-primary-darker); }
+
+  /* ---------- tables ---------- */
+  .edc-table-wrap{ overflow-x:auto; border-radius:var(--edc-radius); box-shadow:var(--edc-shadow); margin:26px 0; }
+  table.edc-table{ width:100%; border-collapse:collapse; background:var(--edc-white); min-width:520px; }
+  table.edc-table thead th{ background:var(--edc-ink); color:#eafbf0; font-size:13px; text-transform:uppercase; letter-spacing:.5px; padding:16px 18px; text-align:left; }
+  table.edc-table tbody td{ padding:16px 18px; font-size:15px; border-bottom:1px solid #eef3ef; color:var(--edc-text); }
+  table.edc-table tbody tr:last-child td{ border-bottom:none; }
+  table.edc-table tbody tr:hover{ background:var(--edc-primary-light); }
+  table.edc-table tbody tr.is-highlight td{ background:#f0fbf3; font-weight:700; }
+  table.edc-table tbody tr.is-highlight td:first-child{ color:var(--edc-primary-darker); }
+
+  /* ---------- step timeline ---------- */
+  .edc-timeline{ position:relative; margin-top:40px; padding-left:52px; }
+  .edc-timeline::before{ content:""; position:absolute; left:21px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--edc-primary),#cfeed9); }
+  .edc-step{ position:relative; margin-bottom:34px; opacity:0; transform:translateY(18px); transition:opacity .5s ease, transform .5s ease; }
+  .edc-step.is-visible{ opacity:1; transform:translateY(0); }
+  .edc-step:last-child{ margin-bottom:0; }
+  .edc-step-num{ position:absolute; left:-52px; top:0; width:44px; height:44px; border-radius:50%; background:var(--edc-primary); color:#04240f; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(21,184,68,.4); }
+  .edc-step-card{ background:var(--edc-white); border:1px solid #e7efe9; border-radius:14px; padding:20px 22px; box-shadow:var(--edc-shadow); }
+  .edc-step-card h3{ margin:0 0 8px; font-size:18px; font-weight:800; color:var(--edc-ink); }
+  .edc-step-card p{ margin:0; font-size:15.5px; line-height:1.75; color:var(--edc-text); }
+
+  /* ---------- icon list ---------- */
+  .edc-icon-list{ list-style:none; margin:24px 0 0; padding:0; display:grid; gap:14px; }
+  .edc-icon-list li{ display:flex; gap:14px; align-items:flex-start; background:var(--edc-white); border:1px solid #e7efe9; border-radius:12px; padding:14px 16px; box-shadow:var(--edc-shadow); font-size:15.5px; }
+  .edc-icon-list i{ color:var(--edc-primary); font-size:18px; margin-top:2px; flex:0 0 auto; width:22px; text-align:center; }
+
+  /* ---------- offer banner ---------- */
+  .edc-offer{ margin-top:26px; border-radius:var(--edc-radius); padding:30px 28px; background:linear-gradient(120deg,var(--edc-ink),#123b1f); color:var(--edc-white); position:relative; overflow:hidden; box-shadow:var(--edc-shadow-lg); }
+  .edc-offer::after{ content:""; position:absolute; width:260px; height:260px; background:radial-gradient(circle,rgba(21,184,68,.35),transparent 70%); right:-100px; top:-100px; }
+  .edc-offer-badge{ display:inline-flex; align-items:center; gap:8px; background:var(--edc-primary); color:#04240f; font-weight:800; font-size:13px; padding:7px 15px; border-radius:999px; margin-bottom:14px; position:relative; z-index:1; }
+  .edc-offer h3{ font-size:clamp(20px,2.6vw,26px); margin:0 0 10px; font-weight:800; position:relative; z-index:1; }
+  .edc-offer p{ margin:0; color:#d9ede0; font-size:15.5px; line-height:1.7; max-width:640px; position:relative; z-index:1; }
+  .edc-offer b{ color:#8ef0ac; }
+
+  /* ---------- FAQ ---------- */
+  .edc-faq-item{ background:var(--edc-white); border:1px solid #e7efe9; border-radius:12px; margin-bottom:12px; box-shadow:var(--edc-shadow); overflow:hidden; }
+  .edc-faq-item summary{ list-style:none; cursor:pointer; padding:18px 20px; font-weight:700; font-size:16px; color:var(--edc-ink); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .edc-faq-item summary::-webkit-details-marker{ display:none; }
+  .edc-faq-item summary i{ color:var(--edc-primary); transition:transform .25s ease; flex:0 0 auto; }
+  .edc-faq-item[open] summary i{ transform:rotate(45deg); }
+  .edc-faq-item p{ margin:0; padding:0 20px 20px; color:var(--edc-text); font-size:15.5px; line-height:1.75; }
+
+  /* ---------- final CTA + form ---------- */
+  .edc-cta-section{ padding:70px 24px; background:var(--edc-ink); position:relative; overflow:hidden; }
+  .edc-cta-section::before{ content:""; position:absolute; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle,rgba(21,184,68,.25),transparent 70%); top:-180px; left:-140px; }
+  .edc-cta-inner{ max-width:760px; margin:0 auto; position:relative; z-index:1; }
+  .edc-cta-inner h2{ color:var(--edc-white); font-size:clamp(24px,3.4vw,32px); font-weight:800; text-align:center; margin:0 0 8px; }
+  .edc-cta-inner > p.edc-cta-sub{ color:#c7ddcd; text-align:center; font-size:15.5px; margin:0 0 36px; }
+
+  .edc-form{ background:var(--edc-white); border-radius:20px; padding:32px; box-shadow:var(--edc-shadow-lg); }
+  .edc-form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+  .edc-field{ position:relative; }
+  .edc-field label{ display:block; font-size:13px; font-weight:700; color:var(--edc-muted); margin-bottom:6px; }
+  .edc-field input, .edc-field select, .edc-field textarea{ width:100%; padding:13px 14px; border:1.5px solid #e2ebe4; border-radius:10px; font-size:15px; font-family:var(--edc-font); color:var(--edc-text); background:#fbfdfb; transition:border-color .15s ease, box-shadow .15s ease; }
+  .edc-field input:focus, .edc-field select:focus, .edc-field textarea:focus{ outline:none; border-color:var(--edc-primary); box-shadow:0 0 0 4px rgba(21,184,68,.15); background:var(--edc-white); }
+  .edc-field textarea{ resize:vertical; min-height:96px; }
+  .edc-field.full{ grid-column:1 / -1; }
+
+  .edc-dropzone{ grid-column:1 / -1; border:2px dashed #cfe4d5; border-radius:14px; padding:28px 18px; text-align:center; cursor:pointer; transition:.15s; background:#fbfdfb; }
+  .edc-dropzone:hover, .edc-dropzone.is-drag{ border-color:var(--edc-primary); background:var(--edc-primary-light); }
+  .edc-dropzone i{ font-size:26px; color:var(--edc-primary); margin-bottom:8px; display:block; }
+  .edc-dropzone p{ margin:0 0 4px; font-size:15px; font-weight:600; color:var(--edc-ink); }
+  .edc-dropzone .edc-browse{ color:var(--edc-primary-dark); text-decoration:underline; font-weight:700; }
+  .edc-dropzone small{ color:var(--edc-muted); font-size:12.5px; }
+
+  .edc-file-list{ grid-column:1 / -1; display:grid; gap:10px; margin-top:14px; }
+  .edc-file-chip{ display:flex; align-items:center; gap:12px; background:#f6faf7; border:1px solid #e7efe9; border-radius:10px; padding:8px 10px; }
+  .edc-file-chip img{ width:38px; height:38px; object-fit:cover; border-radius:6px; flex:0 0 auto; }
+  .edc-file-chip .edc-file-icon{ width:38px; height:38px; border-radius:6px; background:var(--edc-primary-light); color:var(--edc-primary-dark); display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+  .edc-file-chip .edc-file-name{ font-size:13.5px; color:var(--edc-text); flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .edc-file-chip .edc-file-size{ font-size:12px; color:var(--edc-muted); flex:0 0 auto; }
+  .edc-file-remove{ background:none; border:none; color:#b0463f; cursor:pointer; font-size:15px; flex:0 0 auto; padding:4px; }
+
+  .edc-form-submit{ grid-column:1 / -1; display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:6px; }
+  .edc-form-note{ font-size:12.5px; color:var(--edc-muted); }
+  .edc-alt-cta{ text-align:center; margin-top:18px; }
+  .edc-alt-cta a{ color:#8ef0ac; font-size:14px; font-weight:600; text-decoration:none; }
+  .edc-alt-cta a:hover{ text-decoration:underline; }
+
+  @media (max-width:700px){
+    .edc-stats{ grid-template-columns:1fr; }
+    .edc-form-row{ grid-template-columns:1fr; }
+    .edc-timeline{ padding-left:44px; }
+    .edc-step-num{ left:-44px; width:38px; height:38px; font-size:14px; }
+  }
+</style>
+
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N77JNRQ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- THIS IS FOR GOOGLE ANALYTICS -->
+    <!-- <<<<GA-4 PROPERTY START>>>> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8PZYH20NBY');
+    </script> 
+    <!-- <<<<GA-4 PROPERTY END>>>> -->
+
+    <!-- Google tag (gtag.js) -->
+    <!-- THIS IS FOR GOOGLE ADS; CONVERSION TRACKING -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10905930773">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-10905930773');
+    </script>
+    <!-- Google tag (gtag.js) -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Dental Implants in Albania: Cost, Steps & Timeline</title>
+    <meta name="description" content="Get dental implants in Albania with Swiss-made materials. See the full step-by-step process, healing timeline, and free travel perks."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="canonical" href="https://www.emeraldental.com/dental-implants-albania-cost-process-timeline"/>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicoo.webp"
+    />
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+        var options = {
+            facebook: "124464958944945", // Facebook page ID
+            whatsapp: "+355 69 20 57 277", // WhatsApp number
+            call_to_action: "Have a question? Send us a message", // Call to action
+            button_color: "#15b844", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,facebook", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+    
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- header-area start -->
+      <header>
+          <div class="main-header-area main-header-02 main-header-06 header-06-bg pt-20 pb-10" id="position-relative">
+              <div class="container">
+                  <div class="row align-items-center justify-content-between">
+                      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+                          <div class="logo">
+                          <a class="logo-img" href="home.html"
+                              ><img loading="lazy"
+                              src="assets/img/logo/Clinica Dentale Emerald.webp"
+                              alt="Emerald Clinic"
+                          /></a>
+                          <a class="logo-img sticky-logo d-none" href="home.html"
+                              ><img loading="lazy"
+                              src="assets/img/logo/Clinica Dentale Emerald.webp"
+                              loading="lazy"
+                              alt=""
+                          /></a>
+                          </div>
+                      </div>
+                      <div class="col-xxl-8 col-xl-10 col-lg-7 d-none d-lg-block">
+                          <div class="width-108-for-navbar main-menu main-menu-02 main-menu-06 d-none d-lg-block text-lg-end ml-45" style="min-width: 700px;">
+                          <nav>
+                              <ul>
+                                  <li>
+                                      <a class="active" href="home.html">Home </a>
+                                  </li>
+                                  <li>
+                                      <a href="about-us.html">About Us</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Services <i class="far fa-chevron-down"></i></a>
+                          <ul class="submenu">
+                              <li><a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a></li>
+                              <li><a href="dental-crowns.html">Dental Crowns</a></li>
+                              <li><a href="veneers.html">Veneers</a></li>
+                              <li><a href="endodontics.html">Endodontics</a></li>
+                              <li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants-albania-cost-process-timeline.html">Oral and Maxillofacial surgery (OMF)</a></li>
+                                <li><a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning & Whitening</a></li>
+                            </ul>
+                                  </li>
+                                  <li><a href="prices.html">Prices</a></li>
+                                  <li><a href="contact-us.html">Contact</a></li>
+                                  <li><a href="dental-tourism.html">Dental Tourism</a></li>
+                                  <li><a href="blog-en.html">Blog</a></li>
+                                  <li>
+                                      <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
+                                      <ul class="submenu">
+                                          <li><a href="implantologia-dentale.html">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </nav>
+                          </div>
+                      </div>
+                      <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-6 col-6 text-xxl-start text-end">
+                          <ul class="right-nav">
+                          <li>
+                              <div class="hamburger-menu d-md-block d-lg-none">
+                              <a href="javascript:void(0);">
+                                  <i class="far fa-bars"></i>
+                              </a>
+                              </div>
+                          </li>
+                          <li class="d-none d-lg-inline-block"></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+      <!-- header-area end -->
+
+      <!-- slide-bar start -->
+      <aside class="slide-bar">
+          <div class="close-mobile-menu">
+              <a href="javascript:void(0);" role="button" aria-label="Toggle Menu"><i class="far fa-bars"></i></a>
+          </div>      
+          <!-- side-mobile-menu start -->
+          <nav class="side-mobile-menu">
+              <ul id="mobile-menu-active">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="#">Services <i class="far fa-chevron-down"></i></a>
+                  <ul class="submenu">
+                      <li><a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a></li>
+                      <li><a href="dental-crowns.html">Dental Crowns</a></li>
+                      <li><a href="veneers.html">Veneers</a></li>
+                      <li><a href="endodontics.html">Endodontics</a></li>
+                      <li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants-albania-cost-process-timeline.html">Oral and Maxillofacial surgery (OMF)</a></li>
+                                <li><a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning & Whitening</a></li>
+                            </ul>
+              </li>
+              <li><a href="prices.html">Prices</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+              <li><a href="dental-tourism.html">Dental Tourism</a></li>
+              <li><a href="blog-en.html">Blog</a></li>
+              <li>
+                  <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
+                  <ul class="submenu">
+                      <li><a href="implantologia-dentale.html">IT  <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
+                  </ul>
+              </li>
+              </ul>
+          </nav>
+          <!-- side-mobile-menu end -->
+      </aside>
+      <div class="body-overlay"></div>
+      <!-- slide-bar end -->      
+
+
+
+<div class="edc-progress" id="edcProgress"></div>
+
+<main class="edc-main">
+
+  <!-- ============ HERO ============ -->
+  <section class="edc-hero">
+    <div class="edc-container edc-hero-inner">
+      <span class="edc-badge">✦ Trusted by patients across Italy, the UK &amp; Europe</span>
+      <h1>Dental Implants in Albania: Your Complete Step-by-Step Guide</h1>
+      <p class="edc-hero-sub">Everything you need to know before you fly in — the real cost, the day-by-day process, and exactly how long healing takes.</p>
+      <div class="edc-hero-meta">
+        <span><i class="far fa-clock"></i>&nbsp; 5 minute read</span>
+        <span><i class="fas fa-tooth"></i>&nbsp; Swiss-made implants</span>
+        <span><i class="fas fa-check-circle"></i>&nbsp; Lifetime warranty</span>
+      </div>
+      <div class="edc-hero-cta">
+        <a href="#journey" class="edc-btn edc-btn-primary">See the full process <i class="fas fa-arrow-down"></i></a>
+        <a href="#contact-form" class="edc-btn edc-btn-ghost">Get a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STICKY QUICK NAV ============ -->
+  <nav class="edc-quicknav" id="edcQuicknav">
+    <div class="edc-quicknav-track">
+      <a href="#what-is" data-target="what-is">What's an Implant</a>
+      <a href="#cost" data-target="cost">Cost</a>
+      <a href="#journey" data-target="journey">Your Journey</a>
+      <a href="#timeline" data-target="timeline">Timeline</a>
+      <a href="#bone" data-target="bone">Bone Support</a>
+      <a href="#logistics" data-target="logistics">Travel Help</a>
+      <a href="#aftercare" data-target="aftercare">Aftercare</a>
+      <a href="#faq" data-target="faq">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- ============ INTRO + STATS ============ -->
+  <section class="edc-container edc-intro">
+    <p class="edc-dropcap">Thinking about dental implants in Albania? You're not alone. Every year, thousands of patients from Italy, the UK, and across Europe travel here for the same reason: lower cost without lower quality. A single implant costs around €300 in Albania, compared to €1,500–€2,500 in Italy or the UK, because of lower taxes and wages, not lower standards. Our clinic only places Swiss-manufactured implants backed by a lifetime warranty. This guide walks you through the entire journey, from your first online consultation to your final crown fitting, plus the healing time you should expect at each stage.</p>
+
+    <div class="edc-stats edc-reveal">
+      <div class="edc-stat"><span class="edc-stat-num">€300</span><span class="edc-stat-label">per implant</span></div>
+      <div class="edc-stat"><span class="edc-stat-num">2</span><span class="edc-stat-label">clinic visits total</span></div>
+      <div class="edc-stat"><span class="edc-stat-num">Lifetime</span><span class="edc-stat-label">Swiss warranty</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IS AN IMPLANT ============ -->
+  <section class="edc-section" id="what-is">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-tooth"></i> The Basics</div>
+      <h2 class="edc-h2">What Is a Dental Implant?</h2>
+      <p class="edc-p">A dental implant is a small titanium post that replaces the root of a missing tooth. It's placed directly into your jawbone, where it fuses with the bone over time. Once healed, it acts as a stable anchor for a crown, bridge, or denture. Unlike removable dentures, implants don't slip or shift when you eat or speak, which is why patients describe them as feeling like natural teeth.</p>
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> An implant replaces the tooth root, not just the visible tooth, which is why it feels and functions naturally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COST ============ -->
+  <section class="edc-section alt" id="cost">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-euro-sign"></i> Pricing</div>
+      <h2 class="edc-h2">How Much Do Dental Implants Cost in Albania?</h2>
+      <p class="edc-p">Dental implants in Albania cost roughly <b>€300 per implant</b>, a fraction of prices in Western Europe. This is due to lower operating costs and taxation in Albania, not a compromise on materials. Every implant placed at our clinic is manufactured in Switzerland and comes with a lifetime warranty.</p>
+
+      <div class="edc-table-wrap">
+        <table class="edc-table">
+          <thead>
+            <tr><th>Location</th><th>Average Cost per Implant</th><th>Materials Used</th></tr>
+          </thead>
+          <tbody>
+            <tr class="is-highlight"><td>Albania (our clinic)</td><td>~€300</td><td>Swiss-made, lifetime warranty</td></tr>
+            <tr><td>Italy</td><td>€1,500–€2,500</td><td>Varies by clinic</td></tr>
+            <tr><td>United Kingdom</td><td>£1,800–£2,800</td><td>Varies by clinic</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> Lower cost in Albania comes from lower overheads and wages, not cheaper implant brands.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ YOUR JOURNEY (TIMELINE) ============ -->
+  <section class="edc-section" id="journey">
+    <div class="edc-section-inner">
+      <div class="edc-eyebrow edc-reveal"><i class="fas fa-route"></i> The Process</div>
+      <h2 class="edc-h2 edc-reveal">Your Step-by-Step Treatment Journey</h2>
+      <p class="edc-p edc-reveal">Getting dental implants abroad can feel complicated. It isn't, once you know the sequence. Here's exactly what happens from your first message to us through to your finished smile.</p>
+
+      <div class="edc-timeline">
+        <div class="edc-step">
+          <div class="edc-step-num">1</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-laptop-medical" style="color:var(--edc-primary); margin-right:8px;"></i>Free Online Consultation</h3>
+            <p>You start by sending us photos or X-rays of your teeth, along with your medical history. Our surgeons review your case remotely and give you an initial treatment plan and price estimate before you book any travel. This step costs you nothing and helps you decide with confidence.</p>
+          </div>
+        </div>
+
+        <div class="edc-step">
+          <div class="edc-step-num">2</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-plane-departure" style="color:var(--edc-primary); margin-right:8px;"></i>Booking Your Trip</h3>
+            <p>Once you confirm your treatment plan, we help you plan your visit. This includes suggested flight times that fit your treatment schedule, hotel recommendations near the clinic, and an estimate of how many days you'll need to stay for this specific visit.</p>
+          </div>
+          <div class="edc-callout" style="margin-left:0;">
+            <i class="fas fa-lightbulb"></i>
+            <p><b>Key takeaway:</b> Most first visits require 3 to 5 days on the ground, depending on whether grafting is needed.</p>
+          </div>
+        </div>
+
+        <div class="edc-step">
+          <div class="edc-step-num">3</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-x-ray" style="color:var(--edc-primary); margin-right:8px;"></i>Arrival and In-Person Exam</h3>
+            <p>On your first day, you'll have a full clinical exam, including 3D imaging of your jaw. If your tooth was extracted recently, this step may be quicker since recent scans are still valid. Your surgeon confirms the final plan face-to-face and answers any remaining questions before surgery.</p>
+          </div>
+        </div>
+
+        <div class="edc-step">
+          <div class="edc-step-num">4</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-syringe" style="color:var(--edc-primary); margin-right:8px;"></i>Implant Placement Surgery</h3>
+            <p>The surgery itself is short, around 20 minutes per implant, and less uncomfortable than a tooth extraction. Your surgeon numbs the area with local anaesthetic, opens the gum, and places the titanium post directly into the jawbone. If your jawbone needs reinforcement first, this is handled here too, through bone grafting or a sinus lift.</p>
+          </div>
+          <div class="edc-callout" style="margin-left:0;">
+            <i class="fas fa-lightbulb"></i>
+            <p><b>Key takeaway:</b> The surgical placement takes about 20 minutes per implant, but the full process spans months due to healing.</p>
+          </div>
+        </div>
+
+        <div class="edc-step">
+          <div class="edc-step-num">5</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-hourglass-half" style="color:var(--edc-primary); margin-right:8px;"></i>Healing and Osseointegration</h3>
+            <p>After placement, your jawbone needs time to grow around and fuse with the implant. This process is called osseointegration, and it typically takes <b>6 months</b>. You return home during this period and continue your normal life, with only minor aftercare needed.</p>
+          </div>
+        </div>
+
+        <div class="edc-step">
+          <div class="edc-step-num">6</div>
+          <div class="edc-step-card">
+            <h3><i class="fas fa-crown" style="color:var(--edc-primary); margin-right:8px;"></i>Crown Placement and Final Fit</h3>
+            <p>Once healing is complete, you return to the clinic for your final visit. We take new impressions of your mouth, place the abutment (the connector piece), and fit your permanent crown. This visit is usually shorter than your first, often 2 to 3 days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FULL TIMELINE TABLE ============ -->
+  <section class="edc-section alt" id="timeline">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-calendar-check"></i> Big Picture</div>
+      <h2 class="edc-h2">How Long Does the Full Process Take?</h2>
+      <p class="edc-p">The full timeline from surgery to a finished crown is usually 3 to 5 months, split across two clinic visits. Here's how the stages break down.</p>
+
+      <div class="edc-table-wrap">
+        <table class="edc-table">
+          <thead>
+            <tr><th>Stage</th><th>What Happens</th><th>Typical Time</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Consultation</td><td>Remote review of X-rays and history</td><td>1 day</td></tr>
+            <tr class="is-highlight"><td>Visit 1: Surgery</td><td>Implant placement (plus grafting if needed)</td><td>2–3 days on site</td></tr>
+            <tr><td>Healing</td><td>Osseointegration, jawbone fuses to implant</td><td>6 months</td></tr>
+            <tr class="is-highlight"><td>Visit 2: Crown</td><td>Impressions, abutment, crown fitting</td><td>2–3 days on site</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> You only need to travel twice, once for surgery and once for the crown, with the long healing period spent at home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BONE SUPPORT ============ -->
+  <section class="edc-section" id="bone">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-bone"></i> When Extra Care Is Needed</div>
+      <h2 class="edc-h2">What If Your Jawbone Can't Support an Implant?</h2>
+      <p class="edc-p">If your jawbone is too thin or soft, you may need bone grafting or a sinus lift before implant placement. A bone graft rebuilds a solid base for the implant, since your bite exerts real pressure on the bone. A sinus lift adds bone below the sinus when natural bone has thinned due to missing upper back teeth. Minor grafting can often be done the same day as your implant surgery. More extensive grafting may need its own healing period of a few months before implants are placed.</p>
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> Grafting adds time to your treatment plan, but your surgeon will tell you upfront during the online consultation if you need it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGISTICS + FREE OFFER ============ -->
+  <section class="edc-section alt" id="logistics">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-suitcase-rolling"></i> Dental Tourism, Simplified</div>
+      <h2 class="edc-h2">How We Handle Your Travel Logistics</h2>
+      <p class="edc-p">Planning dental treatment abroad shouldn't mean planning a trip alone. Once your treatment plan is confirmed, our team helps coordinate the practical side of your visit so you can focus on your health, not logistics.</p>
+
+      <ul class="edc-icon-list">
+        <li><i class="fas fa-plane"></i> Flight guidance timed around your clinic appointments</li>
+        <li><i class="fas fa-hotel"></i> Hotel booking assistance near the clinic</li>
+        <li><i class="fas fa-shuttle-van"></i> Airport pickup and transport to and from every appointment</li>
+        <li><i class="fas fa-user-headset"></i> A dedicated point of contact throughout your stay</li>
+      </ul>
+
+      <div class="edc-offer">
+        <span class="edc-offer-badge"><i class="fas fa-gift"></i> Free Travel Perk</span>
+        <h3>Free Travel Support on Treatments Over €3,000</h3>
+        <p>Patients who spend more than <b>€3,000</b> on treatment at our clinic receive their travel logistics <b>free of charge</b>. This includes transport to and from the clinic for every appointment during your stay, and support arranging your flights and hotel. It's our way of making full-mouth or multi-implant treatment simpler for patients traveling from abroad.</p>
+      </div>
+
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> Spend over €3,000 on treatment and your local transport and travel support come at no extra cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AFTERCARE ============ -->
+  <section class="edc-section" id="aftercare">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-heartbeat"></i> Recovery</div>
+      <h2 class="edc-h2">Caring for Your Implant After Surgery</h2>
+      <p class="edc-p">Recovery in the days right after surgery matters for how well your implant heals. Avoid rinsing your mouth forcefully, and don't touch the surgical site with your tongue or fingers, since this can dislodge the blood clot and cause bleeding. Skip straws, spitting, and smoking for the same reason.</p>
+      <p class="edc-p">Stick to soft, cool foods for the first few days and avoid anything spicy, hot, or small enough to get stuck in the gum, like popcorn or seeds. Stay hydrated with cold drinks, and avoid alcohol until the anaesthetic has fully worn off. Most patients return to their normal diet within a week.</p>
+      <div class="edc-callout">
+        <i class="fas fa-lightbulb"></i>
+        <p><b>Key takeaway:</b> Careful aftercare in the first week protects the blood clot and supports faster, smoother healing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="edc-section alt" id="faq">
+    <div class="edc-section-inner edc-reveal">
+      <div class="edc-eyebrow"><i class="fas fa-circle-question"></i> Common Questions</div>
+      <h2 class="edc-h2">Frequently Asked Questions</h2>
+
+      <details class="edc-faq-item" open>
+        <summary>How much does a dental implant cost in Albania? <i class="fas fa-plus"></i></summary>
+        <p>A single dental implant costs around €300 in Albania, compared to €1,500 or more in Italy or the UK. The lower price reflects lower local costs, not a lower-quality implant.</p>
+      </details>
+
+      <details class="edc-faq-item">
+        <summary>How long do I need to stay in Albania for implants? <i class="fas fa-plus"></i></summary>
+        <p>Most patients need two separate visits: 3 to 5 days for the surgery, and 2 to 3 days a few months later for the crown fitting. The healing period in between is spent at home.</p>
+      </details>
+
+      <details class="edc-faq-item">
+        <summary>How long does it take for a dental implant to heal? <i class="fas fa-plus"></i></summary>
+        <p>Healing, known as osseointegration, generally takes 3 to 4 months. This is how long it takes for your jawbone to fuse fully with the titanium implant post.</p>
+      </details>
+
+      <details class="edc-faq-item">
+        <summary>Do I need bone grafting before getting an implant? <i class="fas fa-plus"></i></summary>
+        <p>Only if your jawbone is too thin or soft to support an implant safely. Your surgeon can usually tell during the online photo and X-ray review, before you travel.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA + CONTACT FORM ============ -->
+  <section class="edc-cta-section" id="contact-form">
+    <div class="edc-cta-inner">
+      <h2>Ready to get started?</h2>
+      <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
+
+      <form class="edc-form" id="edcContactForm" action="/contatti" method="post" enctype="multipart/form-data" target="blank">
+        <div class="edc-form-row">
+          <div class="edc-field">
+            <label for="edcName">Full name</label>
+            <input type="text" id="edcName" name="name" placeholder="Jane Doe" required>
+          </div>
+          <div class="edc-field">
+            <label for="edcEmail">Email</label>
+            <input type="email" id="edcEmail" name="email" placeholder="jane@email.com" required>
+          </div>
+        </div>
+
+        <div class="edc-form-row">
+          <div class="edc-field">
+            <label for="edcPhone">Phone / WhatsApp</label>
+            <input type="tel" id="edcPhone" name="phone" placeholder="+39 300 000 0000">
+          </div>
+          <div class="edc-field">
+            <label for="edcTreatment">Treatment of interest</label>
+            <select id="edcTreatment" name="treatment">
+              <option>Dental Implants</option>
+              <option>Dental Crowns</option>
+              <option>Veneers</option>
+              <option>Endodontics</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="edc-form-row">
+          <div class="edc-field full">
+            <label for="edcMessage">Tell us about your case</label>
+            <textarea id="edcMessage" name="message" placeholder="How many teeth need attention? Any relevant medical history?"></textarea>
+          </div>
+        </div>
+
+        <div class="edc-form-row">
+          <div class="edc-dropzone" id="edcDropzone">
+            <input type="file" id="edcFileInput" name="attachments[]" multiple accept="image/*,video/*" hidden>
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Drag &amp; drop photos or videos here, or <span class="edc-browse">browse files</span></p>
+            <small>JPG, PNG, HEIC, MP4, MOV — up to 25MB each</small>
+          </div>
+          <div class="edc-file-list" id="edcFileList"></div>
+        </div>
+
+        <div class="edc-form-submit">
+          <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn">Send my case <i class="fas fa-paper-plane"></i></button>
+          <span class="edc-form-note">We usually reply within 24 hours. Your files are only used to prepare your treatment plan.</span>
+        </div>
+      </form>
+
+      <div class="edc-alt-cta">
+        <a href="/contatti" target="blank">Prefer to just ask a quick question? Ask for a quote <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- reading progress bar ---------- */
+  var progressBar = document.getElementById('edcProgress');
+  function updateProgress(){
+    var doc = document.documentElement;
+    var scrollTop = window.scrollY || doc.scrollTop;
+    var height = doc.scrollHeight - doc.clientHeight;
+    var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+    if(progressBar) progressBar.style.width = pct + '%';
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){ updateProgress(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive:true });
+  updateProgress();
+
+  /* ---------- scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.edc-reveal, .edc-step');
+  if('IntersectionObserver' in window){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15, rootMargin:'0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- quicknav scrollspy ---------- */
+  var quicknavLinks = document.querySelectorAll('.edc-quicknav a');
+  var sections = Array.prototype.map.call(quicknavLinks, function(a){
+    return document.getElementById(a.getAttribute('data-target'));
+  }).filter(Boolean);
+
+  if('IntersectionObserver' in window && sections.length){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = entry.target.id;
+          quicknavLinks.forEach(function(a){
+            a.classList.toggle('is-active', a.getAttribute('data-target') === id);
+          });
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px', threshold:0 });
+    sections.forEach(function(sec){ spy.observe(sec); });
+  }
+
+  /* ---------- smooth anchor scroll (accounts for sticky quicknav) ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var targetId = link.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if(!target) return;
+      e.preventDefault();
+      var navEl = document.getElementById('edcQuicknav');
+      var offset = navEl ? navEl.offsetHeight + 12 : 12;
+      var top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top:top, behavior:'smooth' });
+    });
+  });
+
+  /* ---------- file upload: dropzone + previews ---------- */
+  var dropzone = document.getElementById('edcDropzone');
+  var fileInput = document.getElementById('edcFileInput');
+  var fileList = document.getElementById('edcFileList');
+  var fileStore = [];
+  var MAX_SIZE = 25 * 1024 * 1024; // 25MB
+
+  function formatSize(bytes){
+    if(bytes < 1024) return bytes + ' B';
+    if(bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
+    return (bytes/(1024*1024)).toFixed(1) + ' MB';
+  }
+
+  function syncInput(){
+    if(typeof DataTransfer === 'undefined') return;
+    var dt = new DataTransfer();
+    fileStore.forEach(function(f){ dt.items.add(f); });
+    fileInput.files = dt.files;
+  }
+
+  function renderFiles(){
+    fileList.innerHTML = '';
+    fileStore.forEach(function(file, index){
+      var chip = document.createElement('div');
+      chip.className = 'edc-file-chip';
+
+      if(file.type.indexOf('image/') === 0){
+        var img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        chip.appendChild(img);
+      } else {
+        var iconWrap = document.createElement('div');
+        iconWrap.className = 'edc-file-icon';
+        iconWrap.innerHTML = '<i class="fas fa-file-video"></i>';
+        chip.appendChild(iconWrap);
+      }
+
+      var name = document.createElement('span');
+      name.className = 'edc-file-name';
+      name.textContent = file.name;
+      chip.appendChild(name);
+
+      var size = document.createElement('span');
+      size.className = 'edc-file-size';
+      size.textContent = formatSize(file.size);
+      chip.appendChild(size);
+
+      var removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'edc-file-remove';
+      removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+      removeBtn.addEventListener('click', function(){
+        fileStore.splice(index, 1);
+        syncInput();
+        renderFiles();
+      });
+      chip.appendChild(removeBtn);
+
+      fileList.appendChild(chip);
+    });
+  }
+
+  function addFiles(newFiles){
+    Array.prototype.forEach.call(newFiles, function(file){
+      var isMedia = file.type.indexOf('image/') === 0 || file.type.indexOf('video/') === 0;
+      if(!isMedia || file.size > MAX_SIZE) return;
+      fileStore.push(file);
+    });
+    syncInput();
+    renderFiles();
+  }
+
+  if(dropzone && fileInput){
+    dropzone.addEventListener('click', function(){ fileInput.click(); });
+
+    fileInput.addEventListener('change', function(e){
+      addFiles(e.target.files);
+    });
+
+    ['dragenter','dragover'].forEach(function(evt){
+      dropzone.addEventListener(evt, function(e){
+        e.preventDefault(); e.stopPropagation();
+        dropzone.classList.add('is-drag');
+      });
+    });
+    ['dragleave','drop'].forEach(function(evt){
+      dropzone.addEventListener(evt, function(e){
+        e.preventDefault(); e.stopPropagation();
+        dropzone.classList.remove('is-drag');
+      });
+    });
+    dropzone.addEventListener('drop', function(e){
+      if(e.dataTransfer && e.dataTransfer.files){
+        addFiles(e.dataTransfer.files);
+      }
+    });
+  }
+
+  /* ---------- gentle submit UX (does not block native form submission) ---------- */
+  var form = document.getElementById('edcContactForm');
+  var submitBtn = document.getElementById('edcSubmitBtn');
+  if(form && submitBtn){
+    form.addEventListener('submit', function(){
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+    });
+  }
+})();
+</script>
+
+
+      <!--footer-area start-->
+        <footer id="custom-full-width-footer" style="background: #0d1b1e; color: #ffffff; padding: 80px 5% 40px 5%; font-family: 'Segoe UI', Roboto, sans-serif; width: 100%; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="max-width: 100%; margin: 0 auto;">
+                <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+                    
+                    <div style="flex: 1; min-width: 280px; margin-bottom: 30px;">
+                        <img src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt="Emerald Dental Clinic" style="max-width: 180px; height: auto; margin-bottom: 25px; filter: brightness(1.1);">
+                        <p style="font-size: 15px; line-height: 1.8; color: #a0aec0; max-width: 320px;">
+                            Experience world-class dental care in the heart of Tirana. We specialize in advanced diagnostics and aesthetic transformations with a patient-first approach.
+                        </p>
+                        <div style="margin-top: 20px;">
+                            <a href="https://linktr.ee/emeraldentaldentistiintirana" target="_blank" style="display: inline-block; padding: 10px 20px; background: #15b844; color: white; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s;">Visit our Linktree</a>
+                        </div>
+                    </div>
+
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Services</h5>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="dental-implants-albania-cost-process-timeline.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px; transition: color 0.3s;">Dental Implants</a></li>
+                            <li style="margin-bottom: 12px;"><a href="dental-crowns.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Zirconia Crowns</a></li>
+                            <li style="margin-bottom: 12px;"><a href="veneers.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Porcelain Veneers</a></li>
+                            <li style="margin-bottom: 12px;"><a href="endodontics.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Root Canal Therapy</a></li>
+                            <li style="margin-bottom: 12px;"><a href="about-us.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Our Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
+                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Get In Touch</h5>
+                        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-map-marker-alt"></i></span>
+                            <p style="margin: 0; font-size: 15px; color: #cbd5e0;">Rruga e Kavajes, Pallati me Shigjeta, Tirana, Albania</p>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fab fa-whatsapp"></i></span>
+                            <a href="tel:+355 69 20 57 277" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+355 69 20 57 277</a>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-phone-alt"></i></span>
+                            <a href="tel:+39 350 910 5210" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+39 350 910 5210</a>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="far fa-envelope"></i></span>
+                            <a href="mailto:poliklinikaemerald@gmail.com" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">poliklinikaemerald@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div style="flex: 1;">
+                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Clinic Hours</h5>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
+                            <span style="color: #a0aec0;">Mon - Fri:</span>
+                            <span style="color: #ffffff;">09:00 - 20:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
+                            <span style="color: #a0aec0;">Saturday:</span>
+                            <span style="color: #ffffff;">09:00 - 14:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                            <span style="color: #a0aec0;">Sunday:</span>
+                            <span style="color: #ef4444; font-weight: bold;">Closed</span>
+                        </div>
+                        <a href="contact-us.html" style="display: block; margin-top: 20px; text-align: center; color: #15b844; border: 1px solid #15b844; padding: 8px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: 600;">Book Appointment</a>
+                    </div>
+
+                </div>
+
+                <!-- SEO INTERNAL LINKS START -->
+                    <style>
+                        .seo-footer-links {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: center;
+                            margin-top: 20px;
+                            padding-top: 20px;
+                            border-top: 1px solid rgba(255,255,255,0.05);
+                        }
+
+                        .seo-footer-links a {
+                            font-size: 11px;
+                            color: #718096;
+                            text-decoration: none;
+                            transition: color 0.2s ease;
+                            white-space: nowrap;
+                        }
+
+                        .seo-footer-links a:hover {
+                            color: #15b844;
+                        }
+
+                        /* Hide on mobile */
+                        /* @media (max-width: 768px) { */
+                            /* .seo-footer-links { */
+                                /* display: none; */
+                            /* } */
+                        /* } */
+                    </style>
+
+                    <div class="seo-footer-links">
+                        <a href="home.html">Home</a>
+                        <a href="about-us.html">About Us</a>
+                        <a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a>
+                        <a href="dental-crowns.html">Dental Crowns</a>
+                        <a href="veneers.html">Veneers</a>
+                        <a href="endodontics.html">Endodontics</a>
+                        <a href="prices.html">Prices</a>
+                        <a href="contact-us.html">Contact Us</a>
+                        <a href="dental-tourism.html">Dental Tourism</a>
+                        <a href="blog-en.html">Blog</a>
+                        <a href="ireland.html">Ireland</a>
+                        <a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants-albania-cost-process-timeline.html">Oral Surgery</a>
+                        <a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Whitening</a>
+                        <a href="best-dental-clinic-in-tirana.html">Best Dental Clinic in Tirana</a>
+                        <a href="dentist-near-me.html">Dentist Near Me</a>
+                        <a href="teeth-alignment-with-transparent-aligners-and-invisalign.html">Invisalign</a>
+                        <a href="best-tourist-attractions-in-albania-p1.html">Albania Attractions</a>
+                    </div>
+                <!-- SEO INTERNAL LINKS END -->
+
+                <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <p style="font-size: 13px; color: #718096; margin: 0;">&copy; 2026 Emerald Dental Clinic. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    <!--footer-area end-->
+
+
+  <!-- JS here -->
+
+  <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
+  <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/owl.carousel.min.js" defer></script>
+  <script src="assets/js/isotope.pkgd.min.js" defer></script>
+  <script src="assets/js/slick.min.js" defer></script>
+  <script src="assets/js/jquery.meanmenu.min.js" defer></script>
+  <script src="assets/js/metisMenu.min.js" defer></script>
+  <script src="assets/js/jquery.nice-select.js" defer></script>
+
+  <script src="assets/js/.min.js" defer></script>
+  <script src="assets/js/jquery.counterup.min.js" defer></script>
+  <script src="assets/js/waypoints.min.js" defer></script>
+  <script src="assets/js/jquery.scrollUp.min.js" defer></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+  <script src="assets/js/tilt.jquery.js" defer></script>
+  <script src="assets/js/plugins.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
