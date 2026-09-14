@@ -645,16 +645,33 @@
       <h2>Ready to get started?</h2>
       <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
 
-      <form class="edc-form" id="edcContactForm" action="https://formsubmit.co/poliklinikaemerald@gmail.com" method="post" enctype="multipart/form-data" target="blank">
+      <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" method="POST" class="edc-form" id="edcContactForm" enctype="multipart/form-data">
         <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
         <div class="edc-form-row">
           <div class="edc-field">
             <label for="edcName">Full name</label>
-            <input type="text" id="edcName" name="name" placeholder="Jane Doe" required>
+                                      <input
+                            class="contact__input"
+                            type="text"
+                            name="Full Name"
+                            size="10"
+                            placeholder="Full Name"
+                            required
+                            minlength="4"
+                            pattern="[A-Za-z]*"
+                          />
           </div>
           <div class="edc-field">
             <label for="edcEmail">Email</label>
-            <input type="email" id="edcEmail" name="email" placeholder="jane@email.com" required>
+                                      <input
+                            class="contact__input"
+                            type="email"
+                            size="25"
+                            name="E-Mail"
+                            placeholder="E-Mail"
+                            required
+                            minlength="9"
+                          />
           </div>
         </div>
 
