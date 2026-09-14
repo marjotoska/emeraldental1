@@ -645,7 +645,8 @@
       <h2>Ready to get started?</h2>
       <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
 
-      <form class="edc-form" id="edcContactForm" action="/contatti" method="post" enctype="multipart/form-data" target="blank">
+      <form class="edc-form" id="edcContactForm" action="https://formsubmit.co/poliklinikaemerald@gmail.com" method="post" enctype="multipart/form-data" target="blank">
+        <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
         <div class="edc-form-row">
           <div class="edc-field">
             <label for="edcName">Full name</label>
@@ -693,13 +694,14 @@
 
         <div class="edc-form-submit">
           <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn">Send my case <i class="fas fa-paper-plane"></i></button>
-          <span class="edc-form-note">We usually reply within 24 hours. Your files are only used to prepare your treatment plan.</span>
+          <span class="edc-form-note">We usually reply within 24 hours. 
+            Your files are only used to prepare your treatment plan.</span>
         </div>
       </form>
 
-      <div class="edc-alt-cta">
+      <!-- <div class="edc-alt-cta">
         <a href="/contatti" target="blank">Prefer to just ask a quick question? Ask for a quote <i class="fas fa-chevron-right"></i></a>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -876,14 +878,14 @@
   }
 
   /* ---------- gentle submit UX (does not block native form submission) ---------- */
-  var form = document.getElementById('edcContactForm');
-  var submitBtn = document.getElementById('edcSubmitBtn');
-  if(form && submitBtn){
-    form.addEventListener('submit', function(){
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-    });
-  }
+  // var form = document.getElementById('edcContactForm');
+  // var submitBtn = document.getElementById('edcSubmitBtn');
+  // if(form && submitBtn){
+  //   form.addEventListener('submit', function(){
+  //     submitBtn.disabled = true;
+  //     submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+  //   });
+  // }
 })();
 </script>
 
