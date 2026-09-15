@@ -695,21 +695,15 @@
 
           <div class="edc-form-row">
             <div class="edc-field full">
-                <!-- <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
-                    <input type="file" name="attachment" accept="image/png, image/jpeg, image/jpg" placeholder="Carica file immagine (png, jpeg, max 10 MB)">
-                    <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
-                        <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files
-                    </span>
-                </div> -->
-
                 <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
-                                            <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf,.mp4" 
-                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
-                                            onchange="updateFileName(this)">
-                                            <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
-                                                <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Upload image file (img, mp4, pdf, max 10 MB) </span>
-                                        </div>
-
+                  <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf," 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
+                    onchange="updateFileName(this)"
+                  >
+                  <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                      <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Upload image file (img, pdf, max 10 MB) 
+                  </span>
+                </div>
             </div>
           </div>
 
@@ -1066,5 +1060,23 @@
   <script src="assets/js/tilt.jquery.js" defer></script>
   <script src="assets/js/plugins.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+
+  <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
+                <script>
+                    function updateFileName(input) {
+                        const display = document.getElementById('file-name-display');
+                        const container = document.getElementById('upload-container');
+                        if (input.files && input.files.length > 0) {
+                            display.innerHTML = '<i class="fas fa-check-circle" style="color: #15b844; margin-right: 8px;"></i> Selected: ' + input.files[0].name;
+                            container.style.borderColor = '#15b844';
+                            container.style.background = '#ffffff';
+                        } else {
+                            display.innerHTML = '<i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files';
+                            container.style.borderColor = '#cbd5e0';
+                            container.style.background = '#f8fafc';
+                        }
+                    }
+                </script>
+    <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
   </body>
 </html>
