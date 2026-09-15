@@ -612,346 +612,348 @@
 </section>
 
   <!-- ============ FINAL CTA + CONTACT FORM ============ -->
-  <section class="edc-cta-section" id="contact-form">
-<div class="edc-cta-inner">
-<h2>Pronto a iniziare?</h2>
-<p class="edc-cta-sub">Inviaci le tue foto, le radiografie o un breve video del tuo sorriso per una consulenza online gratuita e un piano di trattamento personalizzato.</p>
+    <section class="edc-cta-section" id="contact-form">
+      <div class="edc-cta-inner">
+        <h2>Ready to get started?</h2>
+        <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
 
-      <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" method="POST" class="edc-form" id="edcContactForm" enctype="multipart/form-data">
-        <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
-        <div class="edc-form-row">
-          <div class="edc-field">
-            <label for="edcName">Full name</label>
-                          <input
-                            class="contact__input"
-                            type="text"
-                            name="Full Name"
-                            size="10"
-                            placeholder="Full Name"
-                            required
-                            minlength="4"
-                            pattern="[A-Za-z\s]*$"
-                          />
+        
+        <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST">
+            <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
+          <div class="edc-form-row">
+            <div class="edc-field">
+                <input
+                                class="contact__input"
+                                type="text"
+                                name="Nome"
+                                size="10"
+                                placeholder="Nome"
+                                required
+                                minlength="4"
+                                pattern="[A-Za-z]*"
+                              />
+            </div>
+            <div class="edc-field">
+              <input
+                                class="contact__input"
+                                type="text"
+                                name="Cognome"
+                                size="10"
+                                placeholder="Cognome"
+                                required
+                                minlength="4"
+                                pattern="[A-Za-z]*"
+                              />
+            </div>
+            <div class="edc-field">
+              <input
+                                class="contact__input"
+                                type="email"
+                                size="25"
+                                name="E-Mail"
+                                placeholder="E-Mail"
+                                required
+                                minlength="9"
+                              />
+            </div>
+            <div class="edc-field">
+              <input
+                                class="contact__input"
+                                type="text"
+                                size="25"
+                                name="Soggetto"
+                                placeholder="Soggetto"
+                                required
+                                minlength="7"
+                                pattern="[A-Za-z0-9 ]*"
+                              />
+            </div>
           </div>
-          <div class="edc-field">
-            <label for="edcEmail">Email</label>
-                          <input
-                            class="contact__input"
-                            type="email"
-                            size="25"
-                            name="E-Mail"
-                            placeholder="E-Mail"
-                            required
-                            minlength="9"
-                          />
-          </div>
-        </div>
 
-        <div class="edc-form-row">
-          <div class="edc-field">
-            <label for="edcPhone">Phone / WhatsApp</label>
-            <input type="tel" id="edcPhone" name="phone"
-              pattern="^\+?[1-9]\d{1,14}$" 
-              placeholder="+39 123 456 7890">
-          </div>
-          <div class="edc-field">
-            <label for="edcTreatment">Treatment of interest</label>
-            <select id="edcTreatment" name="treatment">
-              <option>Dental Implants</option>
-              <option>Dental Crowns</option>
-              <option>Veneers</option>
-              <option>Endodontics</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
+          
 
-        <div class="edc-form-row">
-          <div class="edc-field full">
-            <label for="edcMessage">Tell us about your case</label>
-            <textarea id="edcMessage" name="message" placeholder="How many teeth need attention? Any relevant medical history?"></textarea>
+          <div class="edc-form-row">
+            <div class="edc-field full">
+              <textarea class="contact__input contact__input-messege"
+                                name="Messagio"
+                                size="95"
+                                name="Messagio"
+                                placeholder="Raccontaci del tuo caso"
+                                minlength="9"></textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="edc-form-row">
-          <div class="edc-dropzone" id="edcDropzone">
-            <input type="file" id="edcFileInput" name="attachments[]" multiple accept="image/*,video/*" hidden>
-            <i class="fas fa-cloud-upload-alt"></i>
-            <p>Drag &amp; drop photos or videos here, or <span class="edc-browse">browse files</span></p>
-            <small>JPG, PNG, HEIC, MP4, MOV — up to 25MB each</small>
+          <div class="edc-form-submit">
+            <input
+              class="theme_btn theme_btn_bg"
+              type="submit"
+              value="Invia il mio caso"
+              />
+            <!-- <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn"> -->
+              <!-- Send my case <i class="fas fa-paper-plane"></i></button> -->
+            <!-- <span class="edc-form-note">We usually reply within 24 hours.  -->
+              <!-- Your files are only used to prepare your treatment plan.</span> -->
           </div>
-          <div class="edc-file-list" id="edcFileList"></div>
-        </div>
+        </form>
 
-        <div class="edc-form-submit">
-          <input
-            class="theme_btn theme_btn_bg"
-            type="submit"
-            value="Send my case"/>
-          <!-- <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn"> -->
-            <!-- Send my case <i class="fas fa-paper-plane"></i></button> -->
-          <!-- <span class="edc-form-note">We usually reply within 24 hours.  -->
-            <!-- Your files are only used to prepare your treatment plan.</span> -->
-        </div>
-      </form>
-
-      <!-- <div class="edc-alt-cta">
-        <a href="/contatti" target="blank">Prefer to just ask a quick question? Ask for a quote <i class="fas fa-chevron-right"></i></a>
-      </div> -->
-    </div>
-  </section>
+        <!-- <div class="edc-alt-cta">
+          <a href="/contatti" target="blank">Prefer to just ask a quick question? Ask for a quote <i class="fas fa-chevron-right"></i></a>
+        </div> -->
+      </div>
+    </section>
+  <!-- ============ FINAL CTA + CONTACT FORM ============ -->
 
 </main>
 
-<script>
-(function(){
-  "use strict";
+    <script>
+        (function(){
+        "use strict";
 
-  /* ---------- reading progress bar ---------- */
-  var progressBar = document.getElementById('edcProgress');
-  function updateProgress(){
-    var doc = document.documentElement;
-    var scrollTop = window.scrollY || doc.scrollTop;
-    var height = doc.scrollHeight - doc.clientHeight;
-    var pct = height > 0 ? (scrollTop / height) * 100 : 0;
-    if(progressBar) progressBar.style.width = pct + '%';
-  }
-  var ticking = false;
-  window.addEventListener('scroll', function(){
-    if(!ticking){
-      window.requestAnimationFrame(function(){ updateProgress(); ticking = false; });
-      ticking = true;
-    }
-  }, { passive:true });
-  updateProgress();
-
-  /* ---------- scroll reveal ---------- */
-  var revealEls = document.querySelectorAll('.edc-reveal, .edc-step');
-  if('IntersectionObserver' in window){
-    var revealObserver = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
+        /* ---------- reading progress bar ---------- */
+        var progressBar = document.getElementById('edcProgress');
+        function updateProgress(){
+            var doc = document.documentElement;
+            var scrollTop = window.scrollY || doc.scrollTop;
+            var height = doc.scrollHeight - doc.clientHeight;
+            var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+            if(progressBar) progressBar.style.width = pct + '%';
         }
-      });
-    }, { threshold:0.15, rootMargin:'0px 0px -40px 0px' });
-    revealEls.forEach(function(el){ revealObserver.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
-  }
+        var ticking = false;
+        window.addEventListener('scroll', function(){
+            if(!ticking){
+            window.requestAnimationFrame(function(){ updateProgress(); ticking = false; });
+            ticking = true;
+            }
+        }, { passive:true });
+        updateProgress();
 
-  /* ---------- quicknav scrollspy ---------- */
-  var quicknavLinks = document.querySelectorAll('.edc-quicknav a');
-  var sections = Array.prototype.map.call(quicknavLinks, function(a){
-    return document.getElementById(a.getAttribute('data-target'));
-  }).filter(Boolean);
-
-  if('IntersectionObserver' in window && sections.length){
-    var spy = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          var id = entry.target.id;
-          quicknavLinks.forEach(function(a){
-            a.classList.toggle('is-active', a.getAttribute('data-target') === id);
-          });
+        /* ---------- scroll reveal ---------- */
+        var revealEls = document.querySelectorAll('.edc-reveal, .edc-step');
+        if('IntersectionObserver' in window){
+            var revealObserver = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if(entry.isIntersecting){
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+                }
+            });
+            }, { threshold:0.15, rootMargin:'0px 0px -40px 0px' });
+            revealEls.forEach(function(el){ revealObserver.observe(el); });
+        } else {
+            revealEls.forEach(function(el){ el.classList.add('is-visible'); });
         }
-      });
-    }, { rootMargin:'-45% 0px -50% 0px', threshold:0 });
-    sections.forEach(function(sec){ spy.observe(sec); });
-  }
 
-  /* ---------- smooth anchor scroll (accounts for sticky quicknav) ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click', function(e){
-      var targetId = link.getAttribute('href').slice(1);
-      var target = document.getElementById(targetId);
-      if(!target) return;
-      e.preventDefault();
-      var navEl = document.getElementById('edcQuicknav');
-      var offset = navEl ? navEl.offsetHeight + 12 : 12;
-      var top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top:top, behavior:'smooth' });
-    });
-  });
+        /* ---------- quicknav scrollspy ---------- */
+        var quicknavLinks = document.querySelectorAll('.edc-quicknav a');
+        var sections = Array.prototype.map.call(quicknavLinks, function(a){
+            return document.getElementById(a.getAttribute('data-target'));
+        }).filter(Boolean);
 
-  /* ---------- file upload: dropzone + previews ---------- */
-  var dropzone = document.getElementById('edcDropzone');
-  var fileInput = document.getElementById('edcFileInput');
-  var fileList = document.getElementById('edcFileList');
-  var fileStore = [];
-  var MAX_SIZE = 25 * 1024 * 1024; // 25MB
+        if('IntersectionObserver' in window && sections.length){
+            var spy = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if(entry.isIntersecting){
+                var id = entry.target.id;
+                quicknavLinks.forEach(function(a){
+                    a.classList.toggle('is-active', a.getAttribute('data-target') === id);
+                });
+                }
+            });
+            }, { rootMargin:'-45% 0px -50% 0px', threshold:0 });
+            sections.forEach(function(sec){ spy.observe(sec); });
+        }
 
-  function formatSize(bytes){
-    if(bytes < 1024) return bytes + ' B';
-    if(bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
-    return (bytes/(1024*1024)).toFixed(1) + ' MB';
-  }
+        /* ---------- smooth anchor scroll (accounts for sticky quicknav) ---------- */
+        document.querySelectorAll('a[href^="#"]').forEach(function(link){
+            link.addEventListener('click', function(e){
+            var targetId = link.getAttribute('href').slice(1);
+            var target = document.getElementById(targetId);
+            if(!target) return;
+            e.preventDefault();
+            var navEl = document.getElementById('edcQuicknav');
+            var offset = navEl ? navEl.offsetHeight + 12 : 12;
+            var top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top:top, behavior:'smooth' });
+            });
+        });
 
-  function syncInput(){
-    if(typeof DataTransfer === 'undefined') return;
-    var dt = new DataTransfer();
-    fileStore.forEach(function(f){ dt.items.add(f); });
-    fileInput.files = dt.files;
-  }
+        /* ---------- file upload: dropzone + previews ---------- */
+        var dropzone = document.getElementById('edcDropzone');
+        var fileInput = document.getElementById('edcFileInput');
+        var fileList = document.getElementById('edcFileList');
+        var fileStore = [];
+        var MAX_SIZE = 25 * 1024 * 1024; // 25MB
 
-  function renderFiles(){
-    fileList.innerHTML = '';
-    fileStore.forEach(function(file, index){
-      var chip = document.createElement('div');
-      chip.className = 'edc-file-chip';
+        function formatSize(bytes){
+            if(bytes < 1024) return bytes + ' B';
+            if(bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
+            return (bytes/(1024*1024)).toFixed(1) + ' MB';
+        }
 
-      if(file.type.indexOf('image/') === 0){
-        var img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
-        chip.appendChild(img);
-      } else {
-        var iconWrap = document.createElement('div');
-        iconWrap.className = 'edc-file-icon';
-        iconWrap.innerHTML = '<i class="fas fa-file-video"></i>';
-        chip.appendChild(iconWrap);
-      }
+        function syncInput(){
+            if(typeof DataTransfer === 'undefined') return;
+            var dt = new DataTransfer();
+            fileStore.forEach(function(f){ dt.items.add(f); });
+            fileInput.files = dt.files;
+        }
 
-      var name = document.createElement('span');
-      name.className = 'edc-file-name';
-      name.textContent = file.name;
-      chip.appendChild(name);
+        function renderFiles(){
+            fileList.innerHTML = '';
+            fileStore.forEach(function(file, index){
+            var chip = document.createElement('div');
+            chip.className = 'edc-file-chip';
 
-      var size = document.createElement('span');
-      size.className = 'edc-file-size';
-      size.textContent = formatSize(file.size);
-      chip.appendChild(size);
+            if(file.type.indexOf('image/') === 0){
+                var img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                chip.appendChild(img);
+            } else {
+                var iconWrap = document.createElement('div');
+                iconWrap.className = 'edc-file-icon';
+                iconWrap.innerHTML = '<i class="fas fa-file-video"></i>';
+                chip.appendChild(iconWrap);
+            }
 
-      var removeBtn = document.createElement('button');
-      removeBtn.type = 'button';
-      removeBtn.className = 'edc-file-remove';
-      removeBtn.innerHTML = '<i class="fas fa-times"></i>';
-      removeBtn.addEventListener('click', function(){
-        fileStore.splice(index, 1);
-        syncInput();
-        renderFiles();
-      });
-      chip.appendChild(removeBtn);
+            var name = document.createElement('span');
+            name.className = 'edc-file-name';
+            name.textContent = file.name;
+            chip.appendChild(name);
 
-      fileList.appendChild(chip);
-    });
-  }
+            var size = document.createElement('span');
+            size.className = 'edc-file-size';
+            size.textContent = formatSize(file.size);
+            chip.appendChild(size);
 
-  function addFiles(newFiles){
-    Array.prototype.forEach.call(newFiles, function(file){
-      var isMedia = file.type.indexOf('image/') === 0 || file.type.indexOf('video/') === 0;
-      if(!isMedia || file.size > MAX_SIZE) return;
-      fileStore.push(file);
-    });
-    syncInput();
-    renderFiles();
-  }
+            var removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'edc-file-remove';
+            removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            removeBtn.addEventListener('click', function(){
+                fileStore.splice(index, 1);
+                syncInput();
+                renderFiles();
+            });
+            chip.appendChild(removeBtn);
 
-  if(dropzone && fileInput){
-    dropzone.addEventListener('click', function(){ fileInput.click(); });
+            fileList.appendChild(chip);
+            });
+        }
 
-    fileInput.addEventListener('change', function(e){
-      addFiles(e.target.files);
-    });
+        function addFiles(newFiles){
+            Array.prototype.forEach.call(newFiles, function(file){
+            var isMedia = file.type.indexOf('image/') === 0 || file.type.indexOf('video/') === 0;
+            if(!isMedia || file.size > MAX_SIZE) return;
+            fileStore.push(file);
+            });
+            syncInput();
+            renderFiles();
+        }
 
-    ['dragenter','dragover'].forEach(function(evt){
-      dropzone.addEventListener(evt, function(e){
-        e.preventDefault(); e.stopPropagation();
-        dropzone.classList.add('is-drag');
-      });
-    });
-    ['dragleave','drop'].forEach(function(evt){
-      dropzone.addEventListener(evt, function(e){
-        e.preventDefault(); e.stopPropagation();
-        dropzone.classList.remove('is-drag');
-      });
-    });
-    dropzone.addEventListener('drop', function(e){
-      if(e.dataTransfer && e.dataTransfer.files){
-        addFiles(e.dataTransfer.files);
-      }
-    });
-  }
+        if(dropzone && fileInput){
+            dropzone.addEventListener('click', function(){ fileInput.click(); });
 
-  /* ---------- gentle submit UX (does not block native form submission) ---------- */
-  // var form = document.getElementById('edcContactForm');
-  // var submitBtn = document.getElementById('edcSubmitBtn');
-  // if(form && submitBtn){
-  //   form.addEventListener('submit', function(){
-  //     submitBtn.disabled = true;
-  //     submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-  //   });
-  // }
-})();
-</script>
+            fileInput.addEventListener('change', function(e){
+            addFiles(e.target.files);
+            });
+
+            ['dragenter','dragover'].forEach(function(evt){
+            dropzone.addEventListener(evt, function(e){
+                e.preventDefault(); e.stopPropagation();
+                dropzone.classList.add('is-drag');
+            });
+            });
+            ['dragleave','drop'].forEach(function(evt){
+            dropzone.addEventListener(evt, function(e){
+                e.preventDefault(); e.stopPropagation();
+                dropzone.classList.remove('is-drag');
+            });
+            });
+            dropzone.addEventListener('drop', function(e){
+            if(e.dataTransfer && e.dataTransfer.files){
+                addFiles(e.dataTransfer.files);
+            }
+            });
+        }
+
+        /* ---------- gentle submit UX (does not block native form submission) ---------- */
+        // var form = document.getElementById('edcContactForm');
+        // var submitBtn = document.getElementById('edcSubmitBtn');
+        // if(form && submitBtn){
+        //   form.addEventListener('submit', function(){
+        //     submitBtn.disabled = true;
+        //     submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+        //   });
+        // }
+        })();
+    </script>
 
 
-      <!--footer-area start-->
-        <footer id="custom-full-width-footer" style="background: #0d1b1e; color: #ffffff; padding: 80px 5% 40px 5%; font-family: 'Segoe UI', Roboto, sans-serif; width: 100%; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div style="max-width: 100%; margin: 0 auto;">
-                <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
-                    
-                    <div style="flex: 1; min-width: 280px; margin-bottom: 30px;">
-                        <img src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt="Emerald Dental Clinic" style="max-width: 180px; height: auto; margin-bottom: 25px; filter: brightness(1.1);">
-                        <p style="font-size: 15px; line-height: 1.8; color: #a0aec0; max-width: 320px;">
-                            Experience world-class dental care in the heart of Tirana. We specialize in advanced diagnostics and aesthetic transformations with a patient-first approach.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a href="https://linktr.ee/emeraldentaldentistiintirana" target="_blank" style="display: inline-block; padding: 10px 20px; background: #15b844; color: white; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s;">Visit our Linktree</a>
+        <!--footer-area start-->
+            <footer id="custom-full-width-footer" style="background: #0d1b1e; color: #ffffff; padding: 80px 5% 40px 5%; font-family: 'Segoe UI', Roboto, sans-serif; width: 100%; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div style="max-width: 100%; margin: 0 auto;">
+                    <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+                        
+                        <div style="flex: 1; min-width: 280px; margin-bottom: 30px;">
+                            <img src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt="Emerald Dental Clinic" style="max-width: 180px; height: auto; margin-bottom: 25px; filter: brightness(1.1);">
+                            <p style="font-size: 15px; line-height: 1.8; color: #a0aec0; max-width: 320px;">
+                                Vivi cure dentali di livello internazionale nel cuore di Tirana. Siamo specializzati in diagnostica avanzata e trasformazioni estetiche con un approccio centrato sul paziente.
+                            </p>
+                            <div style="margin-top: 20px;">
+                                <a href="https://linktr.ee/emeraldentaldentistiintirana" target="_blank" style="display: inline-block; padding: 10px 20px; background: #15b844; color: white; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s;">Visita il nostro Linktree</a>
+                            </div>
                         </div>
+
+                        <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+                            <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Servizi</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 12px;"><a href="implantologia-dentale" style="color: #cbd5e0; text-decoration: none; font-size: 15px; transition: color 0.3s;">Impianti Dentali</a></li>
+                                <li style="margin-bottom: 12px;"><a href="corone-dentali" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Corone in Zirconia</a></li>
+                                <li style="margin-bottom: 12px;"><a href="facette-per-denti" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Faccette Dentali</a></li>
+                                <li style="margin-bottom: 12px;"><a href="endodonzia" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Terapia Canalare</a></li>
+                                <li style="margin-bottom: 12px;"><a href="about" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Il Nostro Team</a></li>
+                            </ul>
+                        </div>
+
+                        <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
+                            <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Contattaci</h5>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-map-marker-alt"></i></span>
+                                <p style="margin: 0; font-size: 15px; color: #cbd5e0;">Rruga e Kavajes, Pallati me Shigjeta, Tirana, Albania</p>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fab fa-whatsapp"></i></span>
+                                <a href="tel:+355 69 20 57 277" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+355 69 20 57 277</a>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-phone-alt"></i></span>
+                                <a href="tel:+39 350 910 5210" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+39 350 910 5210</a>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="far fa-envelope"></i></span>
+                                <a href="mailto:poliklinikaemerald@gmail.com" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">poliklinikaemerald@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div style="flex: 1;">
+                            <h5 style="color: #15b844; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Orari della Clinica</h5>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
+                                <span style="color: #a0aec0;">Lun - Ven:</span>
+                                <span style="color: #ffffff;">09:00 - 20:00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
+                                <span style="color: #a0aec0;">Sabato:</span>
+                                <span style="color: #ffffff;">09:00 - 14:00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                                <span style="color: #a0aec0;">Domenica:</span>
+                                <span style="color: #ef4444; font-weight: bold;">Chiuso</span>
+                            </div>
+                            <a href="contatti" style="display: block; margin-top: 20px; text-align: center; color: #15b844; border: 1px solid #15b844; padding: 8px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: 600;">Prenota un Appuntamento</a>
+                        </div>
+
                     </div>
 
-                    <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
-                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Services</h5>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 12px;"><a href="dental-implants-albania-cost-process-timeline.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px; transition: color 0.3s;">Dental Implants</a></li>
-                            <li style="margin-bottom: 12px;"><a href="dental-crowns.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Zirconia Crowns</a></li>
-                            <li style="margin-bottom: 12px;"><a href="veneers.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Porcelain Veneers</a></li>
-                            <li style="margin-bottom: 12px;"><a href="endodontics.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Root Canal Therapy</a></li>
-                            <li style="margin-bottom: 12px;"><a href="about-us.html" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">Our Team</a></li>
-                        </ul>
-                    </div>
-
-                    <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
-                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Get In Touch</h5>
-                        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-map-marker-alt"></i></span>
-                            <p style="margin: 0; font-size: 15px; color: #cbd5e0;">Rruga e Kavajes, Pallati me Shigjeta, Tirana, Albania</p>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fab fa-whatsapp"></i></span>
-                            <a href="tel:+355 69 20 57 277" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+355 69 20 57 277</a>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="fas fa-phone-alt"></i></span>
-                            <a href="tel:+39 350 910 5210" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">+39 350 910 5210</a>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <span style="color: #15b844; margin-right: 12px; font-size: 18px;"><i class="far fa-envelope"></i></span>
-                            <a href="mailto:poliklinikaemerald@gmail.com" style="color: #cbd5e0; text-decoration: none; font-size: 15px;">poliklinikaemerald@gmail.com</a>
-                        </div>
-                    </div>
-
-                    <div style="flex: 1;">
-                        <h5 style="color: #15b844; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Clinic Hours</h5>
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
-                            <span style="color: #a0aec0;">Mon - Fri:</span>
-                            <span style="color: #ffffff;">09:00 - 20:00</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px;">
-                            <span style="color: #a0aec0;">Saturday:</span>
-                            <span style="color: #ffffff;">09:00 - 14:00</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; font-size: 14px;">
-                            <span style="color: #a0aec0;">Sunday:</span>
-                            <span style="color: #ef4444; font-weight: bold;">Closed</span>
-                        </div>
-                        <a href="contact-us.html" style="display: block; margin-top: 20px; text-align: center; color: #15b844; border: 1px solid #15b844; padding: 8px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: 600;">Book Appointment</a>
-                    </div>
-
-                </div>
-
-                <!-- SEO INTERNAL LINKS START -->
+                    <!-- SEO INTERNAL LINKS START -->
                     <style>
                         .seo-footer-links {
                             display: flex;
@@ -974,42 +976,37 @@
                         .seo-footer-links a:hover {
                             color: #15b844;
                         }
-
-                        /* Hide on mobile */
-                        /* @media (max-width: 768px) { */
-                            /* .seo-footer-links { */
-                                /* display: none; */
-                            /* } */
-                        /* } */
                     </style>
 
                     <div class="seo-footer-links">
-                        <a href="home.html">Home</a>
-                        <a href="about-us.html">About Us</a>
-                        <a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a>
-                        <a href="dental-crowns.html">Dental Crowns</a>
-                        <a href="veneers.html">Veneers</a>
-                        <a href="endodontics.html">Endodontics</a>
-                        <a href="prices.html">Prices</a>
-                        <a href="contact-us.html">Contact Us</a>
-                        <a href="dental-tourism.html">Dental Tourism</a>
-                        <a href="blog-en.html">Blog</a>
-                        <a href="ireland.html">Ireland</a>
-                        <a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants-albania-cost-process-timeline.html">Oral Surgery</a>
-                        <a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Whitening</a>
-                        <a href="best-dental-clinic-in-tirana.html">Best Dental Clinic in Tirana</a>
-                        <a href="dentist-near-me.html">Dentist Near Me</a>
-                        <a href="teeth-alignment-with-transparent-aligners-and-invisalign.html">Invisalign</a>
-                        <a href="best-tourist-attractions-in-albania-p1.html">Albania Attractions</a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">Chi Siamo</a>
+                        <a href="implantologia-dentale.html">Impianti Dentali</a>
+                        <a href="corone-dentali.html">Corone Dentali</a>
+                        <a href="facette-per-denti.html">Faccette Dentali</a>
+                        <a href="endodonzia.html">Endodonzia</a>
+                        <a href="prezzi.html">Prezzi</a>
+                        <a href="contatti.html">Contatti</a>
+                        <a href="dentista-vicino-a-me.html">Dentista Vicino a Me</a>
+                        <a href="turismo-dentale.html">Turismo Dentale</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="miglior-dentista-in-albania.html">Miglior Dentista in Albania</a>
+                        <a href="impianti-dentali-in-albania-prezzi.html">Impianti Dentali In Albania Prezzi</a>
+                        <a href="quanto-costa-rifarsi-i-denti-in-tirana.html">Quanto Costa Rifarsi i Denti in Tirana?</a>
+                        <a href="dentista-albania-viaggio-cure-denti-sorrisi.html">Dentista Albania: Dal Volo alla Cura per Denti e Sorrisi</a>
+                        <a href="allineamento-denti-con-aligner-trasparent-e-invisalign.html">Invisalign</a>
                     </div>
-                <!-- SEO INTERNAL LINKS END -->
+                    <!-- SEO INTERNAL LINKS END -->
 
-                <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
-                    <p style="font-size: 13px; color: #718096; margin: 0;">&copy; 2026 Emerald Dental Clinic. All Rights Reserved.</p>
+                    <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                        <p style="font-size: 13px; color: #718096; margin: 0;">© <span id="year"></span>
+                            <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+                             Emerald Dental. Tutti i Diritti Riservati.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </footer>
-    <!--footer-area end-->
+            </footer>
+        <!--footer-area end-->
 
 
   <!-- JS here -->
