@@ -295,7 +295,7 @@
                                   <li>
                                       <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
                                       <ul class="submenu">
-                                          <li><a href="implantologia-dentale.html">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
+                                          <li><a href="dental-implants-albania-cost-process-timeline.html">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
                                       </ul>
                                   </li>
                               </ul>
@@ -347,7 +347,7 @@
               <li>
                   <a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language" > <i class="far fa-chevron-down"></i></a>
                   <ul class="submenu">
-                      <li><a href="implantologia-dentale.html">IT  <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
+                      <li><a href="dental-implants-albania-cost-process-timeline.html">IT  <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana" ></a></li>
                   </ul>
               </li>
               </ul>
@@ -626,12 +626,12 @@
   <!-- ============ FINAL CTA + CONTACT FORM ============ -->
     <section class="edc-cta-section" id="contact-form">
       <div class="edc-cta-inner">
-        <h2>Ready to get started?</h2>
-        <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
+        <h2>Ready to start?</h2>
+        <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and a personalized treatment plan.</p>
 
         
-        <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST">
-                      <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
+        <form method="POST" action="https://formsubmit.co/poliklinikaemerald@gmail.com" enctype="multipart/form-data" id="contact-form">
+            <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
           <div class="edc-form-row">
             <div class="edc-field">
                 <input
@@ -682,34 +682,43 @@
             </div>
           </div>
 
-          
-
           <div class="edc-form-row">
             <div class="edc-field full">
               <textarea class="contact__input contact__input-messege"
-                                name="message"
+                                name="Message"
                                 size="95"
                                 name="Message"
-                                placeholder="Tell us about your case"
+                                placeholder="Raccontaci del tuo caso"
                                 minlength="9"></textarea>
             </div>
           </div>
 
-          <!-- <div class="edc-form-row">
-            <div class="edc-dropzone" id="edcDropzone">
-              <input type="file" id="edcFileInput" name="attachments[]" multiple accept="image/*,video/*" hidden>
-              <i class="fas fa-cloud-upload-alt"></i>
-              <p>Drag &amp; drop photos or videos here, or <span class="edc-browse">browse files</span></p>
-              <small>JPG, PNG, HEIC, MP4, MOV — up to 25MB each</small>
+          <div class="edc-form-row">
+            <div class="edc-field full">
+                <!-- <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
+                    <input type="file" name="attachment" accept="image/png, image/jpeg, image/jpg" placeholder="Carica file immagine (png, jpeg, max 10 MB)">
+                    <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                        <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files
+                    </span>
+                </div> -->
+
+                <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
+                                            <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf,.mp4" 
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
+                                            onchange="updateFileName(this)">
+                                            <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                                                <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Upload image file (img, mp4, pdf, max 10 MB) </span>
+                                        </div>
+
             </div>
-            <div class="edc-file-list" id="edcFileList"></div>
-          </div> -->
+          </div>
 
           <div class="edc-form-submit">
             <input
               class="theme_btn theme_btn_bg"
               type="submit"
-              value="Send my case"/>
+              value="Send my case"
+              />
             <!-- <button type="submit" class="edc-btn edc-btn-primary" id="edcSubmitBtn"> -->
               <!-- Send my case <i class="fas fa-paper-plane"></i></button> -->
             <!-- <span class="edc-form-note">We usually reply within 24 hours.  -->

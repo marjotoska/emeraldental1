@@ -158,7 +158,7 @@
       .edc-cta-inner > p.edc-cta-sub{ color:#c7ddcd; text-align:center; font-size:15.5px; margin:0 0 36px; }
 
       .edc-form{ background:var(--edc-white); border-radius:20px; padding:32px; box-shadow:var(--edc-shadow-lg); }
-      .edc-form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+      .edc-form-row{ display:grid; grid-template-columns:1fr 1fr; gap:0px 16px; }
       .edc-field{ position:relative; }
       .edc-field label{ display:block; font-size:13px; font-weight:700; color:var(--edc-muted); margin-bottom:6px; }
       .edc-field input, .edc-field select, .edc-field textarea{ width:100%; padding:13px 14px; border:1.5px solid #e2ebe4; border-radius:10px; font-size:15px; font-family:var(--edc-font); color:var(--edc-text); background:#fbfdfb; transition:border-color .15s ease, box-shadow .15s ease; }
@@ -277,7 +277,7 @@
                     <li><a href="about.html">Chi Siamo</a></li>
                     <li><a href="#">Servizi <i class="far fa-chevron-down"></i></a>
                       <ul class="submenu">
-                          <li><a href="implantologia-dentale.html">Implantologia Dentale</a></li>
+                          <li><a href="dental-implants-albania-cost-process-timeline.html">Implantologia Dentale</a></li>
                           <li><a href="corone-dentali.html">Corone Dentali</a></li>
                           <li><a href="facette-per-denti.html">Faccette Dentali</a></li>
                           <li><a href="endodonzia.html">Endodonzia</a></li>
@@ -326,7 +326,7 @@
         <li><a href="about.html">Chi Siamo</a></li>
         <li class="has-dropdown"><a href="#">Servizi</a>
           <ul class="submenu">
-              <li><a href="implantologia-dentale.html">Implantologia Dentale</a></li>
+              <li><a href="dental-implants-albania-cost-process-timeline.html">Implantologia Dentale</a></li>
               <li><a href="corone-dentali.html">Corone Dentali</a></li>
               <li><a href="facette-per-denti.html">Faccette Dentali</a></li>
               <li><a href="endodonzia.html">Endodonzia</a></li>
@@ -614,11 +614,11 @@
   <!-- ============ FINAL CTA + CONTACT FORM ============ -->
     <section class="edc-cta-section" id="contact-form">
       <div class="edc-cta-inner">
-        <h2>Ready to get started?</h2>
-        <p class="edc-cta-sub">Send us your photos, X-rays, or a short video of your smile for a free online consultation and personalized treatment plan.</p>
+        <h2>Pronto a iniziare?</h2>
+        <p class="edc-cta-sub">Inviaci le tue foto, le radiografie o un breve video del tuo sorriso per una consulenza online gratuita e un piano di trattamento personalizzato.</p>
 
         
-        <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST">
+        <form method="POST" action="https://formsubmit.co/poliklinikaemerald@gmail.com" enctype="multipart/form-data" id="contact-form">
             <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
           <div class="edc-form-row">
             <div class="edc-field">
@@ -670,8 +670,6 @@
             </div>
           </div>
 
-          
-
           <div class="edc-form-row">
             <div class="edc-field full">
               <textarea class="contact__input contact__input-messege"
@@ -680,6 +678,27 @@
                                 name="Messagio"
                                 placeholder="Raccontaci del tuo caso"
                                 minlength="9"></textarea>
+            </div>
+          </div>
+
+          <div class="edc-form-row">
+            <div class="edc-field full">
+                <!-- <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
+                    <input type="file" name="attachment" accept="image/png, image/jpeg, image/jpg" placeholder="Carica file immagine (png, jpeg, max 10 MB)">
+                    <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                        <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files
+                    </span>
+                </div> -->
+
+                <div id="upload-container" style="position: relative; width: 100%; padding: 15px 20px; border-radius: 12px; border: 2px dashed #cbd5e0; background: #f8fafc; text-align: center; transition: all 0.3s ease;">
+                                            <input type="file" name="attachment" id="file-upload" accept="image/*,.pdf" 
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"
+                                            onchange="updateFileName(this)">
+                                            <span id="file-name-display" style="font-size: 14px; color: #4a5568;">
+                                                <i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Carica file immagine (png, jpeg, max 10 MB)
+                                            </span>
+                                        </div>
+
             </div>
           </div>
 
@@ -981,7 +1000,7 @@
                     <div class="seo-footer-links">
                         <a href="index.html">Home</a>
                         <a href="about.html">Chi Siamo</a>
-                        <a href="implantologia-dentale.html">Impianti Dentali</a>
+                        <a href="dental-implants-albania-cost-process-timeline.html">Impianti Dentali</a>
                         <a href="corone-dentali.html">Corone Dentali</a>
                         <a href="facette-per-denti.html">Faccette Dentali</a>
                         <a href="endodonzia.html">Endodonzia</a>
@@ -1030,5 +1049,23 @@
   <script src="assets/js/tilt.jquery.js" defer></script>
   <script src="assets/js/plugins.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
+            <script>
+                function updateFileName(input) {
+                    const display = document.getElementById('file-name-display');
+                    const container = document.getElementById('upload-container');
+                    if (input.files && input.files.length > 0) {
+                        display.innerHTML = '<i class="fas fa-check-circle" style="color: #15b844; margin-right: 8px;"></i> Selected: ' + input.files[0].name;
+                        container.style.borderColor = '#15b844';
+                        container.style.background = '#ffffff';
+                    } else {
+                        display.innerHTML = '<i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files';
+                        container.style.borderColor = '#cbd5e0';
+                        container.style.background = '#f8fafc';
+                    }
+                }
+            </script>
+    <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
+
   </body>
 </html>
