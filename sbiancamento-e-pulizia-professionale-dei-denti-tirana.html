@@ -581,13 +581,12 @@
               </ul>
             </div>
             <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST" class="ed-form">
-              <input type="hidden" name="_next" value="https://emeraldental.com/thanks.html">
-              <input type="hidden" name="_subject" value="Richiesta preventivo - Sbiancamento e pulizia (IT)">
+              <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-              <input type="text" name="Nome" placeholder="Nome" required minlength="2" autocomplete="given-name">
-              <input type="text" name="Cognome" placeholder="Cognome" required minlength="2" autocomplete="family-name">
-              <input type="email" name="E-Mail" placeholder="E-mail" required autocomplete="email">
-              <input type="tel" name="Telefono" placeholder="Telefono (con prefisso)" required minlength="7" autocomplete="tel">
+              <input type="text" name="First Name" placeholder="Nome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="given-name">
+              <input type="text" name="Last Name" placeholder="Cognome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="family-name">
+              <input type="email" name="E-Mail" placeholder="E-mail" required minlength="9" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" autocomplete="email">
+              <input type="tel" name="Phone Number" placeholder="Telefono (con prefisso)" required minlength="7" pattern="^[0-9]+$" autocomplete="tel">
               <select name="Trattamento" class="full" aria-label="Trattamento di interesse">
                 <option value="">Trattamento di interesse</option>
                 <option>Sbiancamento professionale</option>
@@ -597,7 +596,7 @@
                 <option>Trattamento al fluoro</option>
                 <option>Non so, vorrei un consiglio</option>
               </select>
-              <textarea class="full" name="Messaggio" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
+              <textarea class="full" name="Message" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
               <p class="ed-consent full">Inviando il modulo accetti di essere ricontattato in merito alla tua richiesta.</p>
               <div class="full"><button class="ed-btn ed-dark" type="submit">Invia la richiesta</button></div>
             </form>

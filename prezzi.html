@@ -1244,7 +1244,7 @@
                           placeholder="Nome"
                           required
                           minlength="4"
-                          pattern="[A-Za-z]*^(?!eric|Eric).*$"
+                          pattern="^[A-Za-z]+$"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -1270,7 +1270,7 @@
                           placeholder="E-Mail"
                           required
                           minlength="9" 
-                          pattern="^((?!eric.jones.z).)*$"
+                          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                         />
                       </div>
                       <div class="col-xl-6">
@@ -1301,7 +1301,6 @@
                       <div class="col-12">
                         <textarea
                           class="contact__input contact__input-messege"
-                          name="message"
                           size="95"
                           name="Message"
                           placeholder="Messaggio"
