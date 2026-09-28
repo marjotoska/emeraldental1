@@ -567,49 +567,50 @@
       </section>
 
       <!-- FORM -->
-      <section class="ed-sec" id="preventivo">
-        <div class="ed-wrap">
-          <div class="ed-formbox">
-            <div>
-              <h2>Il tuo preventivo gratuito</h2>
-              <p>Lasciaci i tuoi dati e ti contatteremo il prima possibile.</p>
-              <ul class="ed-perks">
-                <li>Nessun impegno</li>
-                <li>Costi chiari fin dall'inizio</li>
-                <li>Consiglio sincero del dentista</li>
-                <li>Assistenza dal primo contatto</li>
-              </ul>
+        <section class="ed-sec" id="preventivo">
+            <div class="ed-wrap">
+            <div class="ed-formbox">
+                <div>
+                <h2>Il tuo preventivo gratuito</h2>
+                <p>Lasciaci i tuoi dati e ti contatteremo il prima possibile.</p>
+                <ul class="ed-perks">
+                    <li>Nessun impegno</li>
+                    <li>Costi chiari fin dall'inizio</li>
+                    <li>Consiglio sincero del dentista</li>
+                    <li>Assistenza dal primo contatto</li>
+                </ul>
+                </div>
+                <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST" class="ed-form">
+                <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
+                <!-- <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"> -->
+                <input type="text" name="First Name" placeholder="Nome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="given-name">
+                <input type="text" name="Last Name" placeholder="Cognome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="family-name">
+                <input type="email" name="E-Mail" placeholder="E-mail" required minlength="9" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" autocomplete="email">
+                <input type="tel" name="Phone Number" placeholder="Telefono" required minlength="7" pattern="[0-9]+$" autocomplete="tel">
+                <select name="Trattamento" class="full" aria-label="Trattamento di interesse">
+                    <option value="">Trattamento di interesse</option>
+                    <option>Sbiancamento professionale</option>
+                    <option>Pulizia dentale profonda</option>
+                    <option>Air polish</option>
+                    <option>Curettage parodontale</option>
+                    <option>Trattamento al fluoro</option>
+                    <option>Non so, vorrei un consiglio</option>
+                </select>
+                <textarea class="full" name="Message" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
+                <p class="ed-consent full">Inviando il modulo accetti di essere ricontattato in merito alla tua richiesta.</p>
+                <div class="full"><button class="ed-btn ed-dark" type="submit">Invia la richiesta</button></div>
+                </form>
             </div>
-            <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST" class="ed-form">
-              <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-              <input type="text" name="First Name" placeholder="Nome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="given-name">
-              <input type="text" name="Last Name" placeholder="Cognome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="family-name">
-              <input type="email" name="E-Mail" placeholder="E-mail" required minlength="9" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" autocomplete="email">
-              <input type="tel" name="Phone Number" placeholder="Telefono (con prefisso)" required minlength="7" pattern="^[0-9]+$" autocomplete="tel">
-              <select name="Trattamento" class="full" aria-label="Trattamento di interesse">
-                <option value="">Trattamento di interesse</option>
-                <option>Sbiancamento professionale</option>
-                <option>Pulizia dentale profonda</option>
-                <option>Air polish</option>
-                <option>Curettage parodontale</option>
-                <option>Trattamento al fluoro</option>
-                <option>Non so, vorrei un consiglio</option>
-              </select>
-              <textarea class="full" name="Message" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
-              <p class="ed-consent full">Inviando il modulo accetti di essere ricontattato in merito alla tua richiesta.</p>
-              <div class="full"><button class="ed-btn ed-dark" type="submit">Invia la richiesta</button></div>
-            </form>
-          </div>
 
-          <p style="text-align:center;margin-top:44px;color:var(--muted)">Preferisci parlare direttamente con noi?</p>
-          <div class="ed-contact">
-            <a href="https://wa.me/393509105210"><small>Chiama o scrivi su WhatsApp</small>+355 69 20 57 277</a>
-            <a href="mailto:poliklinikaemerald@gmail.com"><small>Scrivici una e-mail</small>poliklinikaemerald@gmail.com</a>
-            <!-- <a href="https://wa.me/355692057277" target="_blank" rel="noopener"><small>Risposta rapida</small>Apri WhatsApp</a> -->
-          </div>
-        </div>
-      </section>
+            <p style="text-align:center;margin-top:44px;color:var(--muted)">Preferisci parlare direttamente con noi?</p>
+            <div class="ed-contact">
+                <a href="https://wa.me/393509105210"><small>Chiama o scrivi su WhatsApp</small>+355 69 20 57 277</a>
+                <a href="mailto:poliklinikaemerald@gmail.com"><small>Scrivici una e-mail</small>poliklinikaemerald@gmail.com</a>
+                <!-- <a href="https://wa.me/355692057277" target="_blank" rel="noopener"><small>Risposta rapida</small>Apri WhatsApp</a> -->
+            </div>
+            </div>
+        </section>
+      <!-- FORM -->
     </main>
 
     <!-- Barra mobile -->
