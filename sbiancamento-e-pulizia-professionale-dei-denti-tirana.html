@@ -581,24 +581,25 @@
                 </ul>
                 </div>
                 <form action="https://formsubmit.co/poliklinikaemerald@gmail.com" id="contact-form" method="POST" class="ed-form">
-                <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
-                <!-- <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"> -->
-                <input type="text" name="First Name" placeholder="Nome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="given-name">
-                <input type="text" name="Last Name" placeholder="Cognome" required minlength="3" pattern="^[A-Za-z]+$" autocomplete="family-name">
-                <input type="email" name="E-Mail" placeholder="E-mail" required minlength="9" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" autocomplete="email">
-                <input type="tel" name="Phone Number" placeholder="Telefono" required minlength="7" pattern="[0-9]+$" autocomplete="tel">
-                <select name="Trattamento" class="full" aria-label="Trattamento di interesse">
-                    <option value="">Trattamento di interesse</option>
-                    <option>Sbiancamento professionale</option>
-                    <option>Pulizia dentale profonda</option>
-                    <option>Air polish</option>
-                    <option>Curettage parodontale</option>
-                    <option>Trattamento al fluoro</option>
-                    <option>Non so, vorrei un consiglio</option>
-                </select>
-                <textarea class="full" name="Message" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
-                <p class="ed-consent full">Inviando il modulo accetti di essere ricontattato in merito alla tua richiesta.</p>
-                <button class="ed-btn ed-dark" type="submit">Invia la richiesta</button>
+                    <input type="hidden" name="_next" value="https://emeraldental.com/grazie.html">
+                    <!-- <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"> -->
+                    <input type="text" name="First Name" placeholder="Nome" required minlength="3" pattern="^[A-Za-z]+$">
+                    <input type="text" name="Last Name" placeholder="Cognome" required minlength="3" pattern="^[A-Za-z]+$">
+                    <input type="email" name="E-Mail" placeholder="E-mail" required minlength="9" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                    <input type="tel" name="Phone Number" placeholder="Telefono" required minlength="7" pattern="[0-9]+$">
+                    <input
+                            class="contact__input"
+                            type="text"
+                            size="25"
+                            name="Subject"
+                            placeholder="Soggetto"
+                            required
+                            minlength="7"
+                            pattern="[A-Za-z0-9 ]*^((?!eyeballs|Eyeballs).)*$"
+                    />
+                    <textarea class="full" name="Message" placeholder="Raccontaci cosa ti piacerebbe migliorare" style="min-height:130px" required minlength="9"></textarea>
+                    <p class="ed-consent full">Inviando il modulo accetti di essere ricontattato in merito alla tua richiesta.</p>
+                    <input class="ed-btn ed-dark" type="submit" value="Invia la richiesta" style="background: var(--emerald);"></input>
                 </form>
             </div>
 
