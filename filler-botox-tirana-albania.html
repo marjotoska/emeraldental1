@@ -180,7 +180,32 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 ]}]}
 </script>
 </head>
-<script>(function(){var o={facebook:"124464958944945",whatsapp:"+355 69 20 57 277",call_to_action:"Have a question? Send a message!",button_color:"#15b844",position:"right",order:"whatsapp,facebook"};var p=document.location.protocol,h="getbutton.io",u=p+"//static."+h;var s=document.createElement('script');s.async=true;s.src=u+'/widget-send-button/js/init.js';s.onload=function(){WhWidgetSendButton.init(h,p,o);};var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+
+<!-- GETBUTTON SHOWS ON DESKTOP ONLY -->
+<script>
+(function () {
+  // Desktop only: wide screen + mouse/trackpad (excludes phones and tablets, even large iPads)
+  if (!window.matchMedia('(min-width:1025px) and (hover:hover) and (pointer:fine)').matches) return;
+
+  var o = {
+    facebook: "124464958944945",
+    whatsapp: "+355 69 20 57 277",
+    call_to_action: "Have a question? Send a message!",
+    button_color: "#15b844",
+    position: "right",
+    order: "whatsapp,facebook"
+  };
+  var p = document.location.protocol, h = "getbutton.io", u = p + "//static." + h;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = u + '/widget-send-button/js/init.js';
+  s.onload = function () { WhWidgetSendButton.init(h, p, o); };
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);
+})();
+</script>
+<!-- GETBUTTON SHOWS ON DESKTOP ONLY -->
+
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
