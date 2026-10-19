@@ -37,9 +37,9 @@
 
   var w = document.createElement('div');
   w.innerHTML =
-    '<button class="eb-b" aria-label="Apri la chat con la reception" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><i></i></button>' +
-    '<div class="eb-p" role="dialog" aria-label="Chat con la reception di Emerald Dental">' +
-    '<div class="eb-h"><div><b>Reception Emerald Dental</b><span>Online</span></div><button aria-label="Chiudi la chat">&times;</button></div>' +
+    '<button class="eb-b" aria-label="Apri la chat con la accettazione" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><i></i></button>' +
+    '<div class="eb-p" role="dialog" aria-label="Chat con la accettazione di Emerald Dental">' +
+    '<div class="eb-h"><div><b>Accettazione Emerald Dental</b><span>Online</span></div><button aria-label="Chiudi la chat">&times;</button></div>' +
     '<div class="eb-l" aria-live="polite"></div><div class="eb-c"></div></div>';
   document.body.appendChild(w);
 
