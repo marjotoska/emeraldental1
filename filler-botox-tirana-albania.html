@@ -23,13 +23,44 @@
 <link rel="stylesheet" href="assets/css/metisMenu.css"/>
 <link rel="stylesheet" href="assets/css/main.css"/>
 <style>
-header{position:absolute;width:100%;top:0;left:0;z-index:999;transition:background .3s ease}
-header:not(.scrolled) .main-menu ul li a,header:not(.scrolled) .hamburger-menu a i,header:not(.scrolled) .main-menu ul li i{color:#fff!important}
-header:not(.scrolled) .main-header-area{background:transparent!important}
-header.scrolled{position:fixed;background:#fff!important;box-shadow:0 2px 10px rgba(0,0,0,.1)}
-.main-menu ul li .submenu li a{color:#000!important}
-header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.scrolled .main-menu ul li i{color:#000!important}
 :root{--em:#0f4a3f;--deep:#082e27;--gold:#b8955a;--soft:#e9dcc3;--ivory:#fbfaf7;--sage:#e9f1ed;--ink:#16231f;--muted:#5d6b66;--line:#dfe6e2;--serif:Georgia,'Times New Roman',serif;--sans:'Segoe UI',Roboto,Arial,sans-serif}
+
+/* ===== NAVBAR (design from prices page, scoped to #hd) ===== */
+#hd{position:fixed;top:0;left:0;right:0;z-index:1000;color:#fff;background:transparent;box-shadow:none;transition:background .3s,box-shadow .3s;--hh:68px;font-family:var(--sans);line-height:1.5;font-size:16px}
+#hd.sc,#hd.op{background:#fff;color:var(--deep);box-shadow:0 2px 12px rgba(0,0,0,.1)}
+#hd *{box-sizing:border-box}
+#hd .hw{max-width:1120px;margin:0 auto;padding:0 22px}
+#hd .hb{display:flex;align-items:center;justify-content:space-between;height:var(--hh);gap:16px}
+#hd a{color:inherit;text-decoration:none}
+#hd ul{list-style:none;margin:0;padding:0}
+#hd .logo{display:block}
+#hd .logo img{height:44px;width:auto;max-width:none;display:block}
+#hd .burger{background:none;border:0;color:inherit;padding:10px;cursor:pointer;line-height:0}
+#hd .burger svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;display:block}
+#hd .dnav{display:none;margin:0;padding:0}
+#hd .mnav{display:none;background:#fff;color:var(--deep);max-height:calc(100vh - var(--hh));overflow-y:auto;border-top:1px solid var(--line)}
+#hd.op .mnav{display:block}
+#hd .mnav a,#hd .mnav button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 22px;font:600 16px var(--sans);color:var(--deep);background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;text-align:left;cursor:pointer}
+#hd .mnav .sub{display:none;background:var(--sage)}
+#hd .mnav .sub.open{display:block}
+#hd .mnav .sub a{padding-left:40px;font-weight:400}
+#hd .mnav img,#hd .dnav img{width:20px;height:auto;display:inline-block;margin-left:6px}
+#hd .car{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5;margin-left:6px}
+@media(min-width:1000px){
+#hd .burger,#hd .mnav,#hd.op .mnav{display:none}
+#hd .dnav{display:flex;align-items:center;gap:4px}
+#hd .dnav>li{list-style:none;position:relative}
+#hd .dnav a{display:flex;align-items:center;padding:10px 12px;font-weight:600;font-size:15px;border-radius:8px;white-space:nowrap}
+#hd .dnav>li>a:hover{color:var(--gold)}
+#hd .dnav .dd{position:absolute;top:100%;left:0;min-width:290px;background:#fff;border-radius:12px;box-shadow:0 14px 40px rgba(8,46,39,.2);padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+#hd .dnav>li:hover>.dd,#hd .dnav>li:focus-within>.dd{opacity:1;visibility:visible;transform:none}
+#hd .dnav .dd li{list-style:none}
+#hd .dnav .dd a{color:var(--deep);font-weight:400;white-space:normal}
+#hd .dnav .dd a:hover{background:var(--sage);color:var(--deep)}
+#hd .dnav .act{color:var(--gold)}
+}
+/* ===== END NAVBAR ===== */
+
 .ed{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.75;font-size:17px}
 .ed *{box-sizing:border-box}
 .ed h1,.ed h2,.ed h3{font-family:var(--serif);font-weight:400;color:var(--deep);line-height:1.18;margin:0}
@@ -56,7 +87,7 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 .ed-dark{background:var(--em);color:#fff!important}.ed-dark:hover{background:var(--deep)}
 .ed-line{border-color:var(--em);color:var(--em)!important}.ed-line:hover{background:var(--em);color:#fff!important}
 .ed-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.ed a:focus-visible,.ed summary:focus-visible,.ed input:focus-visible,.ed textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.ed a:focus-visible,.ed summary:focus-visible,.ed input:focus-visible,.ed textarea:focus-visible,#hd a:focus-visible,#hd button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .ed-crumbs{font-size:14px;color:var(--muted);margin-bottom:24px}.ed-crumbs a{color:var(--em)}
 .ed-facts{background:var(--deep);color:#fff;padding:34px 0}
 .ed-facts .ed-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
@@ -75,7 +106,15 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 .ed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 .ed-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 26px}
 .ed-card p{font-size:15px;color:var(--muted);margin:0}
-.ed-card.feat{background:var(--em);border-color:var(--em)}.ed-card.feat h3{color:#fff}.ed-card.feat p{color:#cfe0da}
+.ed-card.has-img{padding:0;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.ed-card.has-img:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(8,46,39,.14)}
+.ed-cimg{display:block;aspect-ratio:16/10;background:linear-gradient(135deg,var(--em),var(--gold));overflow:hidden}
+.ed-cimg img{width:100%;height:100%;object-fit:cover;display:block}
+.ed-cb{padding:24px 26px 28px}
+.ed-card.feat{background:var(--em);border-color:var(--em);transition:transform .25s,box-shadow .25s}
+.ed-card.feat:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(8,46,39,.14)}
+.ed-card.feat a{display:block;color:inherit}
+.ed-card.feat h3{color:#fff}.ed-card.feat p{color:#cfe0da}
 .ed-band{background:linear-gradient(120deg,var(--deep),var(--em));color:#fff;padding:64px 0;text-align:center}
 .ed-band h2{color:#fff}.ed-band p{color:#c8dad3;max-width:620px;margin:0 auto 26px}
 .ed-note{background:#fff;border:1px solid var(--soft);border-left:4px solid var(--gold);border-radius:10px;padding:26px 28px;margin-top:30px}
@@ -148,7 +187,7 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 .ed-intro .ed-fig{order:2;margin:6px 0 24px}
 .ed-intro-txt>.ed-btn{justify-self:start;margin-top:10px}
 .ed-meta{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.ed *{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.ed *{animation:none!important;transition:none!important}html{scroll-behavior:auto}#hd,#hd *{transition:none!important}}
 </style>
 
 <script type="application/ld+json">
@@ -181,69 +220,58 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 </script>
 </head>
 
-<!-- GETBUTTON SHOWS ON DESKTOP ONLY -->
-<script>
-(function () {
-  // Desktop only: wide screen + mouse/trackpad (excludes phones and tablets, even large iPads)
-  if (!window.matchMedia('(min-width:1025px) and (hover:hover) and (pointer:fine)').matches) return;
-
-  var o = {
-    facebook: "124464958944945",
-    whatsapp: "+355 69 20 57 277",
-    call_to_action: "Have a question? Send a message!",
-    button_color: "#15b844",
-    position: "right",
-    order: "whatsapp,facebook"
-  };
-  var p = document.location.protocol, h = "getbutton.io", u = p + "//static." + h;
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = u + '/widget-send-button/js/init.js';
-  s.onload = function () { WhWidgetSendButton.init(h, p, o); };
-  var x = document.getElementsByTagName('script')[0];
-  x.parentNode.insertBefore(s, x);
-})();
-</script>
-<!-- GETBUTTON SHOWS ON DESKTOP ONLY -->
-
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
-<div id="position-relative" class="main-header-area main-header-02 main-header-06 header-06-bg pt-20 pb-10"><div class="container"><div class="row align-items-center justify-content-between">
-<div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6"><div class="logo">
-<a class="logo-img" href="home.html"><img loading="lazy" src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt="Emerald Dental Clinic Tirana"/></a>
-<a class="logo-img sticky-logo d-none" href="home.html"><img loading="lazy" src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt=""/></a></div></div>
-<div class="col-xxl-8 col-xl-10 col-lg-7 d-none d-lg-block"><div class="width-108-for-navbar main-menu main-menu-02 main-menu-06 d-none d-lg-block text-lg-end ml-45" style="min-width:700px"><nav><ul>
-<li><a class="active" href="home.html">Home </a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="#">Services <i class="far fa-chevron-down"></i></a><ul class="submenu">
-<li><a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a></li>
-<li><a href="dental-crowns.html">Dental Crowns</a></li>
-<li><a href="veneers.html">Veneers</a></li>
-<li><a href="endodontics.html">Endodontics</a></li>
-<li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a></li>
-<li><a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning & Whitening</a></li>
-<li><a href="filler-botox-tirana-albania.html">Filler & Botox</a></li></ul></li>
-<li><a href="prices.html">Prices</a></li><li><a href="contact-us.html">Contact</a></li><li><a href="dental-tourism.html">Dental Tourism</a></li><li><a href="blog-en.html">Blog</a></li>
-<li><a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language"> <i class="far fa-chevron-down"></i></a><ul class="submenu"><li><a href="#">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana"></a></li></ul></li>
-</ul></nav></div></div>
-<div class="col-xxl-2 col-xl-3 col-lg-3 col-md-6 col-6 text-xxl-start text-end"><ul class="right-nav"><li><div class="hamburger-menu d-md-block d-lg-none"><a href="javascript:void(0);" role="button" aria-label="Toggle Menu"><i class="far fa-bars"></i></a></div></li><li class="d-none d-lg-inline-block"></li></ul></div>
-</div></div></div>
+<!-- HEADER / NAVBAR -->
+<header id="hd">
+  <div class="hw hb">
+    <a class="logo" href="home.html"><img src="assets/img/logo/Emerald Dental Clinic Logo.webp" alt="Emerald Dental Clinic Tirana"></a>
+    <ul class="dnav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a class="act" href="#" aria-haspopup="true">Services <svg class="car" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd">
+          <li><a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a></li>
+          <li><a href="dental-crowns.html">Dental Crowns</a></li>
+          <li><a href="veneers.html">Veneers</a></li>
+          <li><a href="endodontics.html">Endodontics</a></li>
+          <li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a></li>
+          <li><a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning &amp; Whitening</a></li>
+          <li><a href="filler-botox-tirana-albania.html">Filler &amp; Botox</a></li>
+        </ul></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+      <li><a href="dental-tourism.html">Dental Tourism</a></li>
+      <li><a href="blog-en.html">Blog</a></li>
+      <li><a href="#">EN <img src="assets/img/header/gb-flag1.png" alt="English Language"> <svg class="car" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd" style="left:auto;right:0;min-width:120px">
+          <li><a href="#">IT <img src="assets/img/header/italian-flag2.png" alt="Lingua Italiana"></a></li>
+        </ul></li>
+    </ul>
+    <button class="burger" id="bg" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mn"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+  <nav class="mnav" id="mn" aria-label="Mobile menu">
+    <a href="home.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <button type="button" aria-expanded="false" data-sub="s1">Services <svg class="car" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+    <div class="sub" id="s1">
+      <a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a>
+      <a href="dental-crowns.html">Dental Crowns</a>
+      <a href="veneers.html">Veneers</a>
+      <a href="endodontics.html">Endodontics</a>
+      <a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a>
+      <a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning &amp; Whitening</a>
+      <a href="filler-botox-tirana-albania.html">Filler &amp; Botox</a>
+    </div>
+    <a href="prices.html">Prices</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="dental-tourism.html">Dental Tourism</a>
+    <a href="blog-en.html">Blog</a>
+    <button type="button" aria-expanded="false" data-sub="s2"><span>EN <img src="assets/img/header/gb-flag1.png" alt="English Language"></span> <svg class="car" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+    <div class="sub" id="s2"><a href="#">IT <img src="assets/img/header/italian-flag2.png" alt="Lingua Italiana"></a></div>
+  </nav>
 </header>
-
-<aside class="slide-bar">
-<div class="close-mobile-menu"><a href="javascript:void(0);" role="button" aria-label="Close Menu"><i class="far fa-bars"></i></a></div>
-<nav class="side-mobile-menu"><ul id="mobile-menu-active">
-<li><a href="home.html">Home</a></li><li><a href="about-us.html">About Us</a></li>
-<li><a href="#">Services <i class="far fa-chevron-down"></i></a><ul class="submenu">
-<li><a href="dental-implants-albania-cost-process-timeline.html">Dental Implants</a></li><li><a href="dental-crowns.html">Dental Crowns</a></li><li><a href="veneers.html">Veneers</a></li><li><a href="endodontics.html">Endodontics</a></li>
-<li><a href="oral-surgery-bone-graft-apicoectomy-sinus-lift-dental-implants.html">Oral and Maxillofacial surgery (OMF)</a></li><li><a href="professional-teeth-whitening-teeth-cleaning-tirana.html">Teeth Cleaning & Whitening</a></li><li><a href="filler-botox-tirana-albania.html">Filler & Botox</a></li></ul></li>
-<li><a href="prices.html">Prices</a></li><li><a href="contact-us.html">Contact</a></li><li><a href="dental-tourism.html">Dental Tourism</a></li><li><a href="blog-en.html">Blog</a></li>
-<li><a href="#">EN <img loading="lazy" src="assets/img/header/gb-flag1.png" alt="English Language"> <i class="far fa-chevron-down"></i></a><ul class="submenu"><li><a href="#">IT <img loading="lazy" src="assets/img/header/italian-flag2.png" alt="Lingua Italiana"></a></li></ul></li>
-</ul></nav>
-</aside>
-<div class="body-overlay"></div>
 
 <main class="ed">
 
@@ -292,12 +320,12 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 <section class="ed-sec"><div class="ed-wrap">
 <div class="ed-head"><h2>Facial filler beyond the lips</h2><p class="ed-lead">Volume is lost with age, and filler restores it where it matters, without surgery and with almost no downtime.</p></div>
 <div class="ed-grid">
-<div class="ed-card"><h3>Cheeks</h3><p>Restores mid-face volume and lifts a tired, flat look, supporting the corners of your smile.</p></div>
-<div class="ed-card"><h3>Chin and jawline</h3><p>Improves profile balance and defines the jawline for a stronger, more harmonious face shape.</p></div>
-<div class="ed-card"><h3>Nasolabial folds & marionette lines</h3><p>Softens the lines running from nose to mouth and around the corners of the lips.</p></div>
-<div class="ed-card"><h3>Under-eye hollows</h3><p>Reduces the look of shadows and hollowness for a more rested appearance, in suitable candidates.</p></div>
-<div class="ed-card"><h3>Smile lines around the mouth</h3><p>Fine "smoker's lines" above the lip can be softened and the lip border refreshed.</p></div>
-<div class="ed-card feat"><h3>Not sure where to start?</h3><p>Book the free consultation and we will map out what makes the biggest difference for the least product.</p></div>
+<div class="ed-card has-img"><span class="ed-cimg"><img loading="lazy" src="assets/img/filler-botox/cheek-filler.jpg" alt="Close-up of a woman's cheek and soft, healthy skin, illustrating cheek filler" width="800" height="500" style="object-position:center 55%"></span><div class="ed-cb"><h3>Cheeks</h3><p>Restores mid-face volume and lifts a tired, flat look, supporting the corners of your smile.</p></div></div>
+<div class="ed-card has-img"><span class="ed-cimg"><img loading="lazy" src="assets/img/filler-botox/cheeks.avif" alt="Woman in profile showing a defined chin and jawline" width="800" height="500" style="object-position:center 60%"></span><div class="ed-cb"><h3>Chin and jawline</h3><p>Improves profile balance and defines the jawline for a stronger, more harmonious face shape.</p></div></div>
+<div class="ed-card has-img"><span class="ed-cimg"><img loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=70" alt="Woman's face with smooth skin around the nose and mouth" width="800" height="500" style="object-position:center 65%"></span><div class="ed-cb"><h3>Nasolabial folds &amp; marionette lines</h3><p>Softens the lines running from nose to mouth and around the corners of the lips.</p></div></div>
+<div class="ed-card has-img"><span class="ed-cimg"><img loading="lazy" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=70" alt="Close-up of a rested, bright under-eye area" width="800" height="500" style="object-position:center 40%"></span><div class="ed-cb"><h3>Under-eye hollows</h3><p>Reduces the look of shadows and hollowness for a more rested appearance, in suitable candidates.</p></div></div>
+<div class="ed-card has-img"><span class="ed-cimg"><img loading="lazy" src="assets/img/filler-botox/chin-lines.avif" alt="Woman smiling with a fresh, natural lip line" width="800" height="500" style="object-position:center 70%"></span><div class="ed-cb"><h3>Smile lines around the mouth</h3><p>Fine "smoker's lines" above the lip can be softened and the lip border refreshed.</p></div></div>
+<div class="ed-card feat"><a href="#preventivo"><h3>Not sure where to start?</h3><p>Book the free consultation and we will map out what makes the biggest difference for the least product.</p></a></div>
 </div></div></section>
 
 <section class="ed-sec ed-sage" id="botox"><div class="ed-wrap ed-split rev ed-txt">
@@ -497,6 +525,10 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 <p style="text-align:center;font-size:13px;color:#718096;margin:25px 0 0;padding-top:25px;border-top:1px solid rgba(255,255,255,.05)">&copy; 2026 Emerald Dental Clinic. All Rights Reserved.</p>
 </footer>
 
+<!-- chat-widget.js collect patient data -->
+    <script src="assets/js/chat-widget-en.js" defer></script>
+<!-- chat-widget.js collect patient data -->
+
 <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
 <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
 <script src="assets/js/bootstrap.bundle.min.js" defer></script>
@@ -504,11 +536,21 @@ header.scrolled .main-menu ul li a,header.scrolled .hamburger-menu a i,header.sc
 <script src="assets/js/jquery.meanmenu.min.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script>
-window.addEventListener('scroll',function(){var h=document.querySelector('header');if(window.scrollY>420){h.classList.add('scrolled')}else{h.classList.remove('scrolled')}});
+/* Navbar: scrolled state, mobile menu, mobile submenus */
+(function(){
+  var hd=document.getElementById('hd'),bg=document.getElementById('bg');
+  function sc(){hd.classList.toggle('sc',window.scrollY>60)}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  bg.addEventListener('click',function(){var o=hd.classList.toggle('op');bg.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#hd .mnav a').forEach(function(a){a.addEventListener('click',function(){hd.classList.remove('op');bg.setAttribute('aria-expanded',false)})});
+  document.querySelectorAll('#hd [data-sub]').forEach(function(b){b.addEventListener('click',function(){
+    var s=document.getElementById(b.dataset.sub),o=s.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+  window.addEventListener('resize',function(){if(window.innerWidth>=1000){hd.classList.remove('op');bg.setAttribute('aria-expanded',false)}});
+})();
 /* FAQ: opening one question closes the others */
 (function(){var items=document.querySelectorAll('.ed-faq details');items.forEach(function(d){d.addEventListener('toggle',function(){if(d.open){items.forEach(function(o){if(o!==d)o.open=false;});}});});})();
 /* Hide broken stock images gracefully (the gradient frame stays) */
-document.querySelectorAll('.ed-fig img,.ed-thumb img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none';});});
+document.querySelectorAll('.ed-fig img,.ed-thumb img,.ed-cimg img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none';});});
 </script>
 </body>
 </html>
