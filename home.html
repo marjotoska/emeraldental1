@@ -62,25 +62,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
-  <!-- GetButton.io widget -->
-  <script type="text/javascript">
-    (function () {
-        var options = {
-            facebook: "124464958944945", // Facebook page ID
-            whatsapp: "+355 69 20 57 277", // WhatsApp number
-            call_to_action: "Have a question? Send us a message!", // Call to action
-            button_color: "#15b844", // Color of button
-            position: "right", // Position may be 'right' or 'left'
-            order: "whatsapp,facebook", // Order of buttons
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-  </script>
-  <!-- /GetButton.io widget -->
-
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ"
@@ -764,6 +745,10 @@
 
     <!-- JS here -->
     
+      <!-- chat-widget.js collect patient data -->
+              <script src="assets/js/chat-widget-en.js" defer></script>
+      <!-- chat-widget.js collect patient data -->
+
     <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
