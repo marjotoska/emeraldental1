@@ -249,16 +249,7 @@
     </script>
   </head>
 
-  <!-- GetButton.io widget -->
-  <script type="text/javascript">
-    (function () {
-      var options = { facebook: "124464958944945", whatsapp: "+355 69 20 57 277", call_to_action: "Hai una domanda? Scrivici!", button_color: "#15b844", position: "right", order: "whatsapp,facebook" };
-      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-  </script>
+  
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77JNRQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -420,7 +411,7 @@
             <article class="ed-card feat">
               <div class="ed-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
               <h3>Sbiancamento professionale</h3>
-              <p>Il nostro trattamento più richiesto. Toni più chiari già dalla prima seduta, con protocolli pensati anche per chi ha i denti sensibili.</p>
+              <p style="color: #fff">Il nostro trattamento più richiesto. Toni più chiari già dalla prima seduta, con protocolli pensati anche per chi ha i denti sensibili.</p>
               <div class="ed-price">€120 <small>trattamento completo</small></div>
               <a class="ed-btn ed-gold" href="#preventivo">Richiedi preventivo</a>
             </article>
@@ -732,6 +723,9 @@
     <!--footer-area end-->
 
     <!-- JS (solo quelli necessari alla navbar) -->
+      <!-- chat-widget.js collect patient data -->
+        <script src="assets/js/chat-widget.js" defer></script>
+      <!-- chat-widget.js collect patient data -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
