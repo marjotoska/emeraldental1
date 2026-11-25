@@ -222,25 +222,6 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
-
-  <!-- GetButton.io widget -->
-  <script type="text/javascript">
-    (function () {
-        var options = {
-            facebook: "124464958944945", // Facebook page ID
-            whatsapp: "+355 69 20 57 277", // WhatsApp number
-            call_to_action: "Hai una domanda? Inviaci un messaggio", // Invito all'azione
-            button_color: "#15b844", // Colore del pulsante
-            position: "right", // La posizione può essere ‘right’ o ‘left’
-            order: "whatsapp,facebook", // Ordine dei pulsanti
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-  </script>
-  <!-- /GetButton.io widget -->
     
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1024,43 +1005,47 @@
 
 
   <!-- JS here -->
+    <!-- chat-widget.js collect patient data -->
+      <script src="assets/js/chat-widget.js" defer></script>
+    <!-- chat-widget.js collect patient data -->
 
-  <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
-  <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
-  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/js/owl.carousel.min.js" defer></script>
-  <script src="assets/js/isotope.pkgd.min.js" defer></script>
-  <script src="assets/js/slick.min.js" defer></script>
-  <script src="assets/js/jquery.meanmenu.min.js" defer></script>
-  <script src="assets/js/metisMenu.min.js" defer></script>
-  <script src="assets/js/jquery.nice-select.js" defer></script>
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js" defer></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/owl.carousel.min.js" defer></script>
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/slick.min.js" defer></script>
+    <script src="assets/js/jquery.meanmenu.min.js" defer></script>
+    <script src="assets/js/metisMenu.min.js" defer></script>
+    <script src="assets/js/jquery.nice-select.js" defer></script>
 
-  <script src="assets/js/.min.js" defer></script>
-  <script src="assets/js/jquery.counterup.min.js" defer></script>
-  <script src="assets/js/waypoints.min.js" defer></script>
-  <script src="assets/js/jquery.scrollUp.min.js" defer></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
-  <script src="assets/js/tilt.jquery.js" defer></script>
-  <script src="assets/js/plugins.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
-            <script>
-                function updateFileName(input) {
-                    const display = document.getElementById('file-name-display');
-                    const container = document.getElementById('upload-container');
-                    if (input.files && input.files.length > 0) {
-                        display.innerHTML = '<i class="fas fa-check-circle" style="color: #15b844; margin-right: 8px;"></i> Selected: ' + input.files[0].name;
-                        container.style.borderColor = '#15b844';
-                        container.style.background = '#ffffff';
-                    } else {
-                        display.innerHTML = '<i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files';
-                        container.style.borderColor = '#cbd5e0';
-                        container.style.background = '#f8fafc';
-                    }
-                }
-            </script>
+    <script src="assets/js/.min.js" defer></script>
+    <script src="assets/js/jquery.counterup.min.js" defer></script>
+    <script src="assets/js/waypoints.min.js" defer></script>
+    <script src="assets/js/jquery.scrollUp.min.js" defer></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/tilt.jquery.js" defer></script>
+    <script src="assets/js/plugins.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
+      <script>
+          function updateFileName(input) {
+              const display = document.getElementById('file-name-display');
+              const container = document.getElementById('upload-container');
+              if (input.files && input.files.length > 0) {
+                  display.innerHTML = '<i class="fas fa-check-circle" style="color: #15b844; margin-right: 8px;"></i> Selected: ' + input.files[0].name;
+                  container.style.borderColor = '#15b844';
+                  container.style.background = '#ffffff';
+              } else {
+                  display.innerHTML = '<i class="fas fa-cloud-upload-alt" style="color: #15b844; margin-right: 8px;"></i> Click to upload files';
+                  container.style.borderColor = '#cbd5e0';
+                  container.style.background = '#f8fafc';
+              }
+          }
+      </script>
+    <!-- DOCUMENT UPLOAD UI CONFIRMATION -->
+  <!-- JS here -->
 
   </body>
 </html>
